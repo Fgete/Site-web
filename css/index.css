@@ -15,12 +15,44 @@ body{
 	font-family: pageFont, arial;
 }
 
+/* ---HEADER--- */
+
 header{
-	background-color: white;
+	display: flex;
+	flex-direction: row;
+	background-color: #424242;
 
 	width: 100%;
-	height: 10vw;
+	height: 5vw;
 	padding-top: 1%;
+}
+
+.logoSite{
+	width: 4%;
+	height: 4vw;
+}
+
+#bandeau{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 94%;
+	height: 4vw;
+	margin-left: 1%;
+	align-items: center;
+}
+
+.pageTitre{
+	opacity: 50%;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+
+	transition: 0.5s;
+}
+
+.pageTitre:hover{
+	opacity: 100%;
 }
 
 #nomSite{
