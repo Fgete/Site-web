@@ -9,7 +9,7 @@
 }
 
 body{
-	/* background-color: lightgrey; */
+	background-color: #ffffff;
 	margin: 0;
 
 	font-family: pageFont, arial;
@@ -38,10 +38,13 @@ header{
 #bandeau{
 	display: flex;
 	flex-direction: row;
-	width: 91%;
+	width: 80%;
 	height: 4vw;
 	margin-left: 1%;
 	align-items: center;
+
+	border-right: solid 2px #999999;
+	border-left: solid 2px #999999;
 }
 
 .pageTitre{
@@ -54,25 +57,90 @@ header{
 	text-decoration: none;
 	font-size: 2vw;
 
-	transition: 0.5s;
+	transition: .5s;
 }
 
 .underline{
-	background-color: white;
-	width: 0%;
+	background-color: #999999;
+	width: 0;
 	height: .3vw;
 
-	transition: 0.5s;
+	transition: .5s;
 }
 
 .pageTitre:hover .underline{
 	width: 100%;
-	background-color: #dd8800;
+	background-color: #ffaa00;
 }
 
 .pageTitre:hover .lienPage{
-	color: #dd8800;
+	color: #ffaa00;
 }
+
+#nightMode{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 10%;
+	height: 4vw;
+	margin-left: 1%;
+}
+
+#nightModeLune{
+	width: 3vw;
+	height: 3vw;
+	border-radius: 1.5vw;
+
+	background-color: #999999;
+
+	transition: .5s;
+}
+
+#nightMode:hover #nightModeLune{
+	background-color: #ffaa00;
+}
+
+#nightModeLune2{
+	width: 2vw;
+	height: 2vw;
+	margin-left: 1vw;
+	border-radius: 1vw;
+
+	background-color: #424242;
+}
+
+#nightModeCapsule{
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	align-items: center;
+	padding-right: .5vw;
+	padding-left: .5vw;
+	width: 5vw;
+	height: 3vw;
+	border-radius: 1.5vw;
+
+	background-color: #999999;
+
+	transition: .5s
+}
+
+#nightMode:hover #nightModeCapsule{
+	background-color: #ffaa00
+}
+
+#nightModeSlider{
+	width: 2vw;
+	height: 2vw;
+	border-radius: 1vw;
+
+	background-color: #424242;
+}
+
+
+
+
 
 
 #nomSite{
