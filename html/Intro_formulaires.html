@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fomulaire</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../css/Template.css">
+		<link rel="stylesheet" type="text/css" href="../css/Formulaire.css">
+	</head>
+	<body>
+		<a href="./index.html" title="Lag Production">
+			<header>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+				<div id="headfoot"></div>
+			</header>
+		</a>
+
+		◄ <a href="./Lobby.html" id="retour">Back to lobby</a>
+
+		<h1>Intro : Utilité d'un formulaire</h1>
+
+		<p>
+			Saisir de la donnée.
+		</p>
+
+		<FORM method="get" action="Traitement_formulaires.html">
+			<fieldset>
+				<legend>Identité</legend>
+				<div id="DivInfo">
+					<div id="DivNom">
+						<label for="Nom">Nom :</label>
+						<INPUT type="text" name="Nom" id="Nom" placeholder="Smith" required="required" maxlength="10"><br/>
+
+						<label for="Prenom">Prénom :</label>
+						<INPUT type="text" name="Prenom" id="Prenom" placeholder="John"><br/>
+
+						<label for="Mail">Email :</label>
+						<INPUT type="email" name="Mail" id="Mail" placeholder="j.smith@saucisse.va" required="required"><br/>
+					</div>
+					<div id="DivGenre">
+						<INPUT type="radio" name="Genre" value="Femme" checked="true"> Femme
+						<INPUT type="radio" name="Genre" value="Homme"> Homme
+						<INPUT type="radio" name="Genre" value="Droîde"> Droïde
+					</div>
+				</div>
+				<div id="DivAction">
+					<a href="./Intro_formulaires.html"></a><button>Recharger</button></a>
+					<INPUT type="reset" name="BTN_reset" id="BTN_reset" value="Effacer">
+					<INPUT type="submit" name="BTN_Submit" id="BTN_Submit" value="Valider">
+				</div>
+			</fieldset>
+		</FORM>
+
+		<FORM>
+			<fieldset>
+				<legend>Liste des différents type d'input</legend>
+				<ul>
+					<li>button</li>
+					<INPUT type="button" value="Button">
+
+					<li>checkbox</li>
+					<INPUT type="checkbox"> Checkbox
+
+					<li>color</li>
+					<INPUT type="color"> Selection de couleur
+
+					<li>date</li>
+					<INPUT type="date"> Selection d'une date
+
+					<li>datetime-local</li>
+					<INPUT type="datetime-local"> Seclection de date et heure (sans fuseau horaire)
+
+					<li>email</li>
+					<INPUT type="email"> Permet de saisir un email
+
+					<li>file</li>
+					<INPUT type="file"> Importer un fichier
+
+					<li>hidden</li>
+					<INPUT type="hidden"> Elément caché qui renvoit sa valeur au serveur
+
+					<li>image</li>
+					<INPUT type="image" scr="../images/profil.png" alt="Envoyer" height="50" width="50"> Envoyer le formulaire
+
+					<li>month</li>
+					<INPUT type="month"> Selection de mois et année (sans fuseau horaire)
+
+					<li>number</li>
+					<INPUT type="number" step="5"> Permet de saisir un nombre entier
+
+					<li>password</li>
+					<INPUT type="password"> Permet de saisir un mot de passe
+
+					<li>radio</li>
+					<INPUT type="radio"> Selection d'une seule valeur
+
+					<li>range</li>
+					<INPUT type="range"> Permet de saisir un nombre
+
+					<li>reset</li>
+					<INPUT type="reset"> Réinitialise le contenu du formulaire
+
+					<li>search</li>
+					<INPUT type="search"> Barre de recherche
+
+					<li>submit</li>
+					<INPUT type="submit"> Envoyer le formulaire
+
+					<li>tel</li>
+					<INPUT type="tel"> Pour entrer un numéro de téléphone
+
+					<li>text</li>
+					<INPUT type="text"> Zone d'écriture en une ligne
+
+					<li>time</li>
+					<INPUT type="time"> Permet d'entrer un temps
+
+					<li>url</li>
+					<INPUT type="url"> Saisir un URL
+
+					<li>week</li>
+					<INPUT type="week"> Selection semaine et année (sans fuseau horaire)
+				</ul>
+			</fieldset>
+		</FORM>
+
+		<a href="./index.html" title="Lag Production">
+			<footer>
+				<div id="headfoot"></div>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+			</footer>
+		</a>
+	</body>
+</html>

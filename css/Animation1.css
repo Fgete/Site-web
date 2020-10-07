@@ -1,0 +1,240 @@
+body{
+	background-color: #222222;
+}
+
+	/*Création de l'animation*/
+@keyframes animation1{
+	from{
+		background-color: #00FF00;
+		font-size: 2em;
+	}
+	to{
+		background-color: #0000FF;
+		font-size: 3em;
+	}
+}
+
+@keyframes animation2{
+	0%{
+		background-color: #111111;
+		font-size: 2em;
+	}
+	5%{
+		background-color: #FF5500;
+		font-size: 3em;
+	}
+	100%{
+		background-color: #111111;
+		font-size: 2em;
+	}
+}
+
+@keyframes animation3{
+	0%{
+		left: 0px;
+		top: 0px;
+	}
+	25%{
+		left: 100px;
+		top: 0px;
+	}
+	50%{
+		left: 100px;
+		top: 100px;
+	}
+	75%{
+		left: 0px;
+		top: 100px;
+	}
+	100%{
+		left: 0px;
+		top: 0px;
+	}
+}
+
+@keyframes animation41{
+	0%{
+		left: 0%;
+		border-radius: 0%;
+	}
+	50%{
+		left: 40%;
+		border-radius: 50%;
+	}
+	100%{
+		left: 0%;
+		border-radius: 0%;
+	}
+}
+
+@keyframes animation42{
+	0%{
+		left: 90%;
+		border-radius: 0%;
+	}
+	50%{
+		left: 50%;
+		border-radius: 50%;
+	}
+	100%{
+		left: 90%;
+		border-radius: 0%;
+	}
+}
+
+@keyframes disque{
+	0%		{
+		left:		-30%;
+		transform:	skewX(-10deg);
+		width:		15%;
+		background: radial-gradient(circle at 100px 100px, #5cabff, #c48);
+			}
+	20%		{
+		width: 		22%;
+			}
+	40%		{
+		left:  		30%;
+		transform: 	skewX( 10deg);
+		width: 		15%;
+		background: radial-gradient(circle at 100px 100px, #5cabff, #f00);
+			}
+	50%		{
+		left:  		30%;
+		transform: 	skewX( 10deg);
+		width: 		15%;
+		background: radial-gradient(circle at 100px 100px, #5cabff, #f00);
+			}
+	70%		{
+		width: 		22%;
+			}
+	90%		{
+		left: 		-30%;
+		transform: 	skewX(-10deg);
+		width: 		15%;
+		background: radial-gradient(circle at 100px 100px, #5cabff, #c48);
+			}
+	100%	{
+		left: 		-30%;
+		transform: 	skewX(-10deg);
+		width: 		15%;
+		background: radial-gradient(circle at 100px 100px, #5cabff, #c48);
+			}
+}
+
+div{
+	position: relative;
+	display: flex;
+	background: #FF0000;
+	color: white;
+	width: 500px;
+	height: 500px;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	
+}
+
+#d1{
+	animation-iteration-count: infinite;
+	animation-duration: 0.5s;
+	animation-name: animation1;
+}
+
+#d2{
+	animation-iteration-count: infinite;
+	animation-duration: 0.5s;
+	animation-name: animation2;
+}
+
+#d3{
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-name: animation3;
+	animation-timing-function: linear;
+}
+
+#d4{
+	position: absolute;
+	width: 10%;
+	height: 10vw;
+	background-color: white;
+}
+
+.n1{
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+	animation-name: animation41;
+	animation-timing-function: ease-out;
+}
+
+.n2{
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+	animation-name: animation42;
+	animation-timing-function: ease-in;
+}
+
+.n3{
+	left: 50%;
+	width: 3px;
+	height: 10vw;
+	border: solid black;
+	background-color: #FFFFFF;
+}
+
+#Boule{
+	width: 50%;
+	height: 50vw;
+	border-radius: 50%;
+	background: radial-gradient(circle at 100px 100px, #5cabff, #f00);
+}
+
+#Disque{
+	top: -20%;
+	width: 20%;
+	height: 10vw;
+	border-radius: 50%;
+	animation-name: disque;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	background: radial-gradient(circle at 100px 100px, #5cabff 100%, #f00 100%);
+}
+
+/*Les annimation CSS permettent d'animer la major
+partie des element HTML sans JS ni Flash.
+Une animation permet qu'un element passe graduellement
+d'un style à un autre.
+Toutes les propriété CSS peuvent changer.
+On commence par specifier les keyframes le l'animation.
+
+Il faudra d'abord définir l'animation ensuite on l'applique.
+Dans cette animation il faut définir la durée de l'animation.
+From 0% to 100%.
+
+-Changer la couleur
+-Changer la position
+-Appliquer un délai à l'animation
+-Définir le nombre de fois que l'animation se fait
+
+animation-iteration-count: 5 (infinite -> boucle à l'infini);
+
+-Direction de l'animation
+-Vitesse de l'animation
+-Définir le style avant ou après l'animation
+
+On peut cumuler les propriété animation.
+
+-Animation 2D (transform)
+	-translation
+	-rotation
+	-scale
+	-deform
+-Animation 3D
+	-rotation
+
+Notre première animation sera de modifier
+la couleur du background de notre DIV
+
+La propriété animation-timing-function
+animation-fill-mode

@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Opérations</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../css/Template.css">
+		<link rel="stylesheet" type="text/css" href="../css/Opérations.css">
+	</head>
+	<body>
+		<a href="./index.html" title="Lag Production">
+			<header>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+				<div id="headfoot"></div>
+			</header>
+		</a>
+
+		<p>◄ <a href="./Lobby.html" id="retour">Back to lobby</a></p>
+
+		<h1>Opérations</h1>
+
+		<p>J'utilise du JS pour saisir, traiter et renvoyer les données.</p>
+
+		<FORM method="get" action="#">
+			<fieldset id="calculatrice">
+				<legend>Calculatrice</legend>
+
+				<INPUT type="number" step="1" id="nb1">
+
+				<div id="operator">
+					<INPUT type="button" value="+" onclick="addition()">
+					<INPUT type="button" value="-" onclick="soustraction()">
+					<INPUT type="button" value="*" onclick="multiplication()">
+					<INPUT type="button" value="/" onclick="division()">
+				</div>
+
+				<INPUT type="number" step="1" id="nb2">
+
+				<div id="result"><p id="varResult">
+					<script type="text/javascript">
+						// Affiche une valeur par défaut
+						document.write("--");
+
+						function addition(){
+							var nb1 = document.getElementById('nb1').value;
+							var nb2 = document.getElementById('nb2').value;
+							var varResult = nb1*1 + nb2*1;
+							document.getElementById('varResult').innerHTML = nb1 + " + " + nb2 + " = " + varResult;
+						}
+
+						function soustraction(){
+							var nb1 = document.getElementById('nb1').value;
+							var nb2 = document.getElementById('nb2').value;
+							var varResult = nb1*1 - nb2*1;
+							document.getElementById('varResult').innerHTML = nb1 + " - " + nb2 + " = " + varResult;
+						}
+
+						function multiplication(){
+							var nb1 = document.getElementById('nb1').value;
+							var nb2 = document.getElementById('nb2').value;
+							var varResult = nb1*1 * nb2*1;
+							document.getElementById('varResult').innerHTML = nb1 + " * " + nb2 + " = " + varResult;
+						}
+
+						function division(){
+							var nb1 = document.getElementById('nb1').value;
+							var nb2 = document.getElementById('nb2').value;
+							var varResult = nb1*1 / nb2*1;
+							document.getElementById('varResult').innerHTML = nb1 + " / " + nb2 + " = " + Math.round(varResult * 100)/100;
+						}
+					</script>
+				</p></div>
+			</fieldset>
+
+			<fieldset id="troisNombres">
+				<legend>3 nombres</legend>
+
+				<INPUT type="number" step="1" id="nb3">
+				<INPUT type="number" step="1" id="nb4">
+				<INPUT type="number" step="1" id="nb5">
+
+				<div id="tnOperator">
+					<INPUT type="button" value="Somme" onclick="somme()">
+					<INPUT type="button" value="Produit" onclick="produit()">
+					<INPUT type="button" value="Moyenne" onclick="moyenne()">
+					<INPUT type="button" value="Maximum" onclick="maximum()">
+				</div>
+
+				<div id="result"><p id="varResult2">
+					<script type="text/javascript">
+						// Affiche une valeur par défaut
+						document.write("--");
+
+						function somme(){
+							var nb3 = document.getElementById('nb3').value;
+							var nb4 = document.getElementById('nb4').value;
+							var nb5 = document.getElementById('nb5').value;
+							var varResult2 = nb3*1 + nb4*1 + nb5*1;
+							document.getElementById('varResult2').innerHTML = "Somme = " + varResult2;
+						}
+
+						function produit(){
+							var nb3 = document.getElementById('nb3').value;
+							var nb4 = document.getElementById('nb4').value;
+							var nb5 = document.getElementById('nb5').value;
+							var varResult2 = nb3*1 * nb4*1 * nb5*1;
+							document.getElementById('varResult2').innerHTML = "Produit = " + varResult2;
+						}
+
+						function moyenne(){
+							var nb3 = document.getElementById('nb3').value;
+							var nb4 = document.getElementById('nb4').value;
+							var nb5 = document.getElementById('nb5').value;
+							var varResult2 = (nb3*1 + nb4*1 + nb5*1) / 3;
+							document.getElementById('varResult2').innerHTML = "Moyenne = " + Math.round(varResult2 * 100)/100;;
+						}
+
+						function maximum(){
+							var varResult2 = document.getElementById('nb3').value;
+							var nb4 = document.getElementById('nb4').value;
+							var nb5 = document.getElementById('nb5').value;
+							if (varResult2*1 < nb4*1){
+								varResult2 = nb4;
+							}
+							if (varResult2*1 < nb5*1){
+								varResult2 = nb5;
+							}
+							document.getElementById('varResult2').innerHTML = "Maximum = " + varResult2;
+						}
+					</script>
+				</p></div>
+			</fieldset>
+		</FORM>
+
+		<a href="./index.html" title="Lag Production">
+			<footer>
+				<div id="headfoot"></div>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+			</footer>
+		</a>
+	</body>
+
+	<script type="text/javascript" href="../js/Opérations.js"></script>
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cube</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../../images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../../css/doom/doomPage.css">
+		<link id="adaptative-stylesheet" rel="stylesheet" type="text/css" href="../../css/doom/doom.css">
+
+	</head>
+
+	<script type="text/javascript" src="../../js/doom.js"></script>
+	<script type="text/javascript" src="../../js/doom/fullscreen.js"></script>
+	<script type="text/javascript" src="../../js/doom/menu.js"></script>
+
+	<body onload="refreshInfo()">
+		<p>◄ <a href="../Lobby.html" id="retour">Back to lobby</a></p>
+
+		<div id="main" class="flexCenter">
+			
+			<div id="info-screen" class="flex-column full-absolute">
+				<h1 class="doom-title">INFO</h1>
+				<span>Ratio : <span id="resolution"></span></span>
+				<span>Screen type : <span id="screenType"></span></span>
+			</div>
+
+			<div id="menu" class="flex-column full-absolute">
+				<img id="doom-menu-img" src="../../images/doom/doomtitle.png" alt="DOOM" style="width:33%;">
+				<div class="doom-button">New Game</div>
+				<div class="doom-button" onclick="openPage('options')">Options</div>
+				<div class="doom-button" onclick="openPage('loadGame')">Load Game</div>
+				<div class="doom-button">Save Game</div>
+				<div class="doom-button" onclick="openPage('credits')">Read This!</div>
+				<div class="doom-button" onclick="closeFullscreen()">Quit Game</div>
+			</div>
+
+			<div id="options" class="flex-column full-absolute pageMenu">
+				<h1 class="doom-title">OPTIONS</h1>
+				<div class="doom-button" onclick="showMenu()">BACK</div>
+			</div>
+
+			<div id="credits" class="flex-column full-absolute pageMenu">
+				<h1 class="doom-title">CREDITS</h1>
+				<div class="doom-button" onclick="showMenu()">BACK</div>
+			</div>
+
+			<div id="loadGame" class="flex-column full-absolute pageMenu">
+				<h1 class="doom-title">LOAD GAME</h1>
+				<div id="savingsContainer" class="flex-row">
+					<div style="background:url('../../images/doom/saving01.png')no-repeat;background-size:cover;background-position: center;" class="saving flex-column">
+						<span>Eddy</span>
+						<span>10/02/1998 - 00:54</span>
+					</div>
+					<div style="background:url('../../images/doom/saving02.jpg')no-repeat;background-size:cover;background-position: center;" class="saving flex-column">
+						<span>Frank</span>
+						<span>15/03/1998 - 01:56</span>
+					</div>
+					<div style="background:url('../../images/doom/saving03.jpg')no-repeat;background-size:cover;background-position: center;" class="saving flex-column">
+						<span>Jack</span>
+						<span>16/03/1998 - 03:34</span>
+					</div>
+					<div style="background:url('../../images/doom/saving04.jpg')no-repeat;background-size:cover;background-position: center;" class="saving flex-column">
+						<span>Eddy 2</span>
+						<span>16/07/1999 - 00:07</span>
+					</div>
+					<div style="background:url('../../images/doom/saving05.jpg')no-repeat;background-size:cover;background-position: center;" class="saving flex-column">
+						<span>Eddy</span>
+						<span>10/02/1998 - 00:54</span>
+					</div>
+					<div style="background:url('../../images/doom/saving06.jpg')no-repeat;background-size:cover;background-position: center;" class="saving flex-column">
+						<span>Eddy</span>
+						<span>10/02/1998 - 00:54</span>
+					</div>
+					<div style="background:url('../../images/doom/saving07.jpg')no-repeat;background-size:cover;background-position: center;" class="saving flex-column">
+						<span>Eddy</span>
+						<span>10/02/1998 - 00:54</span>
+					</div>
+					<div style="background:url('../../images/doom/saving08.jpg')no-repeat;background-size:cover;background-position: center;" class="saving flex-column">
+						<span>Eddy</span>
+						<span>10/02/1998 - 00:54</span>
+					</div>
+					<div class="saving"></div>
+				</div>
+
+				<div class="doom-button" onclick="showMenu()">BACK</div>
+			</div>
+
+			<div id="cube" class="flexCenter blur" style="transform: rotateX(0)">
+				<div id="f1" class="faces flexCenter front"><span>1</span></div>
+				<div id="f2" class="faces flexCenter right"><span>2</span></div>
+				<div id="f3" class="faces flexCenter back"><span>3</span></div>
+				<div id="f4" class="faces flexCenter left"><span>4</span></div>
+				<div id="f5" class="faces flexCenter top"><span>5</span></div>
+				<div id="f6" class="faces flexCenter bottom"><span>6</span></div>
+			</div>
+		</div>
+
+		<div id="fullscreenButton" class="flexCenter" onclick="openFullscreen()">
+		</div>
+		<div id="infos" class="flexCenter">
+			<p>
+				Rotation du cube : <INPUT type="text" id="cubeRotation">
+				<INPUT type="button" id="rotUp" value="<" onclick="left()">
+				<INPUT type="button" id="rotUp" value=">" onclick="right()"><br/>
+				X : <INPUT type="number" id="xAxis" onclick="refreshInfo()"><br/>
+				Y : <INPUT type="number" id="yAxis" onclick="refreshInfo()"><br/>
+				Z : <INPUT type="number" id="zAxis" onclick="refreshInfo()"><br/>
+				ViewportHeight : <INPUT type="number" id="vpHeight" onclick="refreshInfo()"><br/>
+				ViewportWidth : <INPUT type="number" id="vpWidth" onclick="refreshInfo()"><br/>
+			</p>
+		</div>
+	</body>
+</html>

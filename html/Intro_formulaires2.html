@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formulaire 2</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../css/Template.css">
+		<link rel="stylesheet" type="text/css" href="../css/Formulaire.css">
+	</head>
+
+	<!--Au chargement, il y aura une alert popup-->
+	<body onload="chargementParagraphe()">
+
+		<a href="./index.html" title="Lag Production">
+			<header>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+				<div id="headfoot"></div>
+			</header>
+		</a>
+
+		<p id="monPar">
+
+		</p>
+
+		<FORM>
+
+		</FORM>
+
+		<script type="text/javascript">
+			function chargementParagraphe()
+			{
+				var monP = document.getElementById('monPar');
+				monP.innerHTML = "Formulaire n°2";
+
+				// Attention au "s" !
+				var elmtPrenom = document.getElementsByName('Prenom');
+				var elmtPrenom_val = elmtPrenom.value;
+
+				// Choppe le placeholder "John"
+				var elmtPrenom_placeh = elmtPrenom[0].placeholder;
+
+				console.log('Place holder du Prénom : ', elmtPrenom_placeh);
+			}
+		</script>
+
+		◄ <a href="./Lobby.html" id="retour">Back to lobby</a>
+
+		<h1>Intro : Formulaire 2</h1>
+
+		<p>
+			Saisir de la donnée.
+		</p>
+
+		<FORM method="post" action="Traitement_formulaires.html">
+			<fieldset>
+				<legend>Identité</legend>
+				<label for="Nom">Nom :</label>
+				<INPUT type="text" name="Nom" id="Nom" placeholder="Smith" required="required" maxlength="10"><br/>
+
+				<label for="Prenom">Prénom :</label>
+				<INPUT type="text" name="Prenom" id="Prenom" placeholder="John"><br/>
+
+				<label for="Mail">Email :</label>
+				<INPUT type="email" name="Mail" id="Mail" placeholder="j.smith@saucisse.va" required="required"><br/>
+
+				<a href="./Intro_formulaires.html"></a><button>Recharger</button></a>
+				<INPUT type="reset" name="BTN_reset" id="BTN_reset" value="Effacer">
+				<INPUT type="submit" name="BTN_Submit" id="BTN_Submit" value="Valider"><br/>
+			</fieldset>
+		</FORM>
+
+		<a href="./index.html" title="Lag Production">
+			<footer>
+				<div id="headfoot"></div>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+			</footer>
+		</a>
+	</body>
+</html>

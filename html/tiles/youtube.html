@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Youtube</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../../images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../../css/Template.css">
+		<link rel="stylesheet" type="text/css" href="../../css/youtube.css">
+	</head>
+	<script type="text/javascript" src="../../js/youtube.js">
+	</script>
+	<body>
+		<a href="../Lobby.html" title="Lag Production">
+			<header>
+				<center>
+					<img src="../../images/profil.png" height="50" width="50">
+				</center>
+				<div id="headfoot"></div>
+			</header>
+		</a>
+
+		<p>◄ <a href="../Lobby.html" id="retour">Back to lobby</a></p>
+
+		<h1>Youtube en mode sans echec</h1>
+
+		<fieldset>
+			<legend>Outils de recherche</legend>
+			<div class="outils">
+				Recherche : <INPUT type="text" id="searchText" placeholder="Search" required="required">
+				<INPUT type="button" id="searchButton" value="Search" onclick="search()">
+			</div>
+
+			<div class="outils">
+				URL : <INPUT type="text" id="urlText" placeholder="https://youtube.com" required="required">
+				<INPUT type="submit" id="urlButton" value="Ok" onclick="ok()">
+			</div>
+		</fieldset>
+		
+		<div id="youtube">
+			<div id="results">
+				<a id="r1" src="" class="vid"></a>
+				<a id="r2" src="" class="vid"></a>
+				<a id="r3" src="" class="vid"></a>
+			</div>
+			<iframe
+				id="video"
+				src="https://www.youtube.com/embed/watch?v=y-LvewxKfaw&list=PLgEVIgSDRu96MxHEbs72XgFCakr6q3MQk"
+				allowfullscreen="allowfullscreen"
+        		mozallowfullscreen="mozallowfullscreen" 
+        		msallowfullscreen="msallowfullscreen" 
+        		oallowfullscreen="oallowfullscreen" 
+        		webkitallowfullscreen="webkitallowfullscreen"></iframe>
+        </div>
+
+		<a href="../Lobby.html" title="Lag Production">
+			<footer>
+				<div id="headfoot"></div>
+				<center>
+					<img src="../../images/profil.png" height="50" width="50">
+				</center>
+			</footer>
+		</a>
+	</body>
+</html>

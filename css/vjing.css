@@ -1,0 +1,307 @@
+/* --body-- */
+body{
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top;
+	background-attachment: fixed;
+
+	font-family: monospace;
+}
+
+/* --Arrows-- */
+.arrow{
+	transition-duration: 0.5s;
+
+	opacity: 50%;
+}
+
+.arrow:hover{
+	opacity: 100%;
+}
+
+/* --Retour-- */
+.imgProfil{
+	width: 5vw;
+	height: 5vw;
+	border-radius: 2.5vw;
+	position: absolute;
+
+	background-color: #666;
+}
+
+.infoProfil{
+	transition-duration: 0.5s;
+
+	width: 5vw;
+	opacity: 50%;
+	background-color: #6660;
+
+	display: flex;
+	overflow: hidden;
+	text-overflow: clip;
+	white-space: nowrap;
+}
+
+.infoProfil:hover{
+	width: 20vw;
+	opacity: 100%
+	background-color: #666F;
+}
+
+#textProfil{
+	color: #111;
+	font-weight: bold;
+	font-size: 3vw;
+
+	margin-left: 6vw;
+	margin-top: 0.85vw;
+	text-overflow: hidden;
+}
+
+/* --Animiation Arrivé-- */
+#retourLobby{
+	display: flex;
+	flex-wrap: wrap;
+
+	position: absolute;
+	top: -10vw;
+
+	animation-delay: 1s;
+	animation-duration: 1s;
+	animation-name: retourLobby;
+	animation-fill-mode: forwards;
+}
+
+@keyframes retourLobby{
+	from{
+		top: -10vw;
+	}
+	to{
+		top: 0.5vw;
+	}
+}
+
+/* --imgA-- */
+#imgA{
+	width: 100%;
+	height: 67vw;
+
+	display: flex;
+
+	background-image: url("../images/vjing/vjing A.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top;
+	background-attachment: fixed;
+}
+
+/* --imgB-- */
+#imgB{
+	width: 100%;
+	height: 30vw;
+
+	position: absolute;
+	top: 38vw;
+
+	background-color: #AAA;
+	background-image: url("../images/vjing/vjing B.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top;
+	background-attachment: fixed;
+
+	display: flex;
+	flex-direction: column;
+
+	animation-duration: 5s;
+	animation-name: apparitionImgB;
+	animation-fill-mode: forwards;
+}
+
+@keyframes apparitionImgB{
+	from{
+		filter: blur(5px);
+		opacity: 0;
+	}
+	to{
+		filter: blur(0);
+		opacity: 100%;
+	}
+}
+
+/* --Titre-- */
+h1{
+	font-size: 5vw;
+	margin: auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+h2{
+	font-size: 3vw;
+	margin: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+h3{
+	font-size: 2vw;
+	margin: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#imgB p{
+	width: 80%;
+
+	font-size: 2vw;
+	margin: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+
+	background-color: #AAAA;
+}
+
+/* --a-- */
+a:link{
+	color: #F90;
+	text-decoration: none;
+}
+
+a:visited{
+	color: #FF0;
+}
+
+a:hover{
+	color: #950;
+}
+
+a::selection{
+	color: #222;
+	background-color: #C70;
+}
+
+/* --mainPage-- */
+#mainPage{
+	width: 80%;
+	margin-left: 10%;
+
+	display: flex;
+	flex-direction: column;
+	background-color: #111;
+}
+
+#mainPage p{
+	width: 80%;
+	margin-left: 10%;
+
+	font-size: 1.5vw;
+	color: #666;
+
+	background-color: #222;
+}
+
+#mainPage h1, #mainPage h2, #mainPage h3{
+	color: #F90;
+}
+
+ol, ul{
+	color: #666;
+	margin: auto;
+	font-size: 1.5vw;
+}
+
+/* --Médias-- */
+#mainPage img{
+	margin: auto;
+}
+
+#petiteImg{
+	width: 50%;
+}
+
+#moyenneImg{
+	width: 80%;
+}
+
+iframe{
+	width: 50%;
+	height: 20vw;
+	margin: auto;
+	margin-bottom: 1%;
+
+	border: none;
+}
+
+/* --imageAnimée-- */
+#imageAnimée{
+	background-size: 100%;
+
+	width: 80%;
+	height: 30vw;
+	margin: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#imgInfo{
+	width: 100%;
+	background: linear-gradient(to bottom right, #fff5 33%, #fff0 66%);
+
+	padding: 5%;
+
+	transition-duration: 0.5s;
+	opacity: 0;
+}
+
+#imgInfo:hover{
+	opacity: 100%;
+}
+
+#imgLink{
+	width: 20%;
+}
+
+/* --Code-- */
+#code{
+	width: 90%;
+	margin: auto;
+
+	background-color: #060606;
+	border-radius: 0.7vw;
+	font-weight: bold;
+	color: white;
+
+	overflow: scroll;
+}
+
+.Ccommentaire{
+	color: grey;
+}
+
+.Cimportant{
+	color: red;
+}
+
+.Celmt{
+	color: orange;
+}
+
+.Cattribut{
+	color: yellow;
+}
+
+.Cnum{
+	color: cyan;
+}
+
+.Cfunction{
+	color: green;
+}
+
+/* --Scrolling-- */
+html {
+  scroll-behavior: smooth;
+}

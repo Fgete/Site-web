@@ -1,0 +1,8 @@
+fieldset{
+	display: flex;
+}
+
+input[type="text"]{
+	width: 30px;
+	text-align: center;
+}

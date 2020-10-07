@@ -1,0 +1,94 @@
+fieldset{
+	display: flex;
+	justify-content: space-between;
+}
+
+#operator{
+	margin-top: 1.7vw;
+	display: block;
+	width: 10vw;
+	height: 10vw;
+}
+
+#tnOperator{
+	margin-top: 1.7vw;
+	display: block;
+	width: 10vw;
+	height: 10vw;
+}
+
+#tnOperator input{
+	width: 10vw;
+	height: 3.5vw;
+}
+
+fieldset input[type="button"]{
+	font-size: 2vw;
+	width: 4vw;
+	height: 7.5vw;
+
+	animation-duration: 0.5s;
+	animation-name: animationTileOff;
+	opacity: 50%;
+}
+
+fieldset input[type="button"]:hover{
+	animation-duration: 0.5s;
+	animation-name: animationTileOn;
+	opacity: 100%;
+	font-weight: bold;
+}
+
+fieldset input[type="number"]{
+	margin-top: 2vw;
+	font-size: 5vw;
+	text-align: center;
+	width: 15vw;
+	height: 15vw;
+}
+
+#result{
+	background: #333;
+
+	font-size: 5vw;
+	text-align: center;
+
+	margin-top: 2vw;
+	width: 35vw;
+	height: 15vw;
+}
+
+fieldset p{
+	color: #000;
+}
+
+#equal{
+	background: #333;
+
+	font-size: 5vw;
+	text-align: center;
+
+	margin-top: 2vw;
+	width: 4vw;
+	height: 15vw;
+}
+
+/*Animations*/
+
+@keyframes animationTileOn{
+	from{
+		opacity: 50%;
+	}
+	to{
+		opacity: 100%;
+	}
+}
+
+@keyframes animationTileOff{
+	from{
+		opacity: 100%;
+	}
+	to{
+		opacity: 50%;
+	}
+}

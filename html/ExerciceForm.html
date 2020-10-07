@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercice Formulaire</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../css/Template.css">
+	</head>
+
+	<script type="text/javascript">
+		
+		function propForm()
+		{
+			console.log("Method form 0  │ ", document.forms[0].method);
+			console.log("Name form 0    │ ", document.forms[0].name);
+			console.log("ID form 0      │ ", document.forms[0].id);
+
+			console.log("───────────────┼──────────");
+
+			var id   = document.getElementById('idForm').method;
+			var name = document.getElementsByName('nameForm')[0].action;
+			var tag  = document.getElementsByTagName('FORM')[0].name;
+
+			console.log("Method du form │ ", id);
+			console.log("Action du form │ ", name.length);
+			console.log("Nom du form    │ ", tag);
+
+			console.log("───────────────┼──────────");
+
+			var TabForms = document.forms;
+
+			console.log("Nb  form       │ ", TabForms.length);
+			console.log("1er form       │ ", document.forms[0].name);
+			console.log("ID de nameForm │ ", document.forms['nameForm'].id);
+
+			console.log("───────────────┼──────────");
+
+			console.log("Placeholder    │ ", document.forms[0].elements[1].placeholder);
+			console.log("Nb type text   │ ", document.querySelectorAll('input[type=text]').length);
+			console.log("Nb type text   │ ", document.querySelectorAll('input[type=text]')[0].placeholder);
+		}
+
+	</script>
+
+	<body onload="propForm()">
+		<a href="./index.html" title="Lag Production">
+			<header>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+				<div id="headfoot"></div>
+			</header>
+		</a>
+
+		<p>◄ <a href="./Lobby.html" id="retour">Back to lobby</a></p>
+
+		<h1>Exercice formulaire :</h1>
+
+		<FORM id="idForm" name="nameForm" method="get" action="Traitement_formulaires.html">
+			<fieldset>
+				<legend>Formulaire</legend>
+			
+				Nom : <INPUT type="text" placeholder="John">
+				<INPUT type="submit" value="Valider">
+			</fieldset>
+		</FORM>
+		
+			
+		
+
+		<a href="./index.html" title="Lag Production">
+			<footer>
+				<div id="headfoot"></div>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+			</footer>
+		</a>
+	</body>
+</html>

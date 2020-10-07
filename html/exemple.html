@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Opérations</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../css/Template.css">
+
+		<style type="text/css">
+			.test{
+				border: blue solid 2px;
+			}
+
+			.rouge{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="./index.html" title="Lag Production">
+			<header>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+				<div id="headfoot"></div>
+			</header>
+		</a>
+
+		<form id="formulaire">
+			<input id="nom" class="test">
+			<input id="prenom" class="test">
+		</form>
+
+		<p class="test">Coucou</p>
+
+		<a href="./Lobby.html" title="Lag Production">
+			<footer>
+				<div id="headfoot"></div>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+			</footer>
+		</a>
+	</body>
+
+	<script>
+		// alert("Coucou !");
+		// console.log("Pouette !");
+
+		var input_nom = document.getElementById("nom");
+		var form = document.getElementById("formulaire");
+
+		// var inputs = document.getElementsByClassName("test");
+		// var result = document.querySelectorAll("#prenom");
+
+		// console.log(results);
+
+		// ---SUPPRESSION---
+		var parent = input_nom.parentNode;
+		parent.removeChild(input_nom);
+
+		// ---CREATION---
+		var input = document.createElement("input");
+		input.setAttribute('id', 'age');
+		input.setAttribute('type', 'number');
+		input.setAttribute('value', 25);
+		input.classList.add('test');
+		input.classList.add('rouge');
+
+		// ---AJOUT---
+		parent.appendChild(input);
+	</script>
+</html>

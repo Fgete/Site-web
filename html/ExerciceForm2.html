@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercice Formulaire 2</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../css/Template.css">
+		<link rel="stylesheet" type="text/css" href="../css/ExerciceForm2.css">
+	</head>
+
+	<script type="text/javascript">
+		
+		function propForm()
+		{
+			console.log("Method form 0  │ ", document.forms[0].method);
+			console.log("Name form 0    │ ", document.forms[0].name);
+			console.log("ID form 0      │ ", document.forms[0].id);
+
+			console.log("───────────────┼──────────");
+
+			var id   = document.getElementById('idForm').method;
+			var name = document.getElementsByName('nameForm')[0].action;
+			var tag  = document.getElementsByTagName('FORM')[0].name;
+
+			console.log("Method du form │ ", id);
+			console.log("Action du form │ ", name.length);
+			console.log("Nom du form    │ ", tag);
+
+			console.log("───────────────┼──────────");
+
+			var TabForms = document.forms;
+
+			console.log("Nb  form       │ ", TabForms.length);
+			console.log("1er form       │ ", document.forms[0].name);
+			console.log("ID de nameForm │ ", document.forms['nameForm'].id);
+
+			console.log("───────────────┼──────────");
+
+			console.log("Placeholder    │ ", document.forms[0].elements[1].placeholder);
+			console.log("Nb type text   │ ", document.querySelectorAll('input[type=text]').length);
+			console.log("Nb type text   │ ", document.querySelectorAll('input[type=text]')[0].placeholder);
+
+			Autotab(un, deux);
+		}
+
+		function Autotab(input, idSuivant)
+		{
+			if (document.getElementById('input').length == 4)
+			{
+				document.getElementById('idSuivant').focus();
+			}
+		}
+
+	</script>
+
+	<body onload="propForm()">
+		<a href="./index.html" title="Lag Production">
+			<header>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+				<div id="headfoot"></div>
+			</header>
+		</a>
+
+		<p>◄ <a href="./Lobby.html" id="retour">Back to lobby</a></p>
+
+		<h1>Exercice formulaire 2 :</h1>
+
+		<FORM id="idForm" name="nameForm" method="get" action="Traitement_formulaires.html">
+			<fieldset>
+				<legend>Formulaire</legend>
+			
+				<INPUT type="text" id="un" placeholder="----" maxlength="4" minlength="4" required="required">
+				<INPUT type="text" id="deux" placeholder="----" maxlength="4" minlength="4" required="required">
+				<INPUT type="text" id="trois" placeholder="----" maxlength="4" minlength="4" required="required">
+				<INPUT type="text" id="quatre" placeholder="----" maxlength="4" minlength="4" required="required">
+
+				<INPUT type="submit" value="Valider">
+				<INPUT type="reset">
+			</fieldset>
+		</FORM>
+		
+			
+		
+
+		<a href="./index.html" title="Lag Production">
+			<footer>
+				<div id="headfoot"></div>
+				<center>
+					<img src="../images/profil.png" height="50" width="50">
+				</center>
+			</footer>
+		</a>
+	</body>
+</html>
