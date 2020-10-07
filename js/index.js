@@ -9,6 +9,7 @@ function clickMenu(){
 		openMenu(menu);
 	}
 	console.log("Menu : " + stateMenu);
+	// console.table() <-- affiche un tabeau en entier et mis en forme
 }
 
 function openMenu(element){

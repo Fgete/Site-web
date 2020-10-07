@@ -30,30 +30,50 @@ header{
 .logoSite{
 	width: 4%;
 	height: 4vw;
+	margin-left: 2%;
+	
+	border-radius: 50%; /* temporaire */
 }
 
 #bandeau{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
-	width: 94%;
+	width: 91%;
 	height: 4vw;
 	margin-left: 1%;
 	align-items: center;
 }
 
 .pageTitre{
-	opacity: 50%;
+	margin-left: 4%;
+}
+
+.lienPage{
 	color: white;
 	font-weight: bold;
 	text-decoration: none;
+	font-size: 2vw;
 
 	transition: 0.5s;
 }
 
-.pageTitre:hover{
-	opacity: 100%;
+.underline{
+	background-color: white;
+	width: 0%;
+	height: .3vw;
+
+	transition: 0.5s;
 }
+
+.pageTitre:hover .underline{
+	width: 100%;
+	background-color: #dd8800;
+}
+
+.pageTitre:hover .lienPage{
+	color: #dd8800;
+}
+
 
 #nomSite{
 	display: flex;
