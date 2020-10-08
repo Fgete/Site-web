@@ -1,3 +1,11 @@
+/* ---VARIABLES--- */
+:root{
+	--color_MainGrey: #424242;
+	--color_MainOrange: #ffaa00;
+	--color_MainWhite: #999999;
+}
+
+/* ---FONTS--- */
 @font-face {
  font-family: "pageFont";
  src: url("../font/lemon-milk/LEMONMILK-Bold.otf");
@@ -9,7 +17,7 @@
 }
 
 body{
-	background-color: #ffffff;
+	background-color: white;
 	margin: 0;
 
 	font-family: pageFont, arial;
@@ -20,7 +28,7 @@ body{
 header{
 	display: flex;
 	flex-direction: row;
-	background-color: #424242;
+	background-color: var(--color_MainGrey);
 
 	width: 100%;
 	height: 5vw;
@@ -43,8 +51,8 @@ header{
 	margin-left: 1%;
 	align-items: center;
 
-	border-right: solid 2px #999999;
-	border-left: solid 2px #999999;
+	border-right: solid 2px var(--color_MainWhite);
+	border-left: solid 2px var(--color_MainWhite);
 }
 
 .pageTitre{
@@ -52,7 +60,7 @@ header{
 }
 
 .lienPage{
-	color: white;
+	color: var(--color_MainWhite);
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 2vw;
@@ -61,7 +69,7 @@ header{
 }
 
 .underline{
-	background-color: #999999;
+	background-color: var(--color_MainWhite);
 	width: 0;
 	height: .3vw;
 
@@ -70,11 +78,11 @@ header{
 
 .pageTitre:hover .underline{
 	width: 100%;
-	background-color: #ffaa00;
+	background-color: var(--color_MainOrange);
 }
 
 .pageTitre:hover .lienPage{
-	color: #ffaa00;
+	color: var(--color_MainOrange);
 }
 
 #nightMode{
@@ -92,14 +100,14 @@ header{
 	height: 3vw;
 	border-radius: 1.5vw;
 
-	background-color: #999999;
+	background-color: var(--color_MainWhite);
 
 	transition: .5s;
 }
 
-#nightMode:hover #nightModeLune{
-	background-color: #ffaa00;
-}
+/* #nightMode:hover #nightModeLune{
+	background-color: var(--color_MainOrange);
+} */
 
 #nightModeLune2{
 	width: 2vw;
@@ -107,7 +115,7 @@ header{
 	margin-left: 1vw;
 	border-radius: 1vw;
 
-	background-color: #424242;
+	background-color: var(--color_MainGrey);
 }
 
 #nightModeCapsule{
@@ -121,21 +129,25 @@ header{
 	height: 3vw;
 	border-radius: 1.5vw;
 
-	background-color: #999999;
+	background-color: var(--color_MainWhite);
 
 	transition: .5s
 }
 
-#nightMode:hover #nightModeCapsule{
-	background-color: #ffaa00
-}
+/* #nightMode:hover #nightModeCapsule{
+	background-color: var(--color_MainOrange);
+} */
 
 #nightModeSlider{
 	width: 2vw;
 	height: 2vw;
 	border-radius: 1vw;
 
-	background-color: #424242;
+	background-color: var(--color_MainGrey);
+
+	/* Piloté par JS */
+	margin-right: 0;
+	transition: .5s;
 }
 
 

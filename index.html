@@ -6,20 +6,11 @@
 		<link rel="shortcut icon" type="image/x-icon" href="./images/profil.jpg"/>
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
 	</head>
-	<!-- <script type="text/javascript" src="../js/index.js"></script> -->
 	<body>
 		<header id="header">
-			<!-- <div id="nomSite">
-				<img src="./images/lobby/L.png" class="initiales">
-				<img src="./images/lobby/A.png" class="initiales">
-				<img src="./images/lobby/G.png" class="initiales">
-			</div>
-			<div id="menu" onclick="clickMenu()">
-				<div id="chap1" class="chapitre">Chap 1</div>
-				<div id="chap2" class="chapitre">Chap 2</div>
-				<div id="chap3" class="chapitre">Chap 3</div>
-			</div> -->
 			<img src="./images/profil.jpg" class="logoSite">
+
+			<!-- BANDEAU TITRES -->
 			<div id="bandeau">
 				<div class="pageTitre">
 					<a href="" class="lienPage">Jeux</a>
@@ -34,7 +25,9 @@
 					<div class="underline"></div>
 				</div>
 			</div>
-			<div id="nightMode">
+
+			<!-- NIGHT MODE -->
+			<div id="nightMode" onclick="toggleNightMode()">
 				<div id="nightModeLune">
 					<div id="nightModeLune2"></div>
 				</div>
@@ -42,6 +35,29 @@
 					<div id="nightModeSlider"></div>
 				</div>
 			</div>
+			<script>
+				var nightMode = false;
+				function toggleNightMode(){
+					nightMode = !nightMode;
+					margin = "0";
+					color = "var(--color_MainWhite)";
+					slider = document.getElementById("nightModeSlider");
+					capsule = document.getElementById("nightModeCapsule");
+					lune = document.getElementById("nightModeLune");
+
+					if (nightMode){
+						margin = "3vw";
+						color = "var(--color_MainOrange)"
+					}else{
+						margin = "0";
+						color = "var(--color_MainWhite)";
+					}
+
+					slider.style.marginRight = margin;
+					capsule.style.backgroundColor = color;
+					lune.style.backgroundColor = color;
+				}
+			</script>
 		</header>
 		<div id="chest">
 			<div id="tileList">
