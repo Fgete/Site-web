@@ -51,7 +51,6 @@ header{
 	margin-left: 1%;
 	align-items: center;
 
-	border-right: solid 2px var(--color_MainWhite);
 	border-left: solid 2px var(--color_MainWhite);
 }
 
@@ -66,6 +65,10 @@ header{
 	font-size: 2vw;
 
 	transition: .5s;
+}
+
+.giantLetter{
+	font-size: 3vw;
 }
 
 .underline{
