@@ -159,14 +159,20 @@ header{
 .chest{
 	position: absolute;
 
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 
 	width: 100vw;
 	height: 100vh;
+}
 
+.darkFont{
 	color: var(--color_MainBlack);
+}
+
+.lightFont{
+	color: var(--color_MainWhite);
 }
 
 #diaporama{
@@ -195,6 +201,28 @@ header{
 .slide{
 	width: 20%;
 	height: 100%;
+
+	background-size: contain;
+}
+
+#slide0{
+	background-image: url("../images/slides/slide0.png");
+}
+
+#slide1{
+	background-image: url("../images/slides/slide1.png");
+}
+
+#slide2{
+	background-image: url("../images/slides/slide2.png");
+}
+
+#slide3{
+	background-image: url("../images/slides/slide3.png");
+}
+
+#slide4{
+	background-image: url("../images/slides/slide4.png");
 }
 
 #dots{
@@ -261,7 +289,23 @@ header{
 	opacity: 50%;
 }
 
-.arrow::selection{
+.mask{
+	width: 100%;
+	height: 100%;
+
+	padding: 10%;
+	font-size: 3em;
+	font-weight: bold;
+
+	opacity: 0%;
+	background: linear-gradient(135deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 50%);
+}
+
+.mask:hover{
+	opacity: 100%;
+}
+
+.unSelect::selection{
 	background-color: none;
 	color: none;
 }
