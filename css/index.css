@@ -376,3 +376,59 @@ p{
 	font-weight: bold;
 	background-color: var(--color_MainLightGrey);
 }
+
+/* ---ARTICLE--- */
+.listArticle{
+	width: 100vw;
+}
+
+.article{
+	margin-top: 1vw;
+	height: 10vw;
+}
+
+.articleBande{
+	width: 100vw;
+	height: 10vw;
+
+	border-radius: 2vw;
+	transform: skew(45deg);
+	margin-left: 10vw;
+
+	position: relative;
+}
+
+.articleFond{
+	background-color: var(--color_MainOrange);
+}
+
+.articleImage{
+	background-color: var(--color_MainBlack);
+	bottom: 10vw;
+}
+
+.article:hover .articleImage{
+	margin-left: 30vw;
+}
+
+.articleTitre{
+	display: flex;
+	align-items: center;
+
+	font-size: 3vw;
+	font-weight: bold;
+
+	width: 100vw;
+	height: 10vw;
+
+	transform: skew(-45deg);
+	margin-left: 5vw;
+}
+
+#vjingArticle .articleImage{
+	background-image: url(../images/articles/vjing.jpg);
+}
+
+a{
+	text-decoration: none;
+}
