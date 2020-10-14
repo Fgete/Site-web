@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
 	</head>
 	<body id="body" class="anime" onload="Setup(0)">
-		<script type="text/javascript" src="./js/index.js"></script>
+		<script type="text/javascript" src="./js/index - nightMode.js"></script>
 		<header id="header">
 			<!-- BD-LOGO -->
 			<div id="bd-logo" class="bandeau">
@@ -43,8 +43,12 @@
 			</div>
 		</header>
 		<div id="main">
+
+			<!-- ACCUEIL -->
 			<div id="page0" class="chest">
 				<h1 class="darkFont">Accueil</h1>
+
+				<!-- DIAPORAMA -->
 				<div id="diaporama">
 					<div id="slides" class="anime">
 						<div id="slide0" class="slide">
@@ -72,79 +76,41 @@
 						<div class="arrow anime unSelect" onclick="PreviewSlide()">◄</div>
 						<div class="arrow anime unSelect" onclick="NextSlide()">►</div>
 					</div>
-					<script>
-						var nSlide = 0;
-						var slideTime = 5000;
-						var slides = document.getElementById("slides");
-						var dots = document.getElementsByClassName("dot");
-
-						var timerDiapo = setInterval(NextSlide, slideTime);
-
-						function NextSlide(){
-							if (nSlide < 4){
-								nSlide++;
-							}else{
-								nSlide = 0;
-							}
-							UpdateSlide();
-						}
-
-						function PreviewSlide(){
-							if (nSlide > 0){
-								nSlide--;
-							}else{
-								nSlide = 4;
-							}
-							UpdateSlide();
-						}
-
-						function ForceSlide(x){
-							nSlide = x;
-							UpdateSlide();
-						}
-
-						function UpdateSlide(){
-							slides.style.right = nSlide * 100 + "%";
-
-							for (var i = 0; i < dots.length; i++)
-								dots[i].style.opacity = "50%";
-							dots[nSlide].style.opacity = "100%";
-						}
-					</script>
 				</div>
+				<script type="text/javascript" src="./js/index - diaporama.js"></script>
+				<!-- DIAPORAMA -->
+
 			</div>
+
+			<!-- JEUX -->
 			<div id="page1" class="chest">
 				<h1 class="darkFont">Jeux</h1>
 			</div>
+
+			<!-- 3D -->
 			<div id="page2" class="chest">
 				<h1 class="darkFont">3D</h1>
 			</div>
+
+			<!-- AUTRE -->
 			<div id="page3" class="chest">
 				<h1 class="darkFont">Autre</h1>
 			</div>
 		</div>
-		<script>
-			var listChapter = document.getElementsByClassName("chapter");
-			var listPage = document.getElementsByClassName("chest");
-			var baseColor = "var(--color_MainWhite)";
-			var displayMode = "flex";
-			
+		<script type="text/javascript" src="./js/index - openPage.js"></script>
 
-			// Show selected page
-			function OpenPage(x){
-				for (var i = 0; i < listPage.length; i++){
-					listChapter[i].style.color = baseColor;
-					listPage[i].style.display = "none";
-				}
-				listChapter[x].style.color = "var(--color_MainOrange)";
-				listPage[x].style.display = displayMode;
-			}
-
-			// Setup
-			function Setup(x){
-				OpenPage(x);
-				dots[nSlide].style.opacity = "100%";
-			}
-		</script>
+		<footer>
+			<div id="reseau">
+				<a href="https://www.facebook.com/pages/category/Visual-Arts/Lag-Production-106201717429277/" target="blank" title="Facebook">
+					<img src="./images/logos/facebook.png" class="logoReseau anime">
+				</a>
+				<a href="https://www.instagram.com/wargh_lag/?hl=fr" target="blank" title="Instagram">
+					<img src="./images/logos/instagram.png" class="logoReseau anime">
+				</a>
+				<a href="https://www.youtube.com/channel/UCLDG2sF3vIVgSYq4q3aWzUw" target="blank" title="Youtube">
+					<img src="./images/logos/youtube.png" class="logoReseau anime">
+				</a>
+			</div>
+		</footer>
 	</body>
 </html>

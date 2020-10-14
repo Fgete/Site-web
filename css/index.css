@@ -151,6 +151,42 @@ header{
 	background-color: var(--color_MainGrey);
 }
 
+/* ---FOOTER--- */
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	width: 100vw;
+	height: 6em;
+
+
+	background-color: var(--color_MainGrey);
+
+	position: relative;
+	top: 100vh;
+}
+
+#reseau{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 50%;
+}
+
+.logoReseau{
+	width: 5vw;
+	height: 5vw;
+
+	opacity: 50%;
+}
+
+.logoReseau:hover{
+	opacity: 100%;
+}
+
 /* ---MAIN--- */
 #main{
 	display: flex;
