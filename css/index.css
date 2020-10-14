@@ -30,9 +30,12 @@ header{
 	justify-content: flex-start;
 	background-color: var(--color_MainGrey);
 
-	width: 97vw;
+	width: 100vw;
 	height: 3em;
 	padding: 0 1% 0 1%;
+
+	position: fixed;
+	z-index: 100;
 }
 
 #logo{
@@ -158,13 +161,14 @@ footer{
 	justify-content: center;
 
 	width: 100vw;
-	height: 6em;
+	height: 7vw;
 
 
 	background-color: var(--color_MainGrey);
 
-	position: relative;
-	top: 100vh;
+	position: fixed;
+	top: calc(100vh - 7vw);
+	z-index: 100;
 }
 
 #reseau{
@@ -193,6 +197,8 @@ footer{
 }
 
 .chest{
+	margin-top: 3em;
+	padding-bottom: 7vw;
 	position: absolute;
 
 	display: none;
@@ -200,7 +206,7 @@ footer{
 	align-items: center;
 
 	width: 100vw;
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 .darkFont{
@@ -344,4 +350,29 @@ footer{
 .unSelect::selection{
 	background-color: none;
 	color: none;
+}
+
+.textImportant{
+	color: var(--color_MainOrange);
+	font-weight: bold;
+}
+
+p{
+	cursor: default;
+}
+
+.paragraphe{
+	width: 50%;
+}
+
+.citation{
+	display: flex;
+	justify-content: center;
+
+	width: 25vw;
+	border-radius: 12.5vw;
+
+	font-size: 1vw;
+	font-weight: bold;
+	background-color: var(--color_MainLightGrey);
 }
