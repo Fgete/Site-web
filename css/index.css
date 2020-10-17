@@ -433,6 +433,10 @@ p{
 	background-image: url(../images/articles/arm.png);
 }
 
+#mastermindArticle .articleImage{
+	background-image: url(../images/articles/mastermind.jpg);
+}
+
 a{
 	text-decoration: none;
 }
