@@ -429,6 +429,10 @@ p{
 	background-image: url(../images/articles/vjing.jpg);
 }
 
+#armArticle .articleImage{
+	background-image: url(../images/articles/arm.png);
+}
+
 a{
 	text-decoration: none;
 }
