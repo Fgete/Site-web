@@ -1,7 +1,7 @@
 var nightMode = false;
 
 // NIGHT MODE
-function toggleNightMode(){
+function ToggleNightMode(){
 	nightMode = !nightMode;
 
 	// NIGHT MODE

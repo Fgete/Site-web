@@ -1,0 +1,141 @@
+/* ---VARIABLES--- */
+:root{
+	--color_MainBlack: #333333;
+	--color_MainGrey: #424242;
+	--color_MainLightGrey: #505050;
+	--color_MainWhite: #eeeeee;
+	--color_MainOrange: #ffaa00;
+}
+
+/* ---HEADER--- */
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: var(--color_MainGrey);
+
+	width: 100%;
+	height: 3em;
+
+	position: fixed;
+	z-index: 100;
+}
+
+#logo{
+	width: 2em;
+	height: 2em;
+	
+	border-radius: 50%;
+}
+
+.bandeau{
+	/* border: solid 2px red; */
+}
+
+#bd-logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 5%;
+}
+
+#bd-chapter{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+
+	width: 80%;
+	margin-left: 2%;
+}
+
+.chapter{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	color: var(--color_MainWhite);
+	text-transform: capitalize;
+	font-weight: bold;
+	font-size: 1.5em;
+
+	padding: 0 .5em 0 .5em;
+
+	/* border: solid 2px blue; */
+}
+
+.anime{
+	transition: .5s;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+.clickable:hover, .clickable:hover #nightModeLune2, .clickable:hover #nightModeSlider, .clickable:hover #nightModeSliderColor{
+	background-color: var(--color_MainLightGrey);
+}
+
+/* ---NIGHT MODE--- */
+#nightMode{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 4.8em;
+	padding: 0 .5em 0 .5em;
+}
+
+#nightModeLune{
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .75em;
+
+	background-color: var(--color_MainWhite);
+
+	transition: .5s;
+}
+
+#nightModeLune2{
+	width: 1em;
+	height: 1em;
+	margin-left: .5em;
+	border-radius: .5em;
+
+	background-color: var(--color_MainGrey);
+}
+
+#nightModeCapsule{
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	align-items: center;
+	padding-right: .25em;
+	padding-left: .25em;
+	width: 2.5em;
+	height: 1.5em;
+	border-radius: .75em;
+
+	background-color: var(--color_MainWhite);
+
+	transition: .5s
+}
+
+#nightModeSlider{
+	width: 1em;
+	height: 1em;
+	border-radius: .5em;
+
+	/* Piloté par JS */
+	margin-right: 0;
+}
+
+#nightModeSliderColor{
+	width: 1em;
+	height: 1em;
+	border-radius: .5em;
+
+	background-color: var(--color_MainGrey);
+}

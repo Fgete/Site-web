@@ -1,0 +1,44 @@
+/* ---VARIABLES--- */
+:root{
+	--color_MainBlack: #333333;
+	--color_MainGrey: #424242;
+	--color_MainLightGrey: #505050;
+	--color_MainWhite: #eeeeee;
+	--color_MainOrange: #ffaa00;
+}
+
+/* ---FOOTER--- */
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	width: 100vw;
+	height: 7vw;
+
+	background-color: var(--color_MainGrey);
+
+	position: fixed;
+	top: calc(100vh - 7vw);
+	z-index: 100;
+}
+
+#reseau{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 50%;
+}
+
+.logoReseau{
+	width: 5vw;
+	height: 5vw;
+
+	opacity: 50%;
+}
+
+.logoReseau:hover{
+	opacity: 100%;
+}

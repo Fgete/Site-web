@@ -5,42 +5,13 @@
 		<meta charset="utf-8"/>
 		<link rel="shortcut icon" type="image/x-icon" href="./images/profil.jpg"/>
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<link rel="stylesheet" type="text/css" href="./css/index - header.css">
+		<link rel="stylesheet" type="text/css" href="./css/index - footer.css">
 	</head>
-	<body id="body" class="anime" onload="Setup(0)">
+	<body id="body" class="anime" onload="Setup(0); ToggleNightMode()">
 		<script type="text/javascript" src="./js/index - nightMode.js"></script>
 		<header id="header">
-			<!-- BD-LOGO -->
-			<div id="bd-logo" class="bandeau">
-				<img src="./images/profil.jpg" id="logo">
-			</div>
-
-			<!-- BD-CHAPTER -->
-			<div id="bd-chapter" class="bandeau">
-				<div id="chap0" class="chapter clickable" onclick="OpenPage(0)">
-					accueil
-				</div>
-				<div id="chap1" class="chapter clickable" onclick="OpenPage(1)">
-					jeux
-				</div>
-				<div id="chap2" class="chapter clickable" onclick="OpenPage(2)">
-					3D
-				</div>
-				<div id="chap3" class="chapter clickable" onclick="OpenPage(3)">
-					autre
-				</div>
-			</div>
-
-			<!-- BD-NIGHT MODE -->
-			<div id="nightMode" class="bandeau clickable" onclick="toggleNightMode()">
-				<div id="nightModeLune">
-					<div id="nightModeLune2"></div>
-				</div>
-				<div id="nightModeCapsule">
-					<div id="nightModeSlider" class="anime">
-						<div id="nightModeSliderColor"></div>
-					</div>
-				</div>
-			</div>
+			<script type="text/javascript" src="./js/index - header.js"></script>
 		</header>
 		<div id="main">
 
@@ -154,17 +125,7 @@
 		<script type="text/javascript" src="./js/index - openPage.js"></script>
 
 		<footer>
-			<div id="reseau">
-				<a href="https://www.facebook.com/pages/category/Visual-Arts/Lag-Production-106201717429277/" target="blank" title="Facebook">
-					<img src="./images/logos/facebook.png" class="logoReseau anime">
-				</a>
-				<a href="https://www.instagram.com/wargh_lag/?hl=fr" target="blank" title="Instagram">
-					<img src="./images/logos/instagram.png" class="logoReseau anime">
-				</a>
-				<a href="https://www.youtube.com/channel/UCLDG2sF3vIVgSYq4q3aWzUw" target="blank" title="Youtube">
-					<img src="./images/logos/youtube.png" class="logoReseau anime">
-				</a>
-			</div>
+			<script src="./js/index - footer.js"></script>
 		</footer>
 	</body>
 </html>
