@@ -1,0 +1,80 @@
+/* ---VARIABLES--- */
+:root{
+	--color_MainBlack: #333333;
+	--color_MainGrey: #424242;
+	--color_MainLightGrey: #505050;
+	--color_MainWhite: #eeeeee;
+	--color_MainOrange: #ffaa00;
+}
+
+/* ---ARTICLE--- */
+.listArticle{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: flex-start;
+
+	width: 80vw;
+	height: 100vh;
+
+	perspective: 550px;
+	transform-style: preserve-3d;
+}
+
+.article{
+	width: 35vw;
+	height: calc(calc(35vw/1920)*1080);
+}
+
+.article:hover{
+	transform: rotateX(20deg);
+}
+
+.articleReflet{
+	width: 100%;
+	height: 66%;
+
+	background-image: url("../images/articles/reflet.png");
+	background-size: cover;
+}
+
+.article:hover .articleReflet{
+	height: 100%;
+}
+
+.articleTitle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-weight: bold;
+	font-size: 2em;
+	opacity: 0%;
+
+	width: 100%;
+	height: 100%;
+}
+
+.article:hover .articleTitle{
+	opacity: 100%;
+}
+
+#armArticle{
+	background-image: url("../images/articles/arm.png");
+	background-size: cover;
+}
+
+#vjingArticle{
+	background-image: url("../images/articles/vjing.png");
+	background-size: cover;
+}
+
+#mastermindArticle{
+	background-image: url("../images/articles/mastermind.jpg");
+	background-size: cover;
+}
+
+a{
+	text-decoration: none;
+}
