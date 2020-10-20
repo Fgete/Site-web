@@ -1,9 +1,16 @@
-var nightMode = false;
+// SESSION STORAGE
+sessionStorage.setItem("nightMode", true);
+var nightMode = sessionStorage.getItem("nightMode");
+
+UpdateColours();
 
 // NIGHT MODE
 function ToggleNightMode(){
 	nightMode = !nightMode;
+	UpdateColours();
+}
 
+function UpdateColours(){
 	// NIGHT MODE
 	slider = document.getElementById("nightModeSlider");
 	capsule = document.getElementById("nightModeCapsule");
