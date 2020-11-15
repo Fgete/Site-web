@@ -15,6 +15,7 @@
 			<script type="text/javascript" src="./js/index - header.js"></script>
 		</header>
 		<div id="main">
+			<script type="text/javascript" src="./js/index - article.js"></script>
 
 			<!-- ACCUEIL -->
 			<div id="page0" class="chest">
@@ -68,17 +69,14 @@
 			<!-- JEUX -->
 			<div id="page1" class="chest">
 				<h1 class="darkFont">Jeux</h1>
-				<div class="listArticle">
+				<div id="listArticleJeux" class="listArticle">
+					<script type="text/javascript">
+						var tableArticles = [
+						["arm","ARM Project","./html/tiles/arm.html"],
+						["inksam","Ink Samurai","./html/tiles/inksam.html"]];
 
-					<!-- ARTICLE -->
-					<a href="./html/tiles/arm.html">
-						<div id="armArticle" class="article anime">
-							<div class="articleReflet anime">
-								<div class="articleTitle lightFont anime">ARM Project</div>
-							</div>
-						</div>
-					</a>
-
+						DeveloppeArticles(tableArticles, "listArticleJeux");
+					</script>
 				</div>
 			</div>
 
@@ -86,35 +84,28 @@
 			<div id="page2" class="chest">
 				<h1 class="darkFont">3D</h1>
 
-				<div class="listArticle">
+				<div id="listArticle3d" class="listArticle">
+					<script type="text/javascript">
+						var tableArticles = [
+						["vjing","VJing","./html/tiles/vjing.html"]];
 
-					<!-- ARTICLE -->
-					<a href="./html/tiles/vjing.html">
-						<div id="vjingArticle" class="article anime">
-							<div class="articleReflet anime">
-								<div class="articleTitle lightFont anime">VJing</div>
-							</div>
-						</div>
-					</a>
-
+						DeveloppeArticles(tableArticles, "listArticle3d");
+					</script>
 				</div>
 
 			</div>
 
 			<!-- AUTRE -->
 			<div id="page3" class="chest">
-				<h1 class="darkFont">Autre</h1>
+				<h1 class="darkFont">Autres</h1>
 
-				<div class="listArticle">
+				<div id="listArticleAutres" class="listArticle">
+					<script type="text/javascript">
+						var tableArticles = [
+						["mastermind","Mastermind","./html/tiles/mastermind.html"]];
 
-					<!-- ARTICLE -->
-					<a href="./html/tiles/mastermind.html">
-						<div id="mastermindArticle" class="article anime">
-							<div class="articleReflet anime">
-								<div class="articleTitle lightFont anime">Mastermind</div>
-							</div>
-						</div>
-					</a>
+						DeveloppeArticles(tableArticles, "listArticleAutres");
+					</script>
 
 				</div>
 

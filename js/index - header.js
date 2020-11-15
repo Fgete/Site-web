@@ -18,9 +18,9 @@ chapter.setAttribute("id", "bd-chapter");
 chapter.setAttribute("class", "bandeau");
 header.appendChild(chapter);
 
-var listChapters = ["accueil", "jeux", "3D", "autre"];
+var listChapters = ["accueil", "jeux", "3D", "autres"];
 
-for (var i = 0; i < 4; i++){
+for (var i = 0; i < listChapters.length; i++){
 	var chap = document.createElement("div");
 	chap.setAttribute("id", "chap" + i);
 	chap.setAttribute("class", "chapter clickable");
