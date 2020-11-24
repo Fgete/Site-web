@@ -35,12 +35,15 @@
 	width: 100%;
 	height: 66%;
 
-	background-image: url("../images/articles/reflet.png");
-	background-size: cover;
+	opacity: 50%;
+
+	background-image: url("../images/articles/reflet2.png");
+	background-size: contain;
 }
 
 .article:hover .articleReflet{
 	height: 100%;
+	opacity: 100%;
 }
 
 .articleTitle{
@@ -62,6 +65,11 @@
 
 #armArticle{
 	background-image: url("../images/articles/arm.png");
+	background-size: cover;
+}
+
+#inksamArticle{
+	background-image: url("../images/articles/inksam.jpg");
 	background-size: cover;
 }
 

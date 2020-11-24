@@ -14,12 +14,12 @@ footer{
 	justify-content: center;
 
 	width: 100vw;
-	height: 7vw;
+	height: 4vw;
 
 	background-color: var(--color_MainGrey);
 
 	position: fixed;
-	top: calc(100vh - 7vw);
+	top: calc(100vh - 4vw);
 	z-index: 100;
 }
 
@@ -33,8 +33,8 @@ footer{
 }
 
 .logoReseau{
-	width: 5vw;
-	height: 5vw;
+	width: 3vw;
+	height: 3vw;
 
 	opacity: 50%;
 }
