@@ -44,7 +44,11 @@
 								Ink Samurai
 							</div>
 						</div>
-						<div src="./images/slides/slide4.png" id="slide4" class="slide"></div>
+						<div src="./images/slides/slide4.png" id="slide4" class="slide">
+							<div class="mask anime lightFont unSelect" onclick="OpenPage(3)">
+								La Traque
+							</div>
+						</div>
 					</div>
 					<div id="dots">
 						<div id="dot0" class="dot" onclick="ForceSlide(0)"></div>
@@ -106,7 +110,8 @@
 				<div id="listArticleAutres" class="listArticle">
 					<script type="text/javascript">
 						var tableArticles = [
-						["mastermind","Mastermind","./html/tiles/mastermind.html"]];
+						["mastermind","Mastermind","./html/tiles/mastermind.html"],
+						["traque","La Traque","./html/tiles/traque.html"]];
 
 						DeveloppeArticles(tableArticles, "listArticleAutres");
 					</script>

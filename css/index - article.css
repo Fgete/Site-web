@@ -83,6 +83,11 @@
 	background-size: cover;
 }
 
+#traqueArticle{
+	background-image: url("../images/articles/traque.png");
+	background-size: cover;
+}
+
 a{
 	text-decoration: none;
 }
