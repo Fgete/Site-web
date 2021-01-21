@@ -1,0 +1,122 @@
+/* --- VARIABLES --- */
+:root{
+	--index: 1;
+	--offsetX: -3vw;
+	--posX: 65vw;
+	--offsetY: 20vh;
+	--posY: 35vh;
+	--fade: 20%;
+}
+
+/* --- BODY --- */
+
+body{
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	background-image: url("../images/index/wallpaper_virgo.png");
+}
+
+.background{
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	opacity: 0%;
+	transition: 0.5s;
+}
+
+/* --- TILE --- */
+
+.tile{
+	position: absolute;
+	transform-origin: center;
+	transition: 0.5s;
+
+	--scale: 30vw;
+	width: var(--scale);
+	height: calc((var(--scale) / 16) * 9);
+
+	opacity: 50%;
+	border: solid black 1px;
+	background-color: red;
+}
+
+#t1{
+	/* right = radius - (index - tileIndex)² * offsetX */
+	--tileIndex: 1;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	/* top = (index - tileIndex) * offsetY */
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	/* opacity = 100 - (index - tileIndex) * 20 */
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}
+
+#t2{
+	--tileIndex: 2;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}
+
+#t3{
+	--tileIndex: 3;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}
+
+#t4{
+	--tileIndex: 4;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}
+
+#t5{
+	--tileIndex: 5;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}
+
+#t6{
+	--tileIndex: 6;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}
+
+#t7{
+	--tileIndex: 7;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}
+
+#t8{
+	--tileIndex: 8;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}
+
+#t9{
+	--tileIndex: 9;
+	right: calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--offsetX) + var(--posX));
+	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
+	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
+	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+}

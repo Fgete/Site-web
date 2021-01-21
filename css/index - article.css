@@ -88,6 +88,11 @@
 	background-size: cover;
 }
 
+#travauxArticle{
+	background-image: url("../images/articles/travaux.jpg");
+	background-size: cover;
+}
+
 a{
 	text-decoration: none;
 }

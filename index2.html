@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>L A G</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="./images/profil.jpg"/>
+		<link rel="stylesheet" type="text/css" href="./css/index2.css">
+	</head>
+	<body>
+		<!-- BACKGROUNDS -->
+		<div class="background" index="2" style="background-image: url('./images/index/wallpaper_vjing.png')"></div>
+		<div class="background" index="3" style="background-image: url('./images/index/wallpaper_vjing.png')"></div>
+
+		<!-- INDEX NAVIGATION -->
+		<script type="text/javascript">
+			var n = 1;
+			root = document.documentElement;
+			body = document.body;
+			faders = document.getElementsByClassName("background");
+
+			document.addEventListener('wheel', function(wheel){
+			    // Set index
+			    if(wheel.deltaY > 0) {
+			        if (n < 9){
+			        	n++;
+			        }else{
+			        	n = 1;
+			        }
+			        root.style.setProperty('--index', n);
+			    }
+			    if(wheel.deltaY < 0) {
+			        if (n > 1){
+			        	n--;
+			        }else{
+			        	n = 9;
+			        }
+			        root.style.setProperty('--index', n);
+			    }
+
+			    // Set background
+			    for (var i = 0; i < faders.length; i++){
+			    	faders[i].style.opacity = "0";
+			    }
+			    if (faders[n - 2] != null)
+			    	faders[n - 2].style.opacity = "100%";
+
+			    console.log('Index set at ' + n);
+			});
+		</script>
+
+		<!-- SCROLLER -->
+		<div id="scroller">
+
+			<a id="t1" class="tile" href="./index.html">BACK</a>
+			<a id="t2" class="tile" href="./html/tiles/vjing.html">VJING</a>
+			<a id="t3" class="tile" href="./index.html">ANTOMOCENE</a>
+
+			<a id="t4" class="tile" href="./index.html"></a>
+			<a id="t5" class="tile" href="./index.html"></a>
+			<a id="t6" class="tile" href="./index.html"></a>
+
+			<a id="t7" class="tile" href="./index.html"></a>
+			<a id="t8" class="tile" href="./index.html"></a>
+			<a id="t9" class="tile" href="./index.html"></a>
+
+		</div>
+	</body>
+</html>
