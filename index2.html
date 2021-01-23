@@ -9,7 +9,7 @@
 	<body>
 		<!-- BACKGROUNDS -->
 		<div class="background" index="2" style="background-image: url('./images/index/wallpaper_vjing.png')"></div>
-		<div class="background" index="3" style="background-image: url('./images/index/wallpaper_vjing.png')"></div>
+		<div class="background" index="3" style="background-image: url('./images/index/wallpaper_arm.png')"></div>
 
 		<!-- INDEX NAVIGATION -->
 		<script type="text/javascript">
@@ -21,26 +21,19 @@
 			document.addEventListener('wheel', function(wheel){
 			    // Set index
 			    if(wheel.deltaY > 0) {
-			        if (n < 9){
+			        if (n < 9)
 			        	n++;
-			        }else{
-			        	n = 1;
-			        }
 			        root.style.setProperty('--index', n);
 			    }
 			    if(wheel.deltaY < 0) {
-			        if (n > 1){
+			        if (n > 1)
 			        	n--;
-			        }else{
-			        	n = 9;
-			        }
 			        root.style.setProperty('--index', n);
 			    }
 
 			    // Set background
-			    for (var i = 0; i < faders.length; i++){
+			    for (var i = 0; i < faders.length; i++)
 			    	faders[i].style.opacity = "0";
-			    }
 			    if (faders[n - 2] != null)
 			    	faders[n - 2].style.opacity = "100%";
 
@@ -51,9 +44,29 @@
 		<!-- SCROLLER -->
 		<div id="scroller">
 
-			<a id="t1" class="tile" href="./index.html">BACK</a>
-			<a id="t2" class="tile" href="./html/tiles/vjing.html">VJING</a>
-			<a id="t3" class="tile" href="./index.html">ANTOMOCENE</a>
+			<script type="text/javascript">
+
+				var tileCollection = [
+					["Back", "./images/profil.jpg", "./index.html"],
+					["VJing", "./images/articles/vjing.png", "./html/tiles/vjing.html"],
+					["A.R.M.", "./images/articles/arm.png", "./html/tiles/arm.html"]
+				];
+
+				for (var i = 0; i < tileCollection.length; i++){
+					// Create tile
+					var tile = document.createElement("a");
+					tile.setAttribute("href", tileCollection[i][2]);
+					tile.setAttribute("id", "t" + (i + 1));
+					tile.setAttribute("class", "tile");
+					var title = document.createTextNode(tileCollection[i][0]);
+					// Place tile
+					tile.appendChild(title);
+					document.getElementById("scroller").appendChild(tile);
+					// Set tile background
+					tile.style.backgroundImage = 'url("' + tileCollection[i][1] + '")';
+				}
+
+			</script>
 
 			<a id="t4" class="tile" href="./index.html"></a>
 			<a id="t5" class="tile" href="./index.html"></a>

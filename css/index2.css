@@ -1,11 +1,16 @@
 /* --- VARIABLES --- */
 :root{
+	/* values */
 	--index: 1;
 	--offsetX: -3vw;
 	--posX: 65vw;
 	--offsetY: 20vh;
 	--posY: 35vh;
-	--fade: 20%;
+	--fade: 50%;
+	--blur: 5px;
+
+	/* colors */
+	--color_MainOrange: #ffaa00;
 }
 
 /* --- BODY --- */
@@ -37,13 +42,34 @@ body{
 	transform-origin: center;
 	transition: 0.5s;
 
-	--scale: 30vw;
+	--scale: 20vw;
 	width: var(--scale);
 	height: calc((var(--scale) / 16) * 9);
 
-	opacity: 50%;
-	border: solid black 1px;
-	background-color: red;
+	border-radius: 1vw;
+	background-color: grey;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* title */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: arial;
+	font-size: 2vw;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: grey;
+	text-decoration: none;
+}
+
+.tile:hover{
+	color: var(--color_MainOrange);
+}
+
+.tile:hover{
+	--scale: 22vw;
 }
 
 #t1{
@@ -55,6 +81,8 @@ body{
 	/* opacity = 100 - (index - tileIndex) * 20 */
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
 
 #t2{
@@ -63,6 +91,8 @@ body{
 	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
 
 #t3{
@@ -71,6 +101,8 @@ body{
 	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
 
 #t4{
@@ -79,6 +111,8 @@ body{
 	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
 
 #t5{
@@ -87,6 +121,8 @@ body{
 	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
 
 #t6{
@@ -95,6 +131,8 @@ body{
 	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
 
 #t7{
@@ -103,6 +141,8 @@ body{
 	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
 
 #t8{
@@ -111,6 +151,8 @@ body{
 	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
 
 #t9{
@@ -119,4 +161,6 @@ body{
 	top: calc((var(--index) - var(--tileIndex)) * var(--offsetY) + var(--posY));
 	opacity: calc(100% - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--fade));
 	z-index: calc(10 - (var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)));
+	filter: blur(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex)) * var(--blur)))
+			grayscale(calc((var(--index) - var(--tileIndex)) * (var(--index) - var(--tileIndex))));
 }
