@@ -10,7 +10,18 @@
 		<!-- INDEX NAVIGATION -->
 		<script type="text/javascript">
 
+			// VARIABLES
 			var index = 1;
+			var isSelected = 0;
+			// POSITION
+			var offsetX = 3; // vw
+			var offsetY = 20; // vh
+			var posX = 65; // vw
+			var posY = 35; // vh
+			var fade = 15; // %
+			var blur = 5; // px
+			var grayscale = 0;
+			// DOCUMENT NODES
 			root = document.documentElement;
 			body = document.body;
 			faders = document.getElementsByClassName("background");
@@ -18,15 +29,13 @@
 			// Read inputs
 			document.addEventListener('wheel', function(wheel){
 			    // Set index
-			    if(wheel.deltaY > 0) {
+			    if(wheel.deltaY > 0 && isSelected == 0) {
 			        if (index < faders.length + 1)
 			        	index++;
-			        root.style.setProperty('--index', index);
 			    }
-			    if(wheel.deltaY < 0) {
+			    if(wheel.deltaY < 0 && isSelected == 0) {
 			        if (index > 1)
 			        	index--;
-			        root.style.setProperty('--index', index);
 			    }
 
 			    // Set background
@@ -35,39 +44,76 @@
 			    if (faders[index - 2] != null)
 			    	faders[index - 2].style.opacity = "100%";
 
-			    console.log('Index set at ' + index);
-
 			    // Tiles position
 			    tiles = document.getElementsByClassName("tile");
 
-			    TilePosition(index);
+			    TilePosition();
+			    Description();
 			});
 
-			function TilePosition(n){
+			function TilePosition(){
 
-				var offsetX = -3; // vw
-				var offsetY = 20; // vh
-				var posX = 65; // vw
-				var posY = 35; // vh
-				var fade = 50; // %
-				var blur = 5; // px
+				// Modify position in function of isSelected
+				if (isSelected == 1){
+					offsetX = 1;
+					posX = 75;
+					grayscale = .5;
+				}else{
+					offsetX = 3;
+					posX = 65;
+					grayscale = 0;
+				}
+
+				// Get node collection
 				tiles = document.getElementsByClassName("tile");
 
+				// Position collection
 			    for (var i = 0; i < tiles.length; i++){
-			    	tiles[i].style.right = ((n - (i + 1)) * (n - (i + 1)) * offsetX + posX) + "vw";
-			    	tiles[i].style.top = ((n - (i + 1)) * offsetY + posY) + "vh";
-			    	tiles[i].style.opacity = (100 - (n - (i + 1)) * (n - (i + 1)) * fade) + "%";
-			    	tiles[i].style.zIndex = (10 - (n - (i + 1)) * (n - (i + 1)));
-			    	var fBlur = "blur(" + ((n - (i + 1)) * (n - (i +1)) * blur) + "px)";
-			    	var fGrayscale = "grayscale(" + (n - (i + 1)) * (n - (i + 1)) + ")";
+			    	tiles[i].style.right = ((index - (i + 1)) * (index - (i + 1)) * offsetX + posX) + "vw";
+			    	tiles[i].style.top = ((index - (i + 1)) * offsetY + posY) + "vh";
+			    	tiles[i].style.opacity = (100 - (index - (i + 1)) * (index - (i + 1)) * fade) + "%";
+			    	tiles[i].style.zIndex = (10 - (index - (i + 1)) * (index - (i + 1)));
+			    	var fBlur = "blur(" + ((index - (i + 1)) * (index - (i +1)) * blur) + "px)";
+			    	var fGrayscale = "grayscale(" + (index - (i + 1)) * (index - (i + 1)) + grayscale + ")";
 			    	tiles[i].style.filter = fBlur + " " + fGrayscale;
 
 			    	// Set pointer events
-			    	if ((i + 1) == n)
+			    	if ((i + 1) == index)
 			    		tiles[i].style.pointerEvents = "auto";
 			    	else
 			    		tiles[i].style.pointerEvents = "none";
 			    }
+			}
+
+			function Description(){
+
+				description = document.getElementById("description");
+				dTitle = description.getElementsByTagName("h1")[0];
+				dLink = description.getElementsByTagName("a")[0];
+
+				// Modify description content
+				dTitle.innerHTML = tileCollection[index - 1][4];
+				dLink.href = tileCollection[index - 1][2];
+
+				// Show description
+				if (isSelected == 0){
+					description.style.opacity = "0";
+					description.style.marginLeft = "23vw";
+				}else{
+					description.style.opacity = "100%";
+					description.style.marginLeft = "25vw";
+				}
+
+			}
+
+			// Toggle selection and update tiles position
+			function Selection(){
+				if (isSelected == 0)
+					isSelected = 1;
+				else
+					isSelected = 0;
+				TilePosition();
+				Description();
 			}
 
 		</script>
@@ -76,24 +122,27 @@
 		<div id="scroller">
 			<script type="text/javascript">
 
-				// [Title, Tile background, URL, Body background]
+				// [Title, Tile background, URL, Body background, Description title]
 
 				var tileCollection = [
-					["Back", "./images/profil.jpg", "./index.html", ""],
-					["VJing", "./images/articles/vjing.png", "./html/tiles/vjing.html", "./images/index/wallpaper_vjing.png"],
-					["A.R.M.", "./images/articles/arm.png", "./html/tiles/arm.html", "./images/index/wallpaper_arm.png"]
+					["L A G", "./images/profil.jpg", "./index.html", "", "Who am I?"],
+					["VJing", "./images/articles/vjing.png", "./html/tiles/vjing.html", "./images/index/wallpaper_vjing.png", "VJing project"],
+					["A.R.M.", "./images/articles/arm.png", "./html/tiles/arm.html", "./images/index/wallpaper_arm.png", "Horror game project"]
 				];
 
 				for (var i = 0; i < tileCollection.length; i++){
+
 					// Create tile
-					var tile = document.createElement("a");
-					tile.setAttribute("href", tileCollection[i][2]);
+					var tile = document.createElement("div");
+					tile.setAttribute("onclick", "Selection()");
 					tile.setAttribute("id", "t" + (i + 1));
 					tile.setAttribute("class", "tile");
 					var title = document.createTextNode(tileCollection[i][0]);
+
 					// Place tile
 					tile.appendChild(title);
 					document.getElementById("scroller").appendChild(tile);
+
 					// Set tile background
 					tile.style.backgroundImage = 'url("' + tileCollection[i][1] + '")';
 
@@ -108,6 +157,12 @@
 				}
 
 			</script>
+		</div>
+
+		<div id="description">
+			<h1>Tile Title</h1>
+			<p>This is an exemple of description about the current selected tile. Check out the link below to visite the associated web page.</p>
+			<a href="">Visit page -></a>
 		</div>
 	</body>
 </html>
