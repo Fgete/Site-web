@@ -6,50 +6,82 @@
 		<link rel="shortcut icon" type="image/x-icon" href="./images/profil.jpg"/>
 		<link rel="stylesheet" type="text/css" href="./css/index2.css">
 	</head>
-	<body>
-		<!-- BACKGROUNDS -->
-		<div class="background" index="2" style="background-image: url('./images/index/wallpaper_vjing.png')"></div>
-		<div class="background" index="3" style="background-image: url('./images/index/wallpaper_arm.png')"></div>
-
+	<body onload="TilePosition(1)">
 		<!-- INDEX NAVIGATION -->
 		<script type="text/javascript">
-			var n = 1;
+
+			var index = 1;
 			root = document.documentElement;
 			body = document.body;
 			faders = document.getElementsByClassName("background");
 
+			// Read inputs
 			document.addEventListener('wheel', function(wheel){
 			    // Set index
 			    if(wheel.deltaY > 0) {
-			        if (n < 9)
-			        	n++;
-			        root.style.setProperty('--index', n);
+			        if (index < faders.length + 1)
+			        	index++;
+			        root.style.setProperty('--index', index);
 			    }
 			    if(wheel.deltaY < 0) {
-			        if (n > 1)
-			        	n--;
-			        root.style.setProperty('--index', n);
+			        if (index > 1)
+			        	index--;
+			        root.style.setProperty('--index', index);
 			    }
 
 			    // Set background
 			    for (var i = 0; i < faders.length; i++)
 			    	faders[i].style.opacity = "0";
-			    if (faders[n - 2] != null)
-			    	faders[n - 2].style.opacity = "100%";
+			    if (faders[index - 2] != null)
+			    	faders[index - 2].style.opacity = "100%";
 
-			    console.log('Index set at ' + n);
+			    console.log('Index set at ' + index);
+
+			    // Tiles position
+			    tiles = document.getElementsByClassName("tile");
+
+			    TilePosition(index);
 			});
+
+			function TilePosition(n){
+
+				var offsetX = -3; // vw
+				var offsetY = 20; // vh
+				var posX = 65; // vw
+				var posY = 35; // vh
+				var fade = 50; // %
+				var blur = 5; // px
+				tiles = document.getElementsByClassName("tile");
+
+			    for (var i = 0; i < tiles.length; i++){
+			    	tiles[i].style.right = ((n - (i + 1)) * (n - (i + 1)) * offsetX + posX) + "vw";
+			    	tiles[i].style.top = ((n - (i + 1)) * offsetY + posY) + "vh";
+			    	tiles[i].style.opacity = (100 - (n - (i + 1)) * (n - (i + 1)) * fade) + "%";
+			    	tiles[i].style.zIndex = (10 - (n - (i + 1)) * (n - (i + 1)));
+			    	var fBlur = "blur(" + ((n - (i + 1)) * (n - (i +1)) * blur) + "px)";
+			    	var fGrayscale = "grayscale(" + (n - (i + 1)) * (n - (i + 1)) + ")";
+			    	tiles[i].style.filter = fBlur + " " + fGrayscale;
+
+			    	// Set pointer events
+			    	if ((i + 1) == n)
+			    		tiles[i].style.pointerEvents = "auto";
+			    	else
+			    		tiles[i].style.pointerEvents = "none";
+			    }
+			}
+
 		</script>
 
 		<!-- SCROLLER -->
 		<div id="scroller">
-
 			<script type="text/javascript">
 
+				// [Title, Tile background, URL, Body background]
+
 				var tileCollection = [
-					["Back", "./images/profil.jpg", "./index.html"],
-					["VJing", "./images/articles/vjing.png", "./html/tiles/vjing.html"],
-					["A.R.M.", "./images/articles/arm.png", "./html/tiles/arm.html"]
+					["Back", "./images/profil.jpg", "./index.html", ""],
+					["VJing", "./images/articles/vjing.png", "./html/tiles/vjing.html", "./images/index/wallpaper_vjing.png"],
+					["A.R.M.", "./images/articles/arm.png", "./html/tiles/arm.html", "./images/index/wallpaper_arm.png"]
 				];
 
 				for (var i = 0; i < tileCollection.length; i++){
@@ -64,18 +96,18 @@
 					document.getElementById("scroller").appendChild(tile);
 					// Set tile background
 					tile.style.backgroundImage = 'url("' + tileCollection[i][1] + '")';
+
+					// Create associated background
+					if (i > 0){
+						var background = document.createElement("div");
+						background.setAttribute("class", "background");
+						background.setAttribute("style", "background-image: url('" + tileCollection[i][3] + "')");
+
+						document.body.appendChild(background);
+					}
 				}
 
 			</script>
-
-			<a id="t4" class="tile" href="./index.html"></a>
-			<a id="t5" class="tile" href="./index.html"></a>
-			<a id="t6" class="tile" href="./index.html"></a>
-
-			<a id="t7" class="tile" href="./index.html"></a>
-			<a id="t8" class="tile" href="./index.html"></a>
-			<a id="t9" class="tile" href="./index.html"></a>
-
 		</div>
 	</body>
 </html>
