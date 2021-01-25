@@ -3,129 +3,165 @@
 	<head>
 		<title>L A G</title>
 		<meta charset="utf-8"/>
-		<link rel="shortcut icon" type="image/x-icon" href="./images/profil.jpg"/>
+		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
-		<link rel="stylesheet" type="text/css" href="./css/index - header.css">
-		<link rel="stylesheet" type="text/css" href="./css/index - footer.css">
-		<link rel="stylesheet" type="text/css" href="./css/index - article.css">
 	</head>
-	<body id="body" class="anime" onload="Setup(0); UpdateColours()">
-		<script type="text/javascript" src="./js/index - nightMode.js"></script>
-		<header id="header">
-			<script type="text/javascript" src="./js/index - header.js"></script>
-		</header>
-		<div id="main">
-			<script type="text/javascript" src="./js/index - article.js"></script>
+	<body onload="TilePosition(1)">
+		<!-- INDEX NAVIGATION -->
+		<script type="text/javascript">
 
-			<!-- ACCUEIL -->
-			<div id="page0" class="chest">
-				<h1 class="darkFont">Accueil</h1>
+			// VARIABLES
+			var index = 1;
+			var isSelected = 0;
+			// POSITION
+			var offsetX = 3; // vw
+			var offsetY = 20; // vh
+			var posX = 65; // vw
+			var posY = 35; // vh
+			var fade = 15; // %
+			var blur = 5; // px
+			var grayscale = 0;
+			// DOCUMENT NODES
+			root = document.documentElement;
+			body = document.body;
+			faders = document.getElementsByClassName("background");
 
-				<!-- DIAPORAMA -->
-				<div id="diaporama">
-					<div id="slides" class="anime">
-						<div id="slide0" class="slide">
-							<div class="mask anime lightFont unSelect" onclick="OpenPage(2)">
-								VJING
-							</div>
-						</div>
-						<div src="./images/slides/slide1.png" id="slide1" class="slide">
-							<div class="mask anime lightFont unSelect" onclick="OpenPage(1)">
-								ARM Project
-							</div>
-						</div>
-						<div src="./images/slides/slide2.png" id="slide2" class="slide">
-							<div class="mask anime lightFont unSelect" onclick="OpenPage(3)">
-								Mastermind
-							</div>
-						</div>
-						<div src="./images/slides/slide3.png" id="slide3" class="slide">
-							<div class="mask anime lightFont unSelect" onclick="OpenPage(1)">
-								Ink Samurai
-							</div>
-						</div>
-						<div src="./images/slides/slide4.png" id="slide4" class="slide">
-							<div class="mask anime lightFont unSelect" onclick="OpenPage(3)">
-								La Traque
-							</div>
-						</div>
-					</div>
-					<div id="dots">
-						<div id="dot0" class="dot" onclick="ForceSlide(0)"></div>
-						<div id="dot1" class="dot" onclick="ForceSlide(1)"></div>
-						<div id="dot2" class="dot" onclick="ForceSlide(2)"></div>
-						<div id="dot3" class="dot" onclick="ForceSlide(3)"></div>
-						<div id="dot4" class="dot" onclick="ForceSlide(4)"></div>
-					</div>
-					<div id="arrows">
-						<div class="arrow anime unSelect" onclick="PreviewSlide()">◄</div>
-						<div class="arrow anime unSelect" onclick="NextSlide()">►</div>
-					</div>
-				</div>
-				<script type="text/javascript" src="./js/index - diaporama.js"></script>
-				<!-- DIAPORAMA -->
+			// Read inputs
+			document.addEventListener('wheel', function(wheel){
+			    // Set index
+			    if(wheel.deltaY > 0 && isSelected == 0) {
+			        if (index < faders.length + 1)
+			        	index++;
+			    }
+			    if(wheel.deltaY < 0 && isSelected == 0) {
+			        if (index > 1)
+			        	index--;
+			    }
 
-				<div class="darkFont paragraphe">
-					<p>Bienvenu sur mon site web. Ce site joue le rôle de <span class="textImportant">portfolio</span>. Vous y trouverez quelques uns de mes  projets et réalisations. Ce site a pour but premier de mettre en avant mes <span class="textImportant">compétences</span> dans l'<span class="textImportant">informatique</span>, la <span class="textImportant">3D</span> et le <span class="textImportant">développement de jeu vidéo</span>. Tout ceci représente ce que j'aime.</p>
-				</div>
-				<div class="lightFont citation">
-					<p>Ce que l'on aime en dit sur qui nous sommes.</p>
-				</div>
-				
-			</div>
+			    // Set background
+			    for (var i = 0; i < faders.length; i++)
+			    	faders[i].style.opacity = "0";
+			    if (faders[index - 2] != null)
+			    	faders[index - 2].style.opacity = "100%";
 
-			<!-- JEUX -->
-			<div id="page1" class="chest">
-				<h1 class="darkFont">Jeux</h1>
-				<div id="listArticleJeux" class="listArticle">
-					<script type="text/javascript">
-						var tableArticles = [
-						["arm","ARM Project","./html/tiles/arm.html"],
-						["inksam","Ink Samurai","./html/tiles/inksam.html"]];
+			    // Tiles position
+			    tiles = document.getElementsByClassName("tile");
 
-						DeveloppeArticles(tableArticles, "listArticleJeux");
-					</script>
-				</div>
-			</div>
+			    TilePosition();
+			});
 
-			<!-- 3D -->
-			<div id="page2" class="chest">
-				<h1 class="darkFont">3D</h1>
+			function TilePosition(){
 
-				<div id="listArticle3d" class="listArticle">
-					<script type="text/javascript">
-						var tableArticles = [
-						["vjing","VJing","./html/tiles/vjing.html"]];
+				// Modify position in function of isSelected
+				if (isSelected == 1){
+					offsetX = 1;
+					posX = 75;
+					grayscale = .5;
+				}else{
+					offsetX = 3;
+					posX = 65;
+					grayscale = 0;
+				}
 
-						DeveloppeArticles(tableArticles, "listArticle3d");
-					</script>
-				</div>
+				// Get node collection
+				tiles = document.getElementsByClassName("tile");
 
-			</div>
+				// Position collection
+			    for (var i = 0; i < tiles.length; i++){
+			    	tiles[i].style.right = ((index - (i + 1)) * (index - (i + 1)) * offsetX + posX) + "vw";
+			    	tiles[i].style.top = ((index - (i + 1)) * offsetY + posY) + "vh";
+			    	tiles[i].style.opacity = (100 - (index - (i + 1)) * (index - (i + 1)) * fade) + "%";
+			    	tiles[i].style.zIndex = (10 - (index - (i + 1)) * (index - (i + 1)));
+			    	var fBlur = "blur(" + ((index - (i + 1)) * (index - (i +1)) * blur) + "px)";
+			    	var fGrayscale = "grayscale(" + (index - (i + 1)) * (index - (i + 1)) + grayscale + ")";
+			    	tiles[i].style.filter = fBlur + " " + fGrayscale;
 
-			<!-- AUTRE -->
-			<div id="page3" class="chest">
-				<h1 class="darkFont">Autres</h1>
+			    	// Set pointer events
+			    	if ((i + 1) == index)
+			    		tiles[i].style.pointerEvents = "auto";
+			    	else
+			    		tiles[i].style.pointerEvents = "none";
+			    }
+			}
 
-				<div id="listArticleAutres" class="listArticle">
-					<script type="text/javascript">
-						// [imgName, title, url]
-						var tableArticles = [
-						["mastermind","Mastermind","./html/tiles/mastermind.html"],
-						["traque","La Traque","./html/tiles/traque.html"],
-						["travaux","Site 2.0","./index2.html"]];
+			function Description(){
 
-						DeveloppeArticles(tableArticles, "listArticleAutres");
-					</script>
+				description = document.getElementById("description");
+				dTitle = description.getElementsByTagName("h1")[0];
+				dLink = description.getElementsByTagName("a")[0];
 
-				</div>
+				// Modify description content
+				dTitle.innerHTML = tileCollection[index - 1][4];
+				dLink.href = tileCollection[index - 1][2];
 
-			</div>
+				// Show description
+				if (isSelected == 0){
+					description.style.opacity = "0";
+					description.style.marginLeft = "23vw";
+				}else{
+					description.style.opacity = "100%";
+					description.style.marginLeft = "25vw";
+				}
+
+			}
+
+			// Toggle selection and update tiles position
+			function Selection(){
+				if (isSelected == 0)
+					isSelected = 1;
+				else
+					isSelected = 0;
+				TilePosition();
+				Description();
+			}
+
+		</script>
+
+		<!-- SCROLLER -->
+		<div id="scroller">
+			<script type="text/javascript">
+
+				// [Title, Tile background, URL, Body background, Description title]
+
+				var tileCollection = [
+					["L A G", "./images/profil.jpg", "./index.html", "", "Who am I?"],
+					["VJing", "./images/articles/vjing.png", "./html/tiles/vjing.html", "./images/index/wallpaper_vjing.png", "VJing project"],
+					["A.R.M.", "./images/articles/arm.png", "./html/tiles/arm.html", "./images/index/wallpaper_arm.png", "Horror game project"]
+				];
+
+				for (var i = 0; i < tileCollection.length; i++){
+
+					// Create tile
+					var tile = document.createElement("div");
+					tile.setAttribute("onclick", "Selection()");
+					tile.setAttribute("id", "t" + (i + 1));
+					tile.setAttribute("class", "tile");
+					var title = document.createTextNode(tileCollection[i][0]);
+
+					// Place tile
+					tile.appendChild(title);
+					document.getElementById("scroller").appendChild(tile);
+
+					// Set tile background
+					tile.style.backgroundImage = 'url("' + tileCollection[i][1] + '")';
+
+					// Create associated background
+					if (i > 0){
+						var background = document.createElement("div");
+						background.setAttribute("class", "background");
+						background.setAttribute("style", "background-image: url('" + tileCollection[i][3] + "')");
+
+						document.body.appendChild(background);
+					}
+				}
+
+			</script>
 		</div>
-		<script type="text/javascript" src="./js/index - openPage.js"></script>
 
-		<footer>
-			<script src="./js/index - footer.js"></script>
-		</footer>
+		<div id="description">
+			<h1>Tile Title</h1>
+			<p>This is an exemple description about the current selected tile. Check out the link below to visite the associated web page.</p>
+			<a href="">Visit page -></a>
+		</div>
 	</body>
 </html>
