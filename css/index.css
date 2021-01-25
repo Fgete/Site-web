@@ -78,7 +78,7 @@ body{
 	margin-left: 23vw;
 	margin-top: calc((100vh - var(--h)) / 2);
 
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	font-weight: bold;
 	color: var(--color_MainWhite);
 
@@ -92,4 +92,16 @@ body{
 
 #description h1, #description a{
 	color: var(--color_MainOrange);
+}
+
+/* --- FONT DETAILS --- */
+
+p, h1{
+	cursor: default;
+}
+
+.game{
+	font-style: italic;
+	font-weight: 100;
+	cursor: help;
 }

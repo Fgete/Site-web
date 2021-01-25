@@ -7,12 +7,12 @@
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
 	</head>
 	<body onload="TilePosition(1)">
-		<!-- INDEX NAVIGATION -->
-		<script type="text/javascript">
+		<script type="text/javascript"> // --- INDEX NAVIGATION ---
 
 			// VARIABLES
 			var index = 1;
 			var isSelected = 0;
+
 			// POSITION
 			var offsetX = 3; // vw
 			var offsetY = 20; // vh
@@ -21,6 +21,7 @@
 			var fade = 15; // %
 			var blur = 5; // px
 			var grayscale = 0;
+			
 			// DOCUMENT NODES
 			root = document.documentElement;
 			body = document.body;
@@ -88,11 +89,19 @@
 
 				description = document.getElementById("description");
 				dTitle = description.getElementsByTagName("h1")[0];
-				dLink = description.getElementsByTagName("a")[0];
+				dLink = document.getElementById("seeMore");
+				dPara = description.getElementsByTagName("p")[0];
 
 				// Modify description content
 				dTitle.innerHTML = tileCollection[index - 1][4];
 				dLink.href = tileCollection[index - 1][2];
+				dPara.innerHTML = tileDescription[index - 1];
+
+				// Show the link if there is one
+				if (tileCollection[index - 1][2] != "")
+					dLink.innerHTML = "En savoir plus ►";
+				else
+					dLink.innerHTML = "";
 
 				// Show description
 				if (isSelected == 0){
@@ -117,16 +126,21 @@
 
 		</script>
 
-		<!-- SCROLLER -->
 		<div id="scroller">
-			<script type="text/javascript">
+			<script type="text/javascript"> // --- TILE BUILDING ---
 
 				// [Title, Tile background, URL, Body background, Description title]
 
 				var tileCollection = [
-					["L A G", "./images/profil.jpg", "./index.html", "", "Who am I?"],
-					["VJing", "./images/articles/vjing.png", "./html/tiles/vjing.html", "./images/index/wallpaper_vjing.png", "VJing project"],
-					["A.R.M.", "./images/articles/arm.png", "./html/tiles/arm.html", "./images/index/wallpaper_arm.png", "Horror game project"]
+					["L A G", "./images/profil.jpg", "", "", "Qui suis-je?"],
+					["VJing", "./images/articles/vjing.png", "./html/tiles/vjing.html", "./images/index/wallpaper_vjing.png", "Projet VJing"],
+					["A.R.M.", "./images/articles/arm.png", "./html/tiles/arm.html", "./images/index/wallpaper_arm.png", "Projet de jeu d'horreur"]
+				];
+
+				var tileDescription = [
+					["Bienvenue! Je m'appelle François GETE et je suis étudiant dans le jeu vidéo à <a href='https://ludus-academie.fr/' target='blank'>Ludus Académie</a>. Vous trouverez sur ce site mes différentes créations. Je vous invite donc à l'<span class='game'>explorer</span>."],
+					["Le 'projet VJing' est un projet audio-visuel ayant pour but de lier le son et l'image dans une performence live. La particularité de celui-ci, est l'utilisation du son au service de la 3D."],
+					["Dans ce jeu, vous entrez dans la peau d'un employé de la ARM. Cette entreprise à pour but de répertorier et de classifier les objets considérés comme anormaux."]
 				];
 
 				for (var i = 0; i < tileCollection.length; i++){
@@ -157,11 +171,22 @@
 
 			</script>
 		</div>
+		<script type="text/javascript"> // --- DESCRIPTION BUILDING ---
+			var description = document.createElement("div");
+			description.setAttribute("id", "description");
 
-		<div id="description">
-			<h1>Tile Title</h1>
-			<p>This is an exemple description about the current selected tile. Check out the link below to visite the associated web page.</p>
-			<a href="">Visit page -></a>
-		</div>
+			var descriptionTitle = document.createElement("h1");
+
+			var descriptionPara = document.createElement("p");
+
+			var descriptionLink = document.createElement("a");
+			descriptionLink.setAttribute("id", "seeMore");
+
+			description.appendChild(descriptionTitle);
+			description.appendChild(descriptionPara);
+			description.appendChild(descriptionLink);
+
+			body.appendChild(description);
+		</script>
 	</body>
 </html>
