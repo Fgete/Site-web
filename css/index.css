@@ -3,7 +3,7 @@
 :root{
 	/* colors */
 	--color_MainOrange: #ffaa00;
-	--color_MainWhite: #999999;
+	--color_MainWhite: #959595;
 }
 
 /* --- BODY --- */
@@ -92,6 +92,7 @@ body{
 
 #description h1, #description a{
 	color: var(--color_MainOrange);
+	text-shadow: rgba(0, 0, 0, 1) 0px 0px 1rem;
 }
 
 /* --- FONT DETAILS --- */
