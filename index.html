@@ -8,14 +8,39 @@
 	</head>
 	<body onload="TilePosition(1), LoadingScreen()">
 
-		<div id="loadingScreen">LOADING...</div>
+		<div id="loadingBack"></div>
+		<div id="loadingScreen">
+			<h2 id="loadingTitle">LOADING...</h2>
+			<p class="loadingPara">
+				Veuillez opérer quelques instants, le <span class="game">Site</span> va vous répondre...
+			</p>
+			<p class="loadingPara">
+				Faites défiler les éléments avec la molette ou utilisez les flèches (↑ ↓) de votre clavier. Cliquez pour sélectionner et déselectionner un élément ou utilisez les flèches (← →) de votre clavier.
+			</p>
+			<p id="loadingClose" onclick="LoadingClose()">₪</p>
+		</div>
 
 		<script type="text/javascript"> // --- LOADING SCREEN ---
 			
 			function LoadingScreen(){
 				console.log("HELLO ! IT'S LOADING...");
-				loadingDiv = document.getElementById("loadingScreen");
-				loadingDiv.innerHTML = "LOADING... OK";
+
+				loadingTitle = document.getElementById("loadingTitle");
+				loadingClose = document.getElementById("loadingClose");
+
+				loadingTitle.innerHTML = "LOADING... OK";
+				loadingTitle.style.color = "#00FF00";
+				loadingClose.style.opacity = "100%";
+				loadingClose.style.pointerEvents = "auto";
+				loadingClose.innerHTML = "►";
+			}
+
+			function LoadingClose(){
+				loadingBack = document.getElementById("loadingBack");
+				loadingScreen = document.getElementById("loadingScreen");
+
+				loadingBack.parentNode.removeChild(loadingBack);
+				loadingScreen.parentNode.removeChild(loadingScreen);
 			}
 
 		</script>

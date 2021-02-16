@@ -35,14 +35,59 @@ body{
 /* --- LOADING --- */
 
 #loadingScreen{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: absolute;
+
+	margin: 10vh 0 0 25vw;
 	width: 50vw;
-	height: 50vh;
+	height: 80vh;
 
-	margin-left: 25vw;
-	margin-top: 25vh;
+	color: white;
+	font-size: 1.5vw;
 
+	z-index: 12;
+	background-color: var(--color_MainWhite);
+	border-radius: 1vw;
+
+	overflow-wrap: scroll; 
+}
+
+#loadingTitle{
+	font-weight: bold;
+	color: red;
+}
+
+.loadingPara{
+	padding: 0 0 0 1vw;
+}
+
+#loadingClose{
+	font-size: 5vw;
+	opacity: 50%;
+
+	pointer-events: none;
+}
+
+#loadingClose:hover{
+	color: var(--color_MainOrange);
+}
+
+#loadingBack{
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	opacity: 50%;
+	background-color: var(--color_MainWhite);
 	z-index: 11;
-	background-color: red;
 }
 
 /* --- TILE --- */
