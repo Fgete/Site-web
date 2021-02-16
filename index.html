@@ -6,7 +6,20 @@
 		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
 	</head>
-	<body onload="TilePosition(1)">
+	<body onload="TilePosition(1), LoadingScreen()">
+
+		<div id="loadingScreen">LOADING...</div>
+
+		<script type="text/javascript"> // --- LOADING SCREEN ---
+			
+			function LoadingScreen(){
+				console.log("HELLO ! IT'S LOADING...");
+				loadingDiv = document.getElementById("loadingScreen");
+				loadingDiv.innerHTML = "LOADING... OK";
+			}
+
+		</script>
+
 		<script type="text/javascript"> // --- INDEX NAVIGATION ---
 			// VARIABLES
 			var index = 1;

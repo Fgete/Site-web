@@ -32,6 +32,19 @@ body{
 	transition: 0.5s;
 }
 
+/* --- LOADING --- */
+
+#loadingScreen{
+	width: 50vw;
+	height: 50vh;
+
+	margin-left: 25vw;
+	margin-top: 25vh;
+
+	z-index: 11;
+	background-color: red;
+}
+
 /* --- TILE --- */
 
 .tile{
