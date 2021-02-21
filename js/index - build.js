@@ -26,7 +26,7 @@ if (sessionStorage.getItem('loadingClosed') != 1){
 	// Loading para 1
 	var loadingPara1 = document.createElement("p");
 	loadingPara1.setAttribute("class", "loadingPara");
-	var loadingParaText1 = document.createTextNode("Veuillez opérer quelques instants, le <span class='game'>Site</span> va vous répondre...");
+	var loadingParaText1 = document.createTextNode("Veuillez opérer quelques instants, le Site va vous répondre...");
 	loadingPara1.appendChild(loadingParaText1);
 	loadingScreen.appendChild(loadingPara1);
 
@@ -51,7 +51,7 @@ if (sessionStorage.getItem('loadingClosed') != 1){
 // [Title, Tile background, URL, Body background, Description title]
 
 var tileCollection = [
-	["L A G", "./images/profil.jpg", "", "", "Qui suis-je?"],
+	["L A G", "./images/profil.jpg", "./html/contact.html", "", "Qui suis-je?"],
 	["VJing", "./images/articles/vjing.png", "./html/vjing.html", "./images/index/wallpaper_vjing.png", "Projet VJing"],
 	["A.R.M.", "./images/articles/arm.png", "./html/arm.html", "./images/index/wallpaper_arm.png", "Projet de jeu d'horreur"]
 ];
