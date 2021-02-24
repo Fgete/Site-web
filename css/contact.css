@@ -117,6 +117,8 @@ header{
 	height: 90vh;
 
 	overflow-y: scroll;
+	scrollbar-color: rgba(68,68,68,.5) rgba(68,68,68,.1);
+	scrollbar-width: thin;
 }
 
 #rightPart h1{
@@ -139,8 +141,30 @@ header{
 	border-radius: 2vw;
 }
 
-.chapter h1, .chapter h2{
+.chapter h1, .chapter h2, .chapter h3{
 	margin-left: 1vw;
+}
+
+#Comp-Panel{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	margin: auto;
+	width: 20vw;
+}
+
+.Comp-Img{
+	width: 3vw;
+	height: 3vw;
+
+	opacity: 50%;
+	transition: .5s;
+}
+
+.Comp-Img:hover{
+	opacity: 100%;
 }
 
 footer{
@@ -168,4 +192,8 @@ footer{
 
 .network:hover{
 	opacity: 100%;
+}
+
+html{
+	scroll-behavior: smooth;
 }
