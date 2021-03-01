@@ -45,7 +45,7 @@ header{
 	align-items: center;
 
 	width: 30vw;
-	height: 70vh;
+	height: 80vh;
 }
 
 #leftPartContent h1{
@@ -112,6 +112,13 @@ header{
 	text-shadow: rgba(0, 0, 0, 1) 0px 0px 1rem;
 }
 
+.miniatureProjet{
+	height: 20vh;
+	border-radius: 1vh;
+
+	margin: auto;
+}
+
 #rightPart{
 	width: 70vw;
 	height: 90vh;
@@ -119,6 +126,8 @@ header{
 	overflow-y: scroll;
 	scrollbar-color: rgba(68,68,68,.5) rgba(68,68,68,.1);
 	scrollbar-width: thin;
+
+	scroll-behavior: smooth;
 }
 
 #rightPart h1{
@@ -167,6 +176,20 @@ header{
 	opacity: 100%;
 }
 
+.Lois-Img{
+	height: 10vh;
+}
+
+.loisirs{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 50vw;
+	margin: auto;
+}
+
 footer{
 	display: flex;
 	flex-direction: row;
@@ -192,8 +215,4 @@ footer{
 
 .network:hover{
 	opacity: 100%;
-}
-
-html{
-	scroll-behavior: smooth;
 }
