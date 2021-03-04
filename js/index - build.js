@@ -10,7 +10,7 @@ var tileCollection = [
 	["L A G", "./images/profil.jpg", "./html/contact.html", "", "Qui suis-je?"],
 	["VJing", "./images/articles/vjing.png", "./html/vjing.html", "./images/index/wallpaper_vjing.png", "Projet VJing"],
 	["A.R.M.", "./images/articles/arm.png", "./html/arm.html", "./images/index/wallpaper_arm.png", "Projet de jeu d'horreur"],
-	["Entomocene", "./images/entomocene/egout.jpg", "", "./images/index/wallpaper_virgo.png", "Projet de Rogue Like"]
+	["Entomocene", "./images/entomocene/egout.jpg", "", "./images/index/wallpaper_entomo.png", "Projet de Rogue Like"]
 ];
 
 var tileDescription = [
