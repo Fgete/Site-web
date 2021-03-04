@@ -7,9 +7,36 @@
 		<link rel="stylesheet" type="text/css" href="../css/arm.css">
 	</head>
 	<body>
-		<a href="../index.html" class="underlined">
-			<div id="backToIndex">◄ Retour accueil</div>
-		</a>
-		<div id="mainPanel">Cette page est en cours de développement. <a href="./contact.html" title="Contact" class="underlined">Contactez-moi</a> pour plus d'information.</div>
+		<header>
+			<a href="../index.html" class="underlined">
+				<div class="navigationButton">◄ Retour accueil</div>
+			</a>
+			<a href="../html/contact.html" class="underlined">
+				<div class="navigationButton">Me contacter ►</div>
+			</a>
+		</header>
+
+		<div id="mainPanel">
+			<h1 class="underlined">Projet ARM</h1>
+
+			<p class="para">Le projet ARM est un projet de développement de jeu vidéo ayant pour but de former et préparer au mieux les futures employés de la ARM. Le projet à été commencé en printemps 2020 à la demande de la █████████ ███ suite à une brèche importante dans le système de confinement de la ARM. Ce projet tient de l'accord A-SA-42.017 et se soumet aux réglementations du programme de renforcement de la sécurité extraordinaire sur le territoire Européen.</p>
+
+			<div id="armOfficial">
+				<div id="adStrip">
+					<p id="adTitle">Inscription ARM</p>
+					<div id="adCloseButton" onclick="CloseAd()">Χ</div>
+				</div>
+				<p>Dans le cas peu problable où vous arrivez sur cette page et qu'un emplois au sein de la ARM vous intéresse, veuillez suivre <a href="" target="blank" title="Inscription ARM">ce lien</a> qui vous redirigera vers notre page d'inscription.</p>
+				<img src="../images/arm/logoArm.png">
+			</div>
+			<script type="text/javascript">
+				function CloseAd(){
+					var ad = document.getElementById("armOfficial");
+					ad.remove();
+				}
+			</script>
+
+			<p></p>
+		</div>
 	</body>
 </html>

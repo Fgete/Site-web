@@ -1,37 +1,35 @@
 body{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 
 	margin: 0;
 	padding: 2vw;
 
 	font-family: arial;
-	color: rgba(68,68,68,1);
+	color: rgba(100,100,100,1);
 
 	overflow-x: hidden;
-	overflow-y: hidden;
 
 	background-image: url("../images/arm/miniatureArm.png");
+	background-size: cover;
+	background-attachment: fixed;
 }
 
-#mainPanel{
+header{
+	position: fixed;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
 
-	width: 50vw;
-	height: 50vh;
-
-	font-size: 1.2vw;
-
-	background: radial-gradient(circle, rgba(0,0,0,.9) 0%, rgba(0,0,0,.5) 15%, rgba(0,0,0,.1) 100%);
-	border-radius: 2vw;
+	width: 96%;
+	height: 2vw;
+	min-height: 20px;
 }
 
-#backToIndex{
+.navigationButton{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -47,11 +45,11 @@ body{
 	background-color: rgba(0, 0, 0, .1);
 }
 
-#backToIndex:hover{
+.navigationButton:hover{
 	background-color: rgba(0, 0, 0, .5);
 }
 
-#backToIndex a{
+.navigationButton a{
 	color: #ffaa00;
 	text-shadow: rgba(0, 0, 0, 1) 0px 0px 1rem;
 	text-decoration: none;
@@ -65,4 +63,90 @@ body{
 
 .transition{
 	transition: .5s;
+}
+
+#mainPanel{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 70%;
+
+	background-color: rgba(0, 0, 0, .2);
+	border-radius: 1vw;
+}
+
+#mainPanel h1{
+	font-size: 5em;
+}
+
+.para{
+	font-weight: bold;
+
+	margin: 1vw;
+	padding: 1vw;
+
+	border-radius: 1vw;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+#armOfficial{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: monospace;
+	font-size: 1em;
+	color: black;
+
+	width: 500px;
+
+	margin: 1vw;
+
+	border: groove 5px grey;
+	border-radius: 0;
+
+	background-color: lightgrey;
+	box-shadow: 5px 5px rgba(0, 0, 0, .3);
+}
+
+#armOfficial img{
+	width: 60px;
+	height: 50px;
+}
+
+#adCloseButton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 15px;
+	height: 15px;
+
+	background-color: grey;
+	border: groove 3px lightgrey;
+
+	cursor: pointer;
+}
+
+#adStrip{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+	height: 20px;
+	background-color: darkblue;
+
+	border-bottom: groove 5px grey;
+}
+
+#adTitle{
+	font-weight: bold;
+	color: white;
+
+	margin: 0;
+	padding: 0;
 }
