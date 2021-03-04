@@ -121,7 +121,7 @@ header{
 	margin-bottom: 5px;
 }
 
-#adCloseButton{
+#insCloseButton{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -135,7 +135,7 @@ header{
 	cursor: pointer;
 }
 
-#adStrip{
+#insStrip{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -148,7 +148,7 @@ header{
 	border-bottom: groove 5px grey;
 }
 
-#adTitle{
+#insTitle{
 	font-weight: bold;
 	color: white;
 
