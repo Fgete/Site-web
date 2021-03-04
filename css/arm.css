@@ -114,6 +114,7 @@ header{
 #armOfficial img{
 	width: 60px;
 	height: 50px;
+	margin-bottom: 5px;
 }
 
 #adCloseButton{
@@ -149,4 +150,26 @@ header{
 
 	margin: 0;
 	padding: 0;
+}
+
+h2{
+	width: 90%;
+}
+
+#protocoleList{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 100%;
+}
+
+#protocoleList img{
+	width: 30%;
+	opacity: 50%;
+}
+
+#protocoleList img:hover{
+	opacity: 100%;
 }
