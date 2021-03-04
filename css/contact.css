@@ -109,7 +109,7 @@ header{
 .underlined{
 	color: #ffaa00;
 	text-decoration: none;
-	text-shadow: rgba(0, 0, 0, 1) 0px 0px 1rem;
+	text-shadow: rgba(0, 0, 0, 1) 0px 0px .6rem;
 }
 
 .miniatureProjet{
