@@ -11,6 +11,10 @@ body{
 	color: rgba(100,100,100,1);
 
 	overflow-x: hidden;
+	scrollbar-color: rgba(68,68,68,.5) rgba(68,68,68,.1);
+	scrollbar-width: thin;
+
+	scroll-behavior: smooth;
 
 	background-image: url("../images/arm/miniatureArm.png");
 	background-size: cover;
