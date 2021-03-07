@@ -1,0 +1,47 @@
+body{
+	margin: 0;
+
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 100%;
+	height: 10vh;
+
+	padding: .5%;
+
+	background-color: lightgrey;
+	border-bottom: groove 3px darkblue;
+}
+
+#mainPanel{
+	height: 76vh;
+}
+
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 100%;
+	height: 10vh;
+
+	padding: .5%;
+
+	background-color: lightgrey;
+	border-top: groove 3px darkblue;
+}
+
+header img{
+	height: 7vh;
+
+	margin-right: 5vw;
+}
+
