@@ -1,8 +1,18 @@
 body{
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
 	margin: 0;
 
 	overflow-x: hidden;
 	overflow-y: hidden;
+
+	color: #333333;
 }
 
 header{
@@ -17,11 +27,22 @@ header{
 	padding: .5%;
 
 	background-color: lightgrey;
-	border-bottom: groove 3px darkblue;
+	border-bottom: groove 3px grey;
 }
 
-#mainPanel{
-	height: 76vh;
+.mainPanel{
+	display: flex;
+	flex-direction: column;
+
+	width: 80vw;
+	max-width: 800px;
+	height: 45vw;
+	max-height: 450px;
+
+	padding: 3%;
+
+	background-color: lightgrey;
+	border:	groove 3px grey;
 }
 
 footer{
@@ -36,12 +57,12 @@ footer{
 	padding: .5%;
 
 	background-color: lightgrey;
-	border-top: groove 3px darkblue;
+	border-top: groove 3px grey;
 }
 
 header img{
 	height: 7vh;
 
+	margin-left: 5vw;
 	margin-right: 5vw;
 }
-

@@ -5,8 +5,12 @@
 		<meta charset="utf-8"/>
 		<link id="shortcutIcon" rel="shortcut icon" type="image/x-icon" href="../images/arm/iconeArm.png"/>
 		<link rel="stylesheet" type="text/css" href="../css/arm_agency.css">
+		<link rel="stylesheet" type="text/css" href="../css/arm_inscription.css">
 	</head>
 	<body>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script type="text/javascript" src="../js/arm - inscription.js"></script>
+
 		<header>
 			<a href="./arm_access.html">
 				<img src="../images/arm/iconeArm.png">
@@ -14,8 +18,62 @@
 			<h1>Inscription</h1>
 		</header>
 		
-		<div id="mainPanel">
-			<!-- 5 slots of 5 char to complete -->
+		<div id="firstStep" class="mainPanel">
+			<!-- Wellcome give us some informations -->
+			<h1>Register</h1>
+			<p>You are insterested in having a job at ARM agency. Complete following informations requiered in order to access the inscription process :</p>
+			<form id="firstStepForm">
+				<fieldset>
+					<legend>Informations</legend>
+					<div id="commonInfo">
+						<label>Firstname</label>
+						<input type="text" id="firstnameInput" required minlength="4" maxlength="17" size="10" placeholder="John">
+						<label>Lastname</label>
+						<input type="text" id="lastnameInput" required minlength="4" maxlength="17" size="10" placeholder="Smith">
+						<label>Email address</label>
+						<input type="email" id="emailInput" required size="21" placeholder="j.smith@arm-agency.gov">
+					</div>
+					<div id="mentalInfo">
+						<label>Mental condition :</label>
+						<div>
+							<input type="radio" id="fine" name="mentalInfoRadio">
+							<label for="fine">Fine</label>
+						</div>
+						<div>
+							<input type="radio" id="stable" name="mentalInfoRadio" checked>
+							<label for="stable">Stable</label>
+						</div>
+						<div>
+							<input type="radio" id="disturbded" name="mentalInfoRadio">
+							<label for="disturbded">Disturbded</label>
+						</div>
+						<div>
+							<input type="radio" id="sick" name="mentalInfoRadio">
+							<label for="sick">Sick</label>
+						</div>
+						<div>
+							<input type="radio" id="chaotic" name="mentalInfoRadio">
+							<label for="chaotic">Chaotic</label>
+						</div>
+					</div>
+					<div id="agreement">
+						<input type="checkbox" name="agreement" required>
+						<label>I have read and agree to the terms of the <a href="../images/arm/protocole0.png" title="ARM acknowledgement of receipt of Policy" target="blank">ARM acknowledgement of receipt of Policy</a>.</label>
+					</div>
+					<input type="reset" name="reset" value="Reset">
+					<input type="button" name="submit" value="Submit" onclick="FirstStepSubmit()">
+				</fieldset>
+			</form>
+		</div>
+
+		<div id="secondStep" class="mainPanel" style="display: none">
+			<!-- Email confirmation & store info -->
+			<h1 id="wellcomeTitle">Wellcome</h1>
+			<p>An confirmation email has been sent to your email address. Please enter your confirmation code to access the inscription process :</p>
+		</div>
+
+		<div id="lastStep" class="mainPanel" style="display: none">
+			<!-- Begin the test -->
 		</div>
 
 		<footer>
