@@ -1,6 +1,7 @@
 var firstname;
 var lastname;
 var email;
+var confirmationCode;
 
 function FirstStepSubmit(){
 
@@ -21,6 +22,8 @@ function FirstStepSubmit(){
 		firstStep.style.display = "none";
 		secondStep.style.display = "flex";
 
+		confirmationCode = Math.floor(Math.random() * 1000000);
+
 		SendConfirmationMail();
 	}
 }
@@ -34,10 +37,23 @@ function SendConfirmationMail(){
 		Username : "noreply.armagency@gmail.com",
 		Password : "nraaempw",
 		To : email,
-		From : "noreply.armagency@gmail.com",
-		Subject : "test mail",
-		Body : "Hello world",
+		From : "noreply@arm-agency.gov",
+		Subject : "Confirmation mail",
+		Body : "Hello " + firstname + " " + lastname + ".<br/>This is a confirmation mail from your inscription attempt at the ARM agency.<br/>Confirmation code : " + confirmationCode,
 		}).then(
-			message => alert(message)
+			message => alert("Confimation mail sent")
 		);
+}
+
+function SecondStepSubmit(){
+	var answerCode = document.getElementById("confirmationCode").value;
+	if (answerCode == confirmationCode) {
+		console.log("Confirmation -- SUCCESSFUL");
+
+		var secondStep = document.getElementById("secondStep");
+		var lastStep = document.getElementById("lastStep");
+
+		secondStep.style.display = "none";
+		lastStep.style.display = "flex";
+	}
 }

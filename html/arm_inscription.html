@@ -68,12 +68,20 @@
 
 		<div id="secondStep" class="mainPanel" style="display: none">
 			<!-- Email confirmation & store info -->
-			<h1 id="wellcomeTitle">Wellcome</h1>
-			<p>An confirmation email has been sent to your email address. Please enter your confirmation code to access the inscription process :</p>
+			<form>
+				<h1 id="wellcomeTitle">Wellcome</h1>
+				<p>An confirmation email has been sent to your email address. Please enter your confirmation code to access the inscription process :</p>
+				<label>Code :</label>
+				<input type="text" id="confirmationCode" maxlength="6" size="6" required>
+				<input type="button" name="submit" value="Confirm" size="6" onclick="SecondStepSubmit()">
+			</form>
+			
 		</div>
 
 		<div id="lastStep" class="mainPanel" style="display: none">
 			<!-- Begin the test -->
+			<h1>Success</h1>
+			<p>Your now registered.</p>
 		</div>
 
 		<footer>
