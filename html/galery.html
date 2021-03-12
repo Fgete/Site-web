@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>L A G - Galerie</title>
+		<meta charset="utf-8"/>
+		<link id="shortcutIcon" rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+		<link rel="stylesheet" type="text/css" href="../css/galery.css">
+	</head>
+	<body>
+
+		<header>
+			<a href="../index.html" class="underlined">
+				<div class="navigationButton">◄ Retour accueil</div>
+			</a>
+
+			<div id="showPanel">
+				<div id="showAction">
+					<div id="showClose" class="transition" onclick="ShowClose()">X</div>
+				</div>
+				<img id="showImg" src="../images/galery/sf0.png">
+			</div>
+
+			<a href="../html/contact.html" class="underlined">
+				<div class="navigationButton">Me contacter ►</div>
+			</a>
+
+			<script type="text/javascript">
+				var show = document.getElementById("showPanel");
+				var img = document.getElementById("showImg");
+
+				function ShowImg(src){
+					show.style.display = "flex";
+					img.src = src;
+				}
+
+				function ShowClose(){
+					show.style.display = "none";
+				}
+			</script>
+
+		</header>
+
+		<div id="mainPanel">
+			<h1 class="underlined">Galerie</h1>
+
+			<div class="para">Bienvenue dans la galerie. Ici, vous retrouverez mes créations ne se trouvant pas dans une page dédiée. Bon visionnage...</div>
+
+			<div class="para">
+				<h2 class="underlined">Modélisation 3D</h2>
+				<p>J'utilise Blender depuis des années. C'est, à mes yeux, le couteau suisse de la 3D. Voici quelques visuels de 2017-2018 :</p>
+				
+				<div class="imgColumn">
+					<div class="imgRow">
+						<img src="../images/galery/sf0.png" class="transition" onclick="ShowImg('../images/galery/sf0.png')">
+						<img src="../images/galery/sf1.png" class="transition" onclick="ShowImg('../images/galery/sf1.png')">
+						<img src="../images/galery/sf2.png" class="transition" onclick="ShowImg('../images/galery/sf2.png')">
+					</div>
+					<div class="imgRow">
+						<img src="../images/galery/exp0.png" class="transition" onclick="ShowImg('../images/galery/exp0.png')">
+						<img src="../images/galery/exp1.png" class="transition" onclick="ShowImg('../images/galery/exp1.png')">
+						<img src="../images/galery/exp2.jpg" class="transition" onclick="ShowImg('../images/galery/exp2.jpg')">
+					</div>
+					<div class="imgRow">
+						<img src="../images/galery/red0.jpg" class="transition" onclick="ShowImg('../images/galery/red0.jpg')">
+						<img src="../images/galery/red1.png" class="transition" onclick="ShowImg('../images/galery/red1.png')">
+						<img src="../images/galery/red2.png" class="transition" onclick="ShowImg('../images/galery/red2.png')">
+					</div>
+				</div>
+
+				<p>Plus tard, j'ai ouvert un compte <a href="https://www.instagram.com/wargh_lag/" title="Instagram" target="blank" class="underlined">Instagram</a> afin de publier mes créations. Au fur et à mesure, mon travail s'est amélioré :</p>
+
+				<div class="imgColumn">
+					<div class="imgRow">
+						<img src="../images/galery/insta0.png" class="transition" onclick="ShowImg('../images/galery/insta0.png')">
+						<img src="../images/galery/insta2.png" class="transition" onclick="ShowImg('../images/galery/insta2.png')">
+					</div>
+					<div class="imgRow">
+						<img src="../images/galery/insta3.png" class="transition" onclick="ShowImg('../images/galery/insta3.png')">
+						<img src="../images/galery/insta4.png" class="transition" onclick="ShowImg('../images/galery/insta4.png')">
+					</div>
+					<div class="imgRow">
+						<img src="../images/galery/insta5.png" class="transition" onclick="ShowImg('../images/galery/insta5.png')">
+					</div>
+				</div>
+
+				<p>Je vous invite à visiter mon <a href="https://www.instagram.com/wargh_lag/" title="Instagram" target="blank" class="underlined">Instagram</a> pour voir l'entièreté de mon contenu.</p>
+
+				<video controls loop>
+
+				    <source src="../videos/instaVideo0.mp4"
+				            type="video/mp4">
+
+				    Sorry, your browser doesn't support embedded videos.
+				</video>
+
+			</div>
+
+			<div class="para">
+				<h2 class="underlined">Jeux Vidéos</h2>
+				<p>Dans mes études, on nous demande de réaliser beaucoup de projets de jeux. Ces projets sont souvent dans le but d'apprendre ou d'appliquer de nouvelles connaissances. A suivre...</p>
+			</div>
+
+		</div>
+	</body>
+</html>

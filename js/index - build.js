@@ -8,6 +8,7 @@
 
 var tileCollection = [
 	["L A G", "./images/profil.jpg", "./html/contact.html", "", "Qui suis-je?"],
+	["Galerie", "./images/articles/galerie.png", "./html/galery.html", "", "J'etez-y un œil."],
 	["VJing", "./images/articles/vjing.png", "./html/vjing.html", "./images/index/wallpaper_vjing.png", "Projet VJing"],
 	["A.R.M.", "./images/articles/arm.png", "./html/arm.html", "./images/index/wallpaper_arm.png", "Projet de jeu d'horreur"],
 	["Entomocene", "./images/entomocene/egout.jpg", "", "./images/index/wallpaper_entomo.png", "Projet de Rogue Like"]
@@ -15,6 +16,7 @@ var tileCollection = [
 
 var tileDescription = [
 	["Bienvenue! Je m'appelle François GETE et je suis étudiant dans le jeu vidéo à <a href='https://ludus-academie.fr/' target='blank'>Ludus Académie</a>. Vous trouverez sur ce site mes différentes créations. Je vous invite donc à l'<span class='game' onclick='BeginGame()'>explorer</span>."],
+	["Par ce lien, vous trouverez une galerie dans laquelle j'y mets mes créations qui ne sont pas présenté dans un article."],
 	["Le 'projet VJing' est un projet audio-visuel ayant pour but de lier le son et l'image dans une performance live. La particularité de celui-ci, est l'utilisation du son au service de la 3D."],
 	["Dans ce jeu, vous entrez dans la peau d'un employé de la ARM. Cette entreprise à pour but de répertorier et de classifier les objets considérés comme anormaux."],
 	["Le <span class='game'>Site</span> n'est pas terminé pour le moment, veuillez nous en excuser."]

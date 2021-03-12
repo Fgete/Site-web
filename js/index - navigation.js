@@ -37,12 +37,14 @@ faders = document.getElementsByClassName("background");
 // Read wheel inputs
 document.addEventListener('wheel', function(wheel){
     // Set index
-    if(wheel.deltaY > 0 && isSelected == 0) {
+    if(wheel.deltaY > 0) {
+        isSelected = 0;
         if (index < faders.length + 1)
         	index++;
         AudioTic();
     }
     if(wheel.deltaY < 0 && isSelected == 0) {
+        isSelected = 0;
         if (index > 1)
         	index--;
         AudioTic();
@@ -58,17 +60,20 @@ document.addEventListener('wheel', function(wheel){
     tiles = document.getElementsByClassName("tile");
 
     TilePosition();
+    Description();
 });
 
 // read keyboard inputs
 document.addEventListener('keydown', function(event){
     // Set index
-    if(event.key == "ArrowDown" && isSelected == 0) {
+    if(event.key == "ArrowDown") {
+        isSelected = 0;
         if (index < faders.length + 1)
         	index++;
         AudioTic();
     }
-    if(event.key == "ArrowUp" && isSelected == 0) {
+    if(event.key == "ArrowUp") {
+        isSelected = 0;
         if (index > 1)
         	index--;
         AudioTic();
@@ -87,6 +92,7 @@ document.addEventListener('keydown', function(event){
     tiles = document.getElementsByClassName("tile");
 
     TilePosition();
+    Description();
 });
 
 // Play "tic" sound when scrolling
