@@ -43,7 +43,7 @@ document.addEventListener('wheel', function(wheel){
         	index++;
         AudioTic();
     }
-    if(wheel.deltaY < 0 && isSelected == 0) {
+    if(wheel.deltaY < 0) {
         isSelected = 0;
         if (index > 1)
         	index--;
