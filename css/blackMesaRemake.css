@@ -98,3 +98,26 @@ header{
 h2{
 	width: 90%;
 }
+
+.imgAlone{
+	width: 50%;
+	margin-left: 25%;
+}
+
+.imgList{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 90%;
+}
+
+.imgList img{
+	width: 40%;
+}
+
+.soundList{
+	display: flex;
+	flex-direction: column;
+}

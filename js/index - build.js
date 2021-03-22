@@ -11,6 +11,7 @@ var tileCollection = [
 	["Galerie", "./images/articles/galerie.png", "./html/galery.html", "", "J'etez-y un œil."],
 	["VJing", "./images/articles/vjing.png", "./html/vjing.html", "./images/index/wallpaper_vjing.png", "Projet VJing"],
 	["A.R.M.", "./images/articles/arm.png", "./html/arm.html", "./images/index/wallpaper_arm.png", "Projet de jeu d'horreur"],
+	["B.M. Remake", "./images/articles/BMRemake.png", "./html/blackMesaRemake.html", "./images/index/wallpaper_entomo.png", "Remake d'un Demake"],
 	["Entomocene", "./images/articles/egout.png", "", "./images/index/wallpaper_entomo.png", "Projet de Rogue Like"]
 ];
 
@@ -19,6 +20,7 @@ var tileDescription = [
 	["Par ce lien, vous trouverez une galerie dans laquelle j'y mets mes créations qui ne sont pas présenté dans un article."],
 	["Le 'projet VJing' est un projet audio-visuel ayant pour but de lier le son et l'image dans une performance live. La particularité de celui-ci, est l'utilisation du son au service de la 3D."],
 	["Dans ce jeu, vous entrez dans la peau d'un employé de la ARM. Cette entreprise à pour but de répertorier et de classifier les objets considérés comme anormaux."],
+	["Il s'agit d'un exercice où nous avons fait un remake du jeu Black Mesa. Vous y trouverez toute les techniques utilisés lors de sa création."],
 	["Le <span class='game'>Site</span> n'est pas terminé pour le moment, veuillez nous en excuser."]
 ];
 
