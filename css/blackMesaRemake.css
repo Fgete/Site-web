@@ -8,7 +8,7 @@ body{
 	padding: 2vw;
 
 	font-family: arial;
-	color: rgba(100,100,100,1);
+	color: rgba(150,150,150,1);
 
 	overflow-x: hidden;
 	scrollbar-color: rgba(68,68,68,.5) rgba(68,68,68,.1);
@@ -92,7 +92,7 @@ header{
 	padding: 1vw;
 
 	border-radius: 1vw;
-	background-color: rgba(0, 0, 0, .3);
+	background-color: rgba(50, 50, 50, 1);
 }
 
 h2{
