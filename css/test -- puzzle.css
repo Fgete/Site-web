@@ -1,0 +1,244 @@
+body{
+	margin: 0;
+	padding: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#UI{
+	position: absolute;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100vw;
+	height: 100vh;
+
+	pointer-events: none;
+}
+
+.transition{
+	transition: .5s;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 10vh;
+
+	font-size: 3em;
+	color: white;
+	text-shadow: 0px 0px 30px rgba(150, 150, 150, 1);
+
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* --- USER PANEL --- */
+
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 100vw;
+	height: 15vh;
+
+	background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+
+	pointer-events: all;
+}
+
+/* --- BUTTON --- */
+
+.shadowButton{
+	box-shadow: 0px 0px 50px rgba(200, 200, 200, 1);
+}
+
+.circleButton{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	width: 8vh;
+	height: 8vh;
+
+	border-radius: 50%;
+
+	box-shadow: 0px 0px 20px rgba(150, 150, 150, 1);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(220, 220, 220, 1) 100%);
+
+	cursor: pointer;
+}
+
+.circleButton div{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	width: 7vh;
+	height: 7vh;
+
+	border-radius: 50%;
+
+	background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(220, 220, 220, 1) 100%);
+}
+
+.buttonText{
+	color: rgba(200, 200, 200, 1);
+	font-size: 3vh;
+}
+
+.buttonText:hover{
+	color: darkorange;
+}
+
+/* --- GAME PANEL --- */
+
+#gamePanel{
+	position: absolute;
+	
+	width: 100vw;
+	height: 100vh;
+
+	perspective: 800px;
+
+	background: linear-gradient(0deg, rgba(205,205,205,1) 20%, rgba(166,189,212,1) 47%, rgba(185,219,255,1) 53%, rgba(255,255,255,1) 100%);
+}
+
+/* --- 3D --- */
+
+#origin{
+	left: 50vw;
+	top: 50vh;
+}
+
+.perspective{
+	position: absolute;
+	backface-visibility: visible;
+	transform-style: preserve-3d;
+	perspective-origin: 100% 100%;
+}
+
+/* --- CUBE --- */
+
+.cubeCenter{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	pointer-events: none;
+}
+
+.cubeFace{
+	position: absolute;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100px;
+	height: 100px;
+
+	color: rgba(100, 100, 100, 0);
+	background-color: rgba(100, 100, 100, 0);
+	box-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
+}
+
+#cubeFaceTop{
+	transform: translateY(-50px) rotateX(90deg);
+}
+
+#cubeFaceBottom{
+	transform: translateY(50px) rotateX(-90deg);
+}
+
+#cubeFaceLeft{
+	transform: translateX(-50px) rotateY(-90deg);
+}
+
+#cubeFaceRight{
+	transform: translateX(50px) rotateY(90deg);
+}
+
+#cubeFaceFront{
+	transform: translateZ(50px);
+}
+
+#cubeFaceBack{
+	transform: translateZ(-50px);
+}
+
+/* --- GROUND --- */
+
+#ground{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 500px;
+	height: 500px;
+
+	top: -250px;
+	left: -250px;
+
+	transform: translateY(250px) rotateX(90deg) rotateZ(-45deg);
+
+	border-radius: 20px;
+	border: solid 5px rgba(252,176,69,1);
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+}
+
+#ground div{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 100%;
+}
+
+#ground div div{
+	width: 100px;
+	height: 100px;
+
+	border-radius: 10px;
+	border: solid 5px rgba(252,176,69,1);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+
+	cursor: pointer;
+}
+
+#ground div div:hover{
+	background-color: rgba(255, 255, 255, .5);
+}
+
+/* --- BALL --- */
+
+#ball{
+	width: 50px;
+	height: 50px;
+
+	top: -25px;
+	left: -25px;
+
+	border-radius: 50%;
+	background: radial-gradient(circle at 10px 10px, #ffffff 0%, rgba(185,219,255,1) 50%, rgba(160,180,190,1) 100%);
+	cursor: pointer;
+}

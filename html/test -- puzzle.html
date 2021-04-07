@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>test -- puzzle</title>
+		<meta charset="utf-8"/>
+		<link id="shortcutIcon" rel="shortcut icon" type="image/x-icon" href="../images/"/>
+		<link rel="stylesheet" type="text/css" href="../css/test -- puzzle.css">
+	</head>
+	<body>
+		<!-- GAME SCREEN -->
+		<div id="gamePanel">
+
+			<div id="origin" class="perspective">
+
+				<div id="ground" class="perspective">
+					<div>
+						<div class="transition"></div>
+						<div class="transition"></div>
+						<div class="transition"></div>
+					</div>
+					<div>
+						<div class="transition"></div>
+						<div class="transition"></div>
+						<div class="transition"></div>
+					</div>
+					<div>
+						<div class="transition"></div>
+						<div class="transition"></div>
+						<div class="transition"></div>
+					</div>
+				</div>
+
+				<div id="ball" class="perspective"></div>
+
+				<div id="cube1" class="cubeCenter perspective">
+					<div id="cubeFaceTop" class="cubeFace">TOP</div>
+					<div id="cubeFaceBottom" class="cubeFace">BOTTOM</div>
+					<div id="cubeFaceLeft" class="cubeFace">LEFT</div>
+					<div id="cubeFaceRight" class="cubeFace">RIGHT</div>
+					<div id="cubeFaceFront" class="cubeFace">FRONT</div>
+					<div id="cubeFaceBack" class="cubeFace">BACK</div>
+				</div>
+
+			</div>
+			
+
+		</div>
+
+		<!-- USER INTERFACE -->
+		<div id="UI">
+			<header>
+				<h1>Puzzle</h1>
+			</header>
+
+			<footer>
+				<div id="bLeft" class="shadowButton circleButton">
+					<div class="buttonText transition">◄</div>
+				</div>
+				<div id="bEnter" class="shadowButton circleButton">
+					<div class="buttonText transition">●</div>
+				</div>
+				<div id="bRight" class="shadowButton circleButton">
+					<div class="buttonText transition">►</div>
+				</div>
+			</footer>
+		</div>
+		
+		<script type="text/javascript" src="../js/test -- puzzle.js"></script>
+
+	</body>
+</html>
