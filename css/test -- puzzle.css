@@ -1,3 +1,7 @@
+:root{
+	--groundWidth: 750px;
+}
+
 body{
 	margin: 0;
 	padding: 0;
@@ -113,7 +117,7 @@ footer{
 	width: 100vw;
 	height: 100vh;
 
-	perspective: 800px;
+	perspective: 1000px;
 
 	background: linear-gradient(0deg, rgba(205,205,205,1) 20%, rgba(166,189,212,1) 47%, rgba(185,219,255,1) 53%, rgba(255,255,255,1) 100%);
 }
@@ -123,13 +127,18 @@ footer{
 #origin{
 	left: 50vw;
 	top: 50vh;
+
+	transform: translateZ(-100px) rotateX(-70deg);
 }
 
 .perspective{
-	position: absolute;
 	backface-visibility: visible;
 	transform-style: preserve-3d;
 	perspective-origin: 100% 100%;
+}
+
+.absolute{
+	position: absolute;
 }
 
 /* --- CUBE --- */
@@ -151,36 +160,37 @@ footer{
 	justify-content: center;
 	align-items: center;
 
-	width: 100px;
-	height: 100px;
+	width: calc(var(--groundWidth)/3);
+	height: calc(var(--groundWidth)/3);
 
 	color: rgba(100, 100, 100, 0);
 	background-color: rgba(100, 100, 100, 0);
-	box-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 50px rgba(255, 255, 255, 0);
+	border: dashed 3px rgba(252,176,69,1);
 }
 
-#cubeFaceTop{
-	transform: translateY(-50px) rotateX(90deg);
+.cubeFaceTop{
+	transform: translateY(calc(var(--groundWidth)/-6)) rotateX(90deg);
 }
 
-#cubeFaceBottom{
-	transform: translateY(50px) rotateX(-90deg);
+.cubeFaceBottom{
+	transform: translateY(calc(var(--groundWidth)/6)) rotateX(-90deg);
 }
 
-#cubeFaceLeft{
-	transform: translateX(-50px) rotateY(-90deg);
+.cubeFaceLeft{
+	transform: translateX(calc(var(--groundWidth)/-6)) rotateY(-90deg);
 }
 
-#cubeFaceRight{
-	transform: translateX(50px) rotateY(90deg);
+.cubeFaceRight{
+	transform: translateX(calc(var(--groundWidth)/6)) rotateY(90deg);
 }
 
-#cubeFaceFront{
-	transform: translateZ(50px);
+.cubeFaceFront{
+	transform: translateZ(calc(var(--groundWidth)/-6));
 }
 
-#cubeFaceBack{
-	transform: translateZ(-50px);
+.cubeFaceBack{
+	transform: translateZ(calc(var(--groundWidth)/6));
 }
 
 /* --- GROUND --- */
@@ -191,16 +201,15 @@ footer{
 	justify-content: space-around;
 	align-items: center;
 
-	width: 500px;
-	height: 500px;
+	width: var(--groundWidth);
+	height: var(--groundWidth);
 
-	top: -250px;
-	left: -250px;
+	top: calc(var(--groundWidth)/-2);
+	left: calc(var(--groundWidth)/-2);
 
-	transform: translateY(250px) rotateX(90deg) rotateZ(-45deg);
+	transform: rotateX(90deg) rotateZ(-90deg);
 
 	border-radius: 20px;
-	border: solid 5px rgba(252,176,69,1);
 	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
 }
@@ -215,11 +224,10 @@ footer{
 }
 
 #ground div div{
-	width: 100px;
-	height: 100px;
+	width: calc(var(--groundWidth)/3);
+	height: calc(var(--groundWidth)/3);
 
-	border-radius: 10px;
-	border: solid 5px rgba(252,176,69,1);
+	border-radius: 20px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
 
 	cursor: pointer;
@@ -227,18 +235,15 @@ footer{
 
 #ground div div:hover{
 	background-color: rgba(255, 255, 255, .5);
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
 }
 
-/* --- BALL --- */
+/* --- ELEMENTS --- */
 
-#ball{
-	width: 50px;
-	height: 50px;
+#cube0{
+	--posX: 0;
+	--posY: calc(var(--groundWidth)/-6);
+	--posZ: 0;
 
-	top: -25px;
-	left: -25px;
-
-	border-radius: 50%;
-	background: radial-gradient(circle at 10px 10px, #ffffff 0%, rgba(185,219,255,1) 50%, rgba(160,180,190,1) 100%);
-	cursor: pointer;
+	transform: translate3d(var(--posX), var(--posY), var(--posZ));
 }

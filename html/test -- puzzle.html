@@ -10,39 +10,36 @@
 		<!-- GAME SCREEN -->
 		<div id="gamePanel">
 
-			<div id="origin" class="perspective">
+			<div id="origin" class="perspective absolute">
 
-				<div id="ground" class="perspective">
+				<div id="ground" class="absolute">
 					<div>
-						<div class="transition"></div>
-						<div class="transition"></div>
-						<div class="transition"></div>
+						<div class="transition" onclick="SetCubeAt('calc(var(--groundWidth)/-3)', 'calc(var(--groundWidth)/3)')"></div>
+						<div class="transition" onclick="SetCubeAt('calc(var(--groundWidth)/-3)', '0')"></div>
+						<div class="transition" onclick="SetCubeAt('calc(var(--groundWidth)/-3)', 'calc(var(--groundWidth)/-3)')"></div>
 					</div>
 					<div>
-						<div class="transition"></div>
-						<div class="transition"></div>
-						<div class="transition"></div>
+						<div class="transition" onclick="SetCubeAt('0', 'calc(var(--groundWidth)/3)')"></div>
+						<div class="transition" onclick="SetCubeAt('0', '0')"></div>
+						<div class="transition" onclick="SetCubeAt('0', 'calc(var(--groundWidth)/-3)')"></div>
 					</div>
 					<div>
-						<div class="transition"></div>
-						<div class="transition"></div>
-						<div class="transition"></div>
+						<div class="transition" onclick="SetCubeAt('calc(var(--groundWidth)/3)', 'calc(var(--groundWidth)/3)')"></div>
+						<div class="transition" onclick="SetCubeAt('calc(var(--groundWidth)/3)', '0')"></div>
+						<div class="transition" onclick="SetCubeAt('calc(var(--groundWidth)/3)', 'calc(var(--groundWidth)/-3)')"></div>
 					</div>
 				</div>
 
-				<div id="ball" class="perspective"></div>
-
-				<div id="cube1" class="cubeCenter perspective">
-					<div id="cubeFaceTop" class="cubeFace">TOP</div>
-					<div id="cubeFaceBottom" class="cubeFace">BOTTOM</div>
-					<div id="cubeFaceLeft" class="cubeFace">LEFT</div>
-					<div id="cubeFaceRight" class="cubeFace">RIGHT</div>
-					<div id="cubeFaceFront" class="cubeFace">FRONT</div>
-					<div id="cubeFaceBack" class="cubeFace">BACK</div>
+				<div id="cube0" class="cubeCenter perspective absolute">
+					<div class="cubeFace cubeFaceTop">TOP</div>
+					<div class="cubeFace cubeFaceBottom">BOTTOM</div>
+					<div class="cubeFace cubeFaceLeft">LEFT</div>
+					<div class="cubeFace cubeFaceRight">RIGHT</div>
+					<div class="cubeFace cubeFaceFront">FRONT</div>
+					<div class="cubeFace cubeFaceBack">BACK</div>
 				</div>
 
 			</div>
-			
 
 		</div>
 
