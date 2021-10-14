@@ -1,0 +1,12 @@
+body{
+	width: 50vw;
+	height: 50vh;
+
+	overflow: hidden;
+    margin: 0;
+
+    background-color: green;
+    border: dashed 5px red;
+
+    color: red
+}
