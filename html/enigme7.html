@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="./default.css">
 
 <body>
-	<h1>50%</h1>
+	<h1 id="debug">50%</h1>
 </body>
 
 <script>
@@ -12,5 +12,7 @@
 		console.log(reponse);
         window.location.href = "uniwebview://feedback?anwser=" + reponse;
     }
+
+    document.getElementById("debug").innerHTML = screen.width + " " + screen.height;
 
 </script>
