@@ -4,13 +4,56 @@
 		<title>L A G - Index</title>
 		<meta charset="utf-8"/>
 		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
-		<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<link rel="stylesheet" type="text/css" href="./css/default.css">
+		<link rel="stylesheet" type="text/css" href="./css/spinner.css">
 	</head>
-	<body onload="TilePosition(1), LoadingScreen(), BuildContact('./html/contact.html', './css/contactLink.css')">
-		<script type="text/javascript" src="./js/index - contact.js"> // --- CONTACT --- </script>
-		<script type="text/javascript" src="./js/index - loading.js"> // --- LOADING SCREEN --- </script>
-		<script type="text/javascript" src="./js/index - navigation.js"> // --- INDEX NAVIGATION --- </script>
-		<script type="text/javascript" src="./js/index - game.js"> // --- GAME --- </script>
-		<script type="text/javascript" src="./js/index - build.js"> // --- BUILDING --- </script>
+
+	<script type="text/javascript" src="./js/spinner.js"></script>
+
+	<body class="flex_column" onload="SetTilesPosition(index)">
+		<header class="flex_row justify_start">
+			<img src="./images/logo_white.png">
+			<a href="#"><div class="width_150p height_50p flex_row justify_around">Accueil</div></a>
+			<a href="./html/galery.html"><div class="width_150p height_50p flex_row justify_around">Galerie</div></a>
+			<a href="#"><div class="width_150p height_50p flex_row justify_around">Projets</div></a>
+			<a href="./html/contact.html"><div class="width_150p height_50p flex_row justify_around">Me contacter</div></a>
+		</header>
+
+		<div id="spinnerContainer" class="width_full height_full flex_column justify_around">
+			<div id="spinnerOrigin">
+				<div class="tileOrigin"><div class="tile">
+					<h3>L A G</h3>
+					<h5>Qui se cache derrière ce drôle de logo ?</h5>
+					<a href="./html/contact.html">En savoir plus ►</a>
+				</div></div>
+				<div class="tileOrigin"><div class="tile">
+					<h3>Galerie 3D</h3>
+					<h5>Découvrez mes créations !</h5>
+					<a href="./html/galery.html">En savoir plus ►</a>
+				</div></div>
+				<div class="tileOrigin"><div class="tile">
+					<h3>VJing</h3>
+					<h5>Modéliser avec du son en temps réel.</h5>
+					<a href="./html/vjing.html">En savoir plus ►</a>
+				</div></div>
+				<div class="tileOrigin"><div class="tile">
+					<h3>A.R.M.</h3>
+					<h5>Jeu d'horreur dans l'univers de SCP.</h5>
+					<a href="./html/arm.html">En savoir plus ►</a>
+				</div></div>
+				<div class="tileOrigin"><div class="tile">
+					<h3>B.M. Remake</h3>
+					<h5>Exercice : Refaire Half Life 1</h5>
+					<a href="./html/blackMesaRemake.html">En savoir plus ►</a>
+				</div></div>
+				<div class="tileOrigin"><div class="tile">
+					<h3>Entomocene</h3>
+					<h5>The Insect Age</h5>
+					<a href="#">En savoir plus ►</a>
+				</div></div>
+			</div>
+		</div>
+
+		<footer></footer>
 	</body>
 </html>
