@@ -32,7 +32,7 @@ header           {
     position: fixed;
     transition: .5s;
     padding: 0 5vw 0 5vw;
-    background-color: var(--color_GreyAlpha);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 50%);
 }
 
 header img       { height: 50px; mix-blend-mode: multiply; }
@@ -43,13 +43,25 @@ header a div     {
 header a div:hover {
     background-color: var(--color_Main);
     color: var(--color_Grey);
-    border-bottom-left-radius: 10px;
 }
 
+#panelContainer  { perspective: 800px; position: absolute; right: 0; }
 .panel           {
-    box-shadow: 0 0 50px #0005;
-    border-radius: 15px;
-    background: radial-gradient(circle, var(--color_LighterGrey) 0%, var(--color_LightGrey) 69%, var(--color_Grey) 100%);
+    position: absolute;
+    right: -50vw;
+    bottom: 8vh;
+    padding: 0 2vw 0 2vw;
+    transform: rotateY(-15deg) rotateX(3deg);
+    border-bottom-right-radius: 40px;
+    border-right: solid 3px var(--color_Main);
+    background-color: var(--color_GreyAlpha);
+    transition: .5s;
+}
+.innerPanel      {
+    padding-left: 2vw;
+    border-bottom-right-radius: 40px;
+    border-right: solid 3px var(--color_Main);
+    background-color: var(--color_GreyAlpha);
 }
 .border_top      { border-top: solid 3px var(--color_Main); }
 .border_bottom   { border-bottom: solid 3px var(--color_Main); }
@@ -107,6 +119,7 @@ header a div:hover {
 .width_100       { width: 100%;   }
 .width_100p      { width: 100px;  }
 .width_90        { width: 90%;    }
+.width_80        { width: 80%;    }
 .width_70        { width: 70%;    }
 .width_50        { width: 50%;    }
 .width_40        { width: 40%;    }
@@ -120,6 +133,7 @@ header a div:hover {
 .height_120      { height: 120%;  }
 .height_100      { height: 100%;  }
 .height_80       { height: 80%;   }
+.height_70       { height: 70%;   }
 .height_50p      { height: 50px;  }
 .height_40       { height: 40%;   }
 .height_10       { height: 10%;   }
@@ -132,12 +146,16 @@ header a div:hover {
 .margin_1        { margin: 1vw;   }
 .margin_05       { margin: .5vw;  }
 
-a                { text-decoration: none; }
-h1, h2, h3       { height: 0; color: var(--color_Main); }
+a                { text-decoration: none; color: var(--color_Main); }
+h1, h2, h3       { color: var(--color_Main); }
 h1               { font-size: 2.5em; }
 h2               { font-size: 2em;   }
 h3               { font-size: 1.7em; }
 label            { width: 100%; margin-top: 1vw; color: var(--color_Main); }
+.headerWhite     { color: var(--color_White); }
+.paddingLeft     { padding-left: 2vw; }
+.positionBottomRight { position: absolute; bottom: 2vw; right: 2vw; }
+.fSize2          { font-size: 2em; }
 
 input[type=text],
 input[type=password],

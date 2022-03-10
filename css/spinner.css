@@ -19,14 +19,40 @@
     border-bottom-left-radius: 20px;
 }
 
-.tile a           {
+.tile a, .panel a {
     color: var(--color_Main);
     text-decoration: none;
     margin-left: 25px;
     transition: .5s;
 }
 
-.tile a:hover     {
+.tile img         {
+    height: 30px;
+    margin-left: calc(50% - 15px);
+    filter: invert(100%);
+    opacity: 80%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.tile img:hover   {
+    filter: invert(100%) drop-shadow(0 0 5px var(--color_Main));
+    opacity: 100%;
+}
+
+a:hover           {
     color: var(--color_Grey);
     background-color: var(--color_Main);
+}
+
+.panel            {
+    background-image: url("../images/logo_white.png");
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+    background-position: top right;
+    background-blend-mode: multiply;
+}
+
+.panel img        {
+    width: 50%;
 }

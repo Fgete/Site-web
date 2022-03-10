@@ -1,7 +1,8 @@
 // --- TILE INDEX ---
 let index = 0;
+let selected = false;
 
-// --- TILE TRANSFORM SETTER ---
+// --- TILE TRANSFORM SETTER & PANEL UPDATE ---
 function SetTilesPosition(n){
     const positions = [
         [0, 1, 2, 3, 4, 5],
@@ -40,13 +41,14 @@ function SetTilesPosition(n){
     const tileOpacities = ["100%", "80%", "60%", "40%", "20%", "10%"];
     for (let i = 0; i < tileOrigins.length; i++){
         tileOrigins[i].style.transform = tileOriginTransforms[positions[n][i]];
+        tileOrigins[i].style.zIndex    = 6-positions[n][i];
         tiles[i].style.transform       = tileTransforms[positions[n][i]];
         tiles[i].style.opacity         = tileOpacities[positions[n][i]];
         tiles[i].style.borderLeft      = "none";
-        tileOrigins[i].style.zIndex    = 6-positions[n][i];
         tiles[i].style.filter          = tileBlurs[positions[n][i]];
     }
     tiles[n].style.borderLeft          = "solid 2px var(--color_Main)";
+    PanelsUpdate();
 }
 
 // --- INDEX CHANGER ---
@@ -64,11 +66,44 @@ function ChangeIndex(n){
 window.addEventListener("wheel", event => {
     const delta = Math.sign(event.deltaY);
     ChangeIndex(delta);
+    SetSelected(false);
 });
 
 document.addEventListener('keydown', function(event) {
-    if (event.key === "ArrowDown")
+    if (event.key === "ArrowDown"){
         ChangeIndex(-1);
-    if (event.key === "ArrowUp")
+        SetSelected(false);
+    }
+    if (event.key === "ArrowUp"){
         ChangeIndex(1);
+        SetSelected(false);
+    }
+    if (event.key === "ArrowRight" || event.key === "ArrowLeft")
+        ToggleSelected();
 });
+
+// --- UPDATE PANELS POSITIONS ---
+function PanelsUpdate() {
+    let panels = document.getElementsByClassName("panel");
+
+    // Default positions
+    for (let i = 0; i < panels.length; i++)
+        panels[i].style.right = "-50vw";
+
+    // Set current panel position
+    if (selected)
+        panels[index].style.right = "5vw";
+    else
+        panels[index].style.right = "-50vw";
+}
+
+// --- TOGGLE SELECTED AND UPDATE PANELS POSITIONS ---
+function ToggleSelected() {
+    selected = !selected;
+    PanelsUpdate();
+}
+
+function SetSelected(newSelected){
+    selected = newSelected;
+    PanelsUpdate();
+}
