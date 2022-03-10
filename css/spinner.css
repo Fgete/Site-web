@@ -45,14 +45,31 @@ a:hover           {
     background-color: var(--color_Main);
 }
 
-.panel            {
+#panelContainer  { perspective: 800px; position: absolute; right: 0; }
+.panel           {
+    position: absolute;
+    right: -50vw;
+    bottom: 15vh;
+    padding: 0 2vw 0 2vw;
+    transform: rotateY(-15deg) rotateX(3deg);
+    border-bottom-right-radius: 40px;
+    border-right: solid 3px var(--color_Main);
+    background-color: var(--color_GreyAlpha);
     background-image: url("../images/logo_white.png");
     background-repeat: no-repeat;
     background-size: 400px 400px;
     background-position: top right;
     background-blend-mode: multiply;
+    transition: .5s;
 }
 
 .panel img        {
     width: 50%;
+}
+
+.innerPanel      {
+    padding-left: 2vw;
+    border-bottom-right-radius: 40px;
+    border-right: solid 3px var(--color_Main);
+    background-color: var(--color_GreyAlpha);
 }

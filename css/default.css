@@ -45,24 +45,6 @@ header a div:hover {
     color: var(--color_Grey);
 }
 
-#panelContainer  { perspective: 800px; position: absolute; right: 0; }
-.panel           {
-    position: absolute;
-    right: -50vw;
-    bottom: 8vh;
-    padding: 0 2vw 0 2vw;
-    transform: rotateY(-15deg) rotateX(3deg);
-    border-bottom-right-radius: 40px;
-    border-right: solid 3px var(--color_Main);
-    background-color: var(--color_GreyAlpha);
-    transition: .5s;
-}
-.innerPanel      {
-    padding-left: 2vw;
-    border-bottom-right-radius: 40px;
-    border-right: solid 3px var(--color_Main);
-    background-color: var(--color_GreyAlpha);
-}
 .border_top      { border-top: solid 3px var(--color_Main); }
 .border_bottom   { border-bottom: solid 3px var(--color_Main); }
 .network         {
