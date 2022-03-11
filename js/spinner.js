@@ -78,7 +78,7 @@ document.addEventListener('keydown', function(event) {
         ChangeIndex(1);
         SetSelected(false);
     }
-    if (event.key === "ArrowRight" || event.key === "ArrowLeft")
+    if (event.key === "ArrowRight" || event.key === "ArrowLeft" || event.key === "Enter")
         ToggleSelected();
 });
 
@@ -95,6 +95,18 @@ function PanelsUpdate() {
         panels[index].style.right = "5vw";
     else
         panels[index].style.right = "-50vw";
+
+    // Update spinner position
+    SpinnerUpdate();
+}
+
+// --- UPDATE SPINNER POSITION ---
+function SpinnerUpdate() {
+    let spinner = document.getElementById("spinnerOrigin");
+    if (selected)
+        spinner.style.left = "0";
+    else
+        spinner.style.left = "50vw";
 }
 
 // --- TOGGLE SELECTED AND UPDATE PANELS POSITIONS ---
@@ -103,6 +115,7 @@ function ToggleSelected() {
     PanelsUpdate();
 }
 
+// --- SET SELECTED AND UPDATE PANELS POSITIONS ---
 function SetSelected(newSelected){
     selected = newSelected;
     PanelsUpdate();

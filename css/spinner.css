@@ -1,7 +1,9 @@
 #spinnerContainer {  }
 #spinnerOrigin    {
+    position: absolute;
     perspective: 800px;
     transform: rotate3d(0, 0, -10, 10deg);
+    transition: .5s;
 }
 
 .tileOrigin       {
@@ -26,20 +28,6 @@
     transition: .5s;
 }
 
-.tile img         {
-    height: 30px;
-    margin-left: calc(50% - 15px);
-    filter: invert(100%);
-    opacity: 80%;
-    transition: .5s;
-    cursor: pointer;
-}
-
-.tile img:hover   {
-    filter: invert(100%) drop-shadow(0 0 5px var(--color_Main));
-    opacity: 100%;
-}
-
 a:hover           {
     color: var(--color_Grey);
     background-color: var(--color_Main);
@@ -50,7 +38,7 @@ a:hover           {
     position: absolute;
     right: -50vw;
     bottom: 15vh;
-    padding: 0 2vw 0 2vw;
+    padding: 2vw 2vw 0 2vw;
     transform: rotateY(-15deg) rotateX(3deg);
     border-bottom-right-radius: 40px;
     border-right: solid 3px var(--color_Main);
@@ -63,13 +51,39 @@ a:hover           {
     transition: .5s;
 }
 
-.panel img        {
-    width: 50%;
-}
-
 .innerPanel      {
     padding-left: 2vw;
     border-bottom-right-radius: 40px;
     border-right: solid 3px var(--color_Main);
     background-color: var(--color_GreyAlpha);
+}
+
+.goImg           {
+    width: 30px;
+    height: 30px;
+    margin-left: calc(50% - 15px);
+    filter: invert(100%);
+    opacity: 80%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.goImg:hover     {
+    filter: invert(100%) drop-shadow(0 0 5px var(--color_Main));
+    opacity: 100%;
+}
+
+.backImg         {
+    transform: rotateZ(180deg);
+    width: 100px;
+    height: 100px;
+    filter: invert(100%);
+    opacity: 80%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.backImg:hover   {
+    filter: invert(100%) drop-shadow(0 0 15px var(--color_Main));
+    opacity: 100%;
 }
