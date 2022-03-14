@@ -19,6 +19,11 @@
     background-color: var(--color_GreyAlpha);
     border-left: solid 2px var(--color_Main);
     border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+.tile:hover       {
+    box-shadow: 0 0 30px var(--color_Main);
 }
 
 .tile a, .panel a {
@@ -75,8 +80,8 @@ a:hover           {
 
 .backImg         {
     transform: rotateZ(180deg);
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     filter: invert(100%);
     opacity: 80%;
     transition: .5s;
@@ -84,6 +89,6 @@ a:hover           {
 }
 
 .backImg:hover   {
-    filter: invert(100%) drop-shadow(0 0 15px var(--color_Main));
+    filter: invert(100%) drop-shadow(0 0 10px var(--color_Main));
     opacity: 100%;
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+<script src="../js/three.js"></script>
+<script type="module">
+    // --- INIT SCENE ---
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    document.body.appendChild( renderer.domElement );
+
+    // --- CREATE & ADD CUBE ---
+    const amount = 10;
+    let cubes = new Array(amount);
+    for (let i = 0; i < amount; i++){
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+        cubes[i] = new THREE.Mesh( geometry, material );
+        cubes[i].position.x = i * 1.5 - 7.5;
+        scene.add( cubes[i] );
+    }
+
+    // --- CREATE TEXT ---
+    /*
+    new THREE.TextGeometry( "Hello world", {
+        font: "Monospace",
+        size: 80,
+        height: 5,
+        curveSegments: 12,
+        bevelEnabled: true,
+        bevelThickness: 10,
+        bevelSize: 8,
+        bevelOffset: 0,
+        bevelSegments: 5
+    });
+    */
+
+    // --- IMPORT FBX ---
+    import FBXLoader from 'https://cdn.skypack.dev/three-fbx-loader';
+    const loader = new FBXLoader();
+    loader.load( '../meshes/idle.fbx', function ( object ) {
+
+        scene.add( object );
+
+    } );
+
+
+    // --- PLACE CAMERA ---
+    camera.position.z = 5;
+
+    // --- RENDER & ANIMATE ---
+    function animate() {
+        requestAnimationFrame( animate );
+        // cube.rotation.x += 0.01;
+        // cube.rotation.y += 0.01;
+        renderer.render( scene, camera );
+    }
+    animate();
+</script>
+</body>
+</html>

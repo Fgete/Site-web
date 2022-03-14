@@ -46,8 +46,10 @@ function SetTilesPosition(n){
         tiles[i].style.opacity         = tileOpacities[positions[n][i]];
         tiles[i].style.borderLeft      = "none";
         tiles[i].style.filter          = tileBlurs[positions[n][i]];
+        tiles[i].style.pointerEvents   = "none";
     }
     tiles[n].style.borderLeft          = "solid 2px var(--color_Main)";
+    tiles[n].style.pointerEvents       = "";
     PanelsUpdate();
 }
 
@@ -84,17 +86,22 @@ document.addEventListener('keydown', function(event) {
 
 // --- UPDATE PANELS POSITIONS ---
 function PanelsUpdate() {
-    let panels = document.getElementsByClassName("panel");
+    let panels   = document.getElementsByClassName("panel");
+    let bigTitle = document.getElementById("bigTitle");
 
     // Default positions
     for (let i = 0; i < panels.length; i++)
         panels[i].style.right = "-50vw";
 
     // Set current panel position
-    if (selected)
+    if (selected){
         panels[index].style.right = "5vw";
-    else
+        bigTitle.style.right      = "-50vw";
+    }
+    else{
         panels[index].style.right = "-50vw";
+        bigTitle.style.right      = "7vw";
+    }
 
     // Update spinner position
     SpinnerUpdate();
