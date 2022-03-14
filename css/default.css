@@ -45,6 +45,11 @@ header a div:hover {
     color: var(--color_Grey);
 }
 
+.header_selected {
+    box-sizing: border-box;
+    border-bottom: solid 2px var(--color_Main);
+}
+
 #bigTitle        {
     position: absolute;
     align-items: end;
