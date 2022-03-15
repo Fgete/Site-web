@@ -1,0 +1,110 @@
+:root {
+    /* colors */
+    --color_BodyLight:         rgba(238,214,174,1);
+    --color_BodyDark:          rgba(152,138,100,1);
+    --color_BlackLight:        rgba(57, 57, 57, 1);
+    --color_BlackDark:         rgba(0,  0,  0,  1);
+    --color_ScreenLight:       rgba(20, 20, 20, 1);
+}
+
+#terminal {
+    margin-left: 5%;
+    padding-top: 1%;
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+    border-left: solid 3px var(--color_BodyDark);
+    border-bottom: solid 3px var(--color_BodyDark);
+    border-right: solid 3px var(--color_BodyLight);
+    border-top: solid 3px var(--color_BodyLight);
+    background: linear-gradient(0deg, var(--color_BodyDark) 0%, var(--color_BodyLight) 100%);
+}
+
+#terminalScreen {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
+    height: 70%;
+    border-radius: 3px;
+    border-left: solid 3px var(--color_BodyLight);
+    border-bottom: solid 3px var(--color_BodyLight);
+    border-right: solid 3px var(--color_BodyDark);
+    border-top: solid 3px var(--color_BodyDark);
+    background: radial-gradient(circle, var(--color_ScreenLight) 0%, var(--color_BlackDark) 100%);
+}
+
+#terminalText {
+    width: 100%;
+    height: 88%;
+
+    font-size: .8em;
+    font-family: "Courier New", serif;
+    color: lime;
+    overflow: hidden;
+}
+
+#terminalText span {
+    background-color: lime;
+    color: black;
+}
+
+#terminalInput {
+    width: 100%;
+    height: 12%;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+
+    font-size: .8em;
+    font-family: "Courier New", serif;
+    color: lime;
+}
+
+#terminalInput:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+#terminalButtons {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
+    height: 15%;
+}
+
+#terminalBrand {
+    width: 30%;
+    height: 100%;
+    margin-right: 15%;
+    opacity: 50%;
+    cursor: default;
+}
+
+#terminalButtonLight {
+    margin-right: 2%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color_BlackLight) 0%, var(--color_BlackDark) 100%);
+}
+
+#terminalButtonPower {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: radial-gradient(circle, var(--color_BodyLight) 0%, var(--color_BodyDark) 100%);
+    border-left: solid 3px var(--color_BodyLight);
+    border-bottom: solid 3px var(--color_BodyLight);
+    border-right: solid 3px var(--color_BodyDark);
+    border-top: solid 3px var(--color_BodyDark);
+}
+
+#terminalButtonPower img {
+    margin-left: 25%;
+    margin-top: 25%;
+    width: 50%;
+    height: 50%;
+    opacity: 50%;
+}

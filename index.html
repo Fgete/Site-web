@@ -5,17 +5,21 @@
 		<meta charset="utf-8"/>
 		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
 		<link rel="stylesheet" type="text/css" href="./css/default.css">
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
 		<link rel="stylesheet" type="text/css" href="./css/spinner.css">
+		<link rel="stylesheet" type="text/css" href="./css/terminal.css">
 	</head>
 
 	<script type="text/javascript" src="./js/spinner.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/terminal.js"></script>
 
-	<body class="flex_column" onload="SetTilesPosition(index)">
+	<body class="flex_column" onload="SetTilesPosition(index); EnterScreen();">
 		<header class="flex_row justify_start">
 			<img src="./images/logo_white.png">
 			<a href="#"><div class="width_150p height_50p flex_row justify_around header_selected">Accueil</div></a>
 			<a href="./html/galery.html"><div class="width_150p height_50p flex_row justify_around">Galerie</div></a>
-			<a href="#"><div class="width_150p height_50p flex_row justify_around">Projets</div></a>
+			<a onclick="ExitScreenWithUrl('./html/project.html');"><div class="width_150p height_50p flex_row justify_around">Projets</div></a>
 			<a href="./html/contact.html"><div class="width_150p height_50p flex_row justify_around">Me contacter</div></a>
 			<div id="bigTitle" class="flex_column justify_start">
 				<h1>François GETE</h1>
@@ -56,12 +60,19 @@
 		<div id="panelContainer" class="width_50 height_full">
 			<div class="panel width_80 height_70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
-				<h1 class="paddingLeft">Qui suis-je ?</h1>
-				<h2>François GETE</h2>
-				<h4 class="headerWhite paddingLeft">• Développeur de jeu vidéo</h4>
-				<h4 class="headerWhite paddingLeft">• Développeur web</h4>
-				<h4 class="headerWhite paddingLeft">• Artiste 3D</h4>
-				<h4 class="headerWhite paddingLeft">• Pationné & déchaîné</h4>
+				<div id="terminal">
+					<div id="terminalScreen">
+						<div id="terminalText"></div>
+						<input id="terminalInput" type="text" placeholder=">_" hidden>
+					</div>
+					<div id="terminalButtons" class="flex_row justify_end">
+						<div id="terminalBrand">FUN-SCOPE</div>
+						<div id="terminalButtonLight"></div>
+						<div id="terminalButtonPower" onclick="TerminalOn();">
+							<img src="./images/logos/power.png">
+						</div>
+					</div>
+				</div>
 				<a class="positionBottomRight fSize2" href="./html/contact.html">En savoir plus ►</a>
 			</div>
 			<div class="panel width_80 height_70">
@@ -96,6 +107,9 @@
 			</div>
 		</div>
 
+		<div id="screenOff"></div>
+
 		<footer></footer>
 	</body>
+
 </html>

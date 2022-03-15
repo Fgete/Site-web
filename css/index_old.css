@@ -1,0 +1,166 @@
+/* --- VARIABLES --- */
+
+:root{
+	/* colors */
+	--color_MainOrange: #ffaa00;
+	--color_MainWhite: #959595;
+}
+
+/* --- BODY --- */
+
+body{
+	display: flex;
+
+	font-family: arial;
+
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	background-image: url("../images/index/wallpaper_virgo.png");
+}
+
+.background{
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	opacity: 0%;
+	transition: 0.5s;
+}
+
+/* --- LOADING --- */
+
+#loadingScreen{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: absolute;
+
+	margin: 10vh 0 0 25vw;
+	width: 50vw;
+	height: 80vh;
+
+	color: white;
+	font-size: 1.5vw;
+
+	z-index: 12;
+	background-color: var(--color_MainWhite);
+	border-radius: 1vw;
+
+	overflow-wrap: scroll; 
+}
+
+#loadingTitle{
+	font-weight: bold;
+	color: red;
+}
+
+.loadingPara{
+	padding: 0 0 0 1vw;
+}
+
+#loadingClose{
+	font-size: 5vw;
+	opacity: 50%;
+
+	pointer-events: none;
+}
+
+#loadingClose:hover{
+	color: var(--color_MainOrange);
+}
+
+#loadingBack{
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	opacity: 50%;
+	background-color: var(--color_MainWhite);
+	z-index: 11;
+}
+
+/* --- TILE --- */
+
+.tile{
+	position: absolute;
+	transform-origin: center;
+	transition: 0.5s;
+
+	--scale: 20vw;
+	width: var(--scale);
+	height: calc((var(--scale) / 16) * 9);
+
+	border-radius: 1vw;
+	background-color: grey;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* title */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 2vw;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: grey;
+	text-decoration: none;
+
+	cursor: pointer;
+}
+
+.tile:hover{
+	color: var(--color_MainOrange);
+	--scale: 22vw;
+}
+
+/* --- DESCRIPTION --- */
+
+#description{
+	--w: 30vw;
+	--h: 50vh;
+	width: var(--w);
+	height: var(--h);
+
+	margin-left: 23vw;
+	margin-top: calc((100vh - var(--h)) / 2);
+
+	font-size: 1.2vw;
+	font-weight: bold;
+	color: var(--color_MainWhite);
+
+	border-radius: 1vw;
+	background-color: rgba(0, 0, 0, .1);
+
+	opacity: 0;
+	z-index: 0;
+	transition: 0.5s;
+}
+
+#description h1, #description a{
+	color: var(--color_MainOrange);
+	text-shadow: rgba(0, 0, 0, 1) 0px 0px 1rem;
+}
+
+/* --- FONT DETAILS --- */
+
+p, h1{
+	cursor: default;
+}
+
+.game{
+	font-style: italic;
+	font-weight: 100;
+	cursor: help;
+}

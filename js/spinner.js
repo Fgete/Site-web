@@ -72,15 +72,7 @@ window.addEventListener("wheel", event => {
 });
 
 document.addEventListener('keydown', function(event) {
-    if (event.key === "ArrowDown"){
-        ChangeIndex(-1);
-        SetSelected(false);
-    }
-    if (event.key === "ArrowUp"){
-        ChangeIndex(1);
-        SetSelected(false);
-    }
-    if (event.key === "ArrowRight" || event.key === "ArrowLeft" || event.key === "Enter")
+    if (event.key === "ArrowRight" || event.key === "ArrowLeft")
         ToggleSelected();
 });
 
@@ -91,16 +83,16 @@ function PanelsUpdate() {
 
     // Default positions
     for (let i = 0; i < panels.length; i++)
-        panels[i].style.right = "-50vw";
+        panels[i].style.right     = "-70vw";
 
     // Set current panel position
     if (selected){
         panels[index].style.right = "5vw";
-        bigTitle.style.right      = "-50vw";
+        bigTitle.style.right      = "-70%";
     }
     else{
-        panels[index].style.right = "-50vw";
-        bigTitle.style.right      = "7vw";
+        panels[index].style.right = "-70vw";
+        bigTitle.style.right      = "2%";
     }
 
     // Update spinner position

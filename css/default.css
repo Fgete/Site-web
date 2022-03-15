@@ -26,51 +26,6 @@ body             {
     overflow: hidden;
 }
 
-header           {
-    width: 100vw;
-    height: 50px;
-    position: fixed;
-    transition: .5s;
-    padding: 0 5vw 0 5vw;
-    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 50%);
-}
-
-header img       { height: 50px; mix-blend-mode: multiply; }
-header a div     {
-    color: var(--color_Main);
-    transition: .5s;
-}
-header a div:hover {
-    background-color: var(--color_Main);
-    color: var(--color_Grey);
-}
-
-.header_selected {
-    box-sizing: border-box;
-    border-bottom: solid 2px var(--color_Main);
-}
-
-#bigTitle        {
-    position: absolute;
-    align-items: end;
-    width: 30vw;
-    height: 60vh;
-    right: 7vw;
-    top: 0vh;
-    background-image: url("../images/logo_black.png");
-    background-size: 300px 300px;
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-blend-mode: multiply;
-    opacity: 50%;
-    transition: .5s;
-}
-
-#bigTitle h1, #bigTitle h2, #bigTitle h3 {
-    height: 0;
-    color: var(--color_White);
-}
-
 .border_top      { border-top: solid 3px var(--color_Main); }
 .border_bottom   { border-bottom: solid 3px var(--color_Main); }
 .network         {

@@ -38,10 +38,15 @@ a:hover           {
     background-color: var(--color_Main);
 }
 
-#panelContainer  { perspective: 800px; position: absolute; right: 0; }
+#panelContainer  {
+    perspective: 800px;
+    position: absolute;
+    right: 0;
+}
+
 .panel           {
     position: absolute;
-    right: -50vw;
+    right: -70vw;
     bottom: 15vh;
     padding: 2vw 2vw 0 2vw;
     transform: rotateY(-15deg) rotateX(3deg);
@@ -63,32 +68,19 @@ a:hover           {
     background-color: var(--color_GreyAlpha);
 }
 
-.goImg           {
-    width: 30px;
-    height: 30px;
-    margin-left: calc(50% - 15px);
-    filter: invert(100%);
-    opacity: 80%;
-    transition: .5s;
-    cursor: pointer;
-}
-
-.goImg:hover     {
-    filter: invert(100%) drop-shadow(0 0 5px var(--color_Main));
-    opacity: 100%;
-}
-
 .backImg         {
+    position: absolute;
+    left: -5vw;
+    top: 25vh;
     transform: rotateZ(180deg);
     width: 50px;
-    height: 50px;
-    filter: invert(100%);
-    opacity: 80%;
+    height: 200px;
+    opacity: 50%;
     transition: .5s;
     cursor: pointer;
 }
 
 .backImg:hover   {
-    filter: invert(100%) drop-shadow(0 0 10px var(--color_Main));
+    filter: invert(100%) sepia(100%) saturate(500%) drop-shadow(0 0 10px var(--color_Main));
     opacity: 100%;
 }
