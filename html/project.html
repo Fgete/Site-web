@@ -9,8 +9,45 @@
 
 <script type="text/javascript" src="../js/project.js"></script>
 
-<body onload="EnterProject();">
-    <img src="../images/screens/screen.png" id="bgScreen">
-    <div id="mainScreen" onclick="ExitProjectWithUrl('../index.html');"></div>
+<body onload="EnterProject();" id="body" class="width_100 height_100">
+    <div id="decorum" class="width_full height_full">
+        <a href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width_100 height_100"></a>
+        <div id="mainScreen" class="width_full height_full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
+    </div>
+    <div id="projectContent" class="flex_column width_full">
+
+        <div class="titleStrip">
+            <h1>Project title</h1>
+            <h4 class="subtitle">Subtitle of this project.</h4>
+        </div>
+
+        <p class="context width_30">
+            It's here you can write a summary of the project.
+            Here you should explain the context of the project.
+        </p>
+
+        <div class="chapter width_50">
+            <h2>Chapter title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet.
+                Est Quis doloremque ab officia velit et tempore quibusdam non perferendis amet rem vero adipisci.
+                Eum maiores unde ut aliquid debitis et molestias animi.
+                Sit aliquam sint et vitae dolorem aut doloribus voluptatibus et voluptatibus veritatis qui doloremque laborum.
+            </p>
+            <img src="../images/index/wallpaper_virgo.png">
+        </div>
+
+        <div class="chapter width_50">
+            <h2>Chapter title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet.
+                Est Quis doloremque ab officia velit et tempore quibusdam non perferendis amet rem vero adipisci.
+                Eum maiores unde ut aliquid debitis et molestias animi.
+                Sit aliquam sint et vitae dolorem aut doloribus voluptatibus et voluptatibus veritatis qui doloremque laborum.
+            </p>
+            <img src="../images/index/wallpaper_virgo.png">
+        </div>
+
+    </div>
 </body>
 </html>
