@@ -17,10 +17,10 @@
 	<body class="flex_column" onload="SetTilesPosition(index); EnterScreen();">
 		<header class="flex_row justify_start">
 			<img src="./images/logo_white.png">
-			<a href="#"><div class="width_150p flex_row justify_around header_selected">Accueil</div></a>
-			<a href="./html/galery.html"><div class="width_150p flex_row justify_around">Galerie</div></a>
-			<a onclick="ExitScreenWithUrl('./html/project.html');"><div class="width_150p flex_row justify_around">Projets</div></a>
-			<a href="./html/contact.html"><div class="width_150p flex_row justify_around">Me contacter</div></a>
+			<div class="width_150p flex_row justify_around header_selected" onclick="ExitScreenWithUrl('#');">Accueil</div>
+			<div class="width_150p flex_row justify_around" onclick="ExitScreenWithUrl('./html/galery.html');">Galerie</div>
+			<div class="width_150p flex_row justify_around" onclick="ExitScreenWithUrl('./html/project.html');">Projets</div>
+			<div class="width_150p flex_row justify_around" onclick="ExitScreenWithUrl('./html/contact.html');">Me contacter</div>
 			<div id="bigTitle" class="flex_column justify_start">
 				<h1>François GETE</h1>
 				<h2>Développeur</h2>
@@ -73,37 +73,37 @@
 						</div>
 					</div>
 				</div>
-				<a class="positionBottomRight fSize2" href="./html/contact.html">En savoir plus ►</a>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/contact.html');">En savoir plus ►</a>
 			</div>
 			<div class="panel width_80 height_70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Ici vous trouverez</h1>
 				<h2>mes création 3D.</h2>
-				<a class="positionBottomRight fSize2" href="./html/galery.html">En savoir plus ►</a>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/galery.html');">En savoir plus ►</a>
 			</div>
 			<div class="panel width_80 height_70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">J'ai branché une entrée</h1>
 				<h2>audio dans Blender.</h2>
-				<a class="positionBottomRight fSize2" href="./html/vjing.html">En savoir plus ►</a>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/vjing.html');">En savoir plus ►</a>
 			</div>
 			<div class="panel width_80 height_70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Mon premier projet</h1>
 				<h2>sur Unity.</h2>
-				<a class="positionBottomRight fSize2" href="./html/arm.html">En savoir plus ►</a>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/arm.html');">En savoir plus ►</a>
 			</div>
 			<div class="panel width_80 height_70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Un exercice de style</h1>
 				<h2>pour bien pratiquer.</h2>
-				<a class="positionBottomRight fSize2" href="./html/blackMesaRemake.html">En savoir plus ►</a>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/blackMesaRemake.html');">En savoir plus ►</a>
 			</div>
 			<div class="panel width_80 height_70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Mon projet de fin</h1>
 				<h2>d'année 2021/22.</h2>
-				<a class="positionBottomRight fSize2" href="#">En savoir plus ►</a>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('https://lagstudio.notion.site/ENTOMOCENE-c26ea16fc44e4ad0bf3f9b51fceed0ce');">En savoir plus ►</a>
 			</div>
 		</div>
 

@@ -10,14 +10,14 @@ header           {
 }
 
 header img       { height: 100%; mix-blend-mode: multiply; }
-header a         { height: 100%; }
-header a div     {
+header div       {
     height: 100%;
     color: var(--color_Main);
     cursor: pointer;
     transition: .5s;
 }
-header a div:hover {
+
+header div:hover {
     background-color: var(--color_Main);
     color: var(--color_Grey);
 }
