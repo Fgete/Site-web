@@ -1,94 +1,113 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>L A G - VJing</title>
-		<meta charset="utf-8"/>
-		<link id="shortcutIcon" rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
-		<link rel="stylesheet" type="text/css" href="../css/article.css">
-		<link rel="stylesheet" type="text/css" href="../css/contactLink.css">
-	</head>
-	<body onload="BuildContact('./contact.html', '../css/contactLink.css')">
-		<script type="text/javascript" src="../js/index - contact.js"> // --- CONTACT --- </script>
-		<div id="imgA" style="background-image: url('../images/vjing/vjing A.png')">
-			<a href="../index.html" id="retourLobby" title="Retour Lobby">
-				<div class="imgProfil infoProfil">
-					<img src="../images/profil.jpg" class="imgProfil">
-					<span id="textProfil">◄ Lobby</span>
-				</div>
-			</a>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/default.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../css/project.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../css/code.css?v=1">
+</head>
 
-			<div id="imgB" style="background-image: url('../images/vjing/vjing B.png')">
-				<h1>Projet VJing</h1>
+<script type="text/javascript" src="../js/project.js"></script>
 
-				<h2>Qu'est ce que le VJing ?</h2>
+<body onload="EnterProject();" class="width_100 height_100">
+    <div id="decorum" class="width_full height_full">
+        <div id="bgEnvironment" class="width_full height_full" style="background-image: url('../images/vjing/vjing A.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width_100 height_100"></div>
+        <div id="mainScreen" class="width_full height_full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
+    </div>
+    <div id="projectContent" class="flex_column width_full">
 
-				<p id="text">Le VJing est un terme large qui désigne la performance visuelle en temps réel. Les caractéristiques du VJing sont la création ou la manipulation de l'image en temps réel via la médiation technologique et en direction d'un public, en synchronisation avec la musique.</p>
-			</div>
-		</div>
+        <div class="titleStrip">
+            <div style="background-image: url('../images/vjing/vjing A.png')" class="width_full height_100"></div>
+            <h1>Projet Vjing</h1>
+            <h4>Mixer de la vidéo</h4>
+        </div>
 
-		<div id="mainPage">
-			<h2>But du projet</h2>
+        <p class="context width_30">
+            Le <span class="highLight">VJing</span> est un terme large qui désigne la performance visuelle en temps réel.
+            Les caractéristiques du <span class="highLight">VJing</span> sont la création ou la manipulation de l'image en temps réel via la médiation technologique et en direction d'un public, en synchronisation avec la musique.
+        </p>
 
-			<p id="text"><span id="partie">Mon objectif :</span> Réaliser une performance visuelle live autonôme. Pour cela, je prévois d'utiliser le son en entrée et sortir des rendu 3D en temps réel. Tout cela automatiquement.</p>
+        <div class="chapter width_50">
+            <h2>But du projet</h2>
+            <p>
+                <span class="highLight">Mon objectif :</span> Réaliser une performance visuelle live autonôme.
+                Pour cela, je prévois d'utiliser le son en entrée et sortir des rendu 3D en temps réel.
+                Tout cela automatiquement.
+            </p>
+            <p>
+                Pour réaliser mon projet, je vais me confronter à plusieurs difficultés :
+            </p>
+            <ol>
+                <li><a href="#recupSon">Récupérer le son</a></li>
+                <li><a href="#traitSon">Traiter le son</a></li>
+                <li><a href="#comBlender">Communiquer avec Blender</a></li>
+                <li><a href="#modelPara">Modéliser et paramétrer</a></li>
+                <li><a href="#ptitPlus">Des petits plus</a></li>
+                <li><a href="#result">Résultat</a></li>
+            </ol>
+            <p>
+                Je vais essayer de détailler au maximum le développement du projet, nottamment les éléments qui m'ont mis en difficulté.
+            </p>
+        </div>
 
-			<p id="text">Pour réaliser mon projet, je vais me confronter à plusieurs difficultés :
-				<ol>
-					<li><a href="#recupSon">Récupérer le son</a></li>
-					<li><a href="#traitSon">Traiter le son</a></li>
-					<li><a href="#comBlender">Communiquer avec Blender</a></li>
-					<li><a href="#modelPara">Modéliser et paramétrer</a></li>
-					<li><a href="#ptitPlus">Des petits plus</a></li>
-					<li><a href="#result">Résultat</a></li>
-				</ol>
-			</p>
+        <div id="recupSon" class="chapter width_50">
+            <h2>1. Récupérer le son</h2>
+            <p>
+                Dans cette première étape, je dois aménager une entrée audio.
+                J'envisage donc de faire entrer le son à la manière d'un micro.
+                Ainsi, un cohéquipier pourra m'envoyer du son par un port jack de mon ordinateur.
+            </p>
+            <img src="../images/vjing/ports.png" class="media">
+        </div>
 
-			<p id="text">Je vais essayer de détailler au maximum le développement du projet, nottamment les éléments qui m'ont mis en difficulté.</p>
+        <div id="traitSon" class="chapter width_50">
+            <h2>2. Traiter le son</h2>
+            <p>
+                Une fois le son dans mon ordinateur, je dois en faire quelque chose.
+                Je ne peux pas l'utiliser de façon brute.
+                Pour cela, je vais utiliser le logiciel <a href="https://cycling74.com/products/max" target="_blank">Max/MSP</a>.
+            </p>
+            <img src="../images/vjing/maxMsp.png" class="media">
+            <p>
+                Ce logiciel me permet de lire le son entrant est d'en générer des variables numériques.
+                Ces variables pourront être facilement interprétées par un programme.
+            </p>
+        </div>
 
-			<h2>Le projet</h2>
+        <div id="comBlender" class="chapter width_50">
+            <h2>3. Communiquer avec Blender</h2>
+            <p>
+                Après avoir créé mes variables sur <a href="https://cycling74.com/products/max" target="_blank">Max/MSP</a>, j'ai dû les envoyer à <a href="https://Blender.org" target="_blank">Blender</a>.
+                Pour cela, j'ai recours à l'addon <a href="https://github.com/maybites/blender.NodeOSC" target="_blank">NodeOCS</a> que j'ai ajouté à <a href="https://Blender.org" target="_blank">Blender</a>.
+            </p>
+            <p>
+                Cet addon me permet de créer un serveur local sur lequel les logiciels pourrons envoyer et recevoir des informations.
+                Néanmoins, je ne peux pas faire transiter beaucoup d'informations.
+                J'aurai besoin de traiter les quelques valeurs reçues par <a href="https://Blender.org" target="_blank">Blender</a> afin de les distribuer aux différents objets paramétrés.
+            </p>
+        </div>
 
-			<h3 id="recupSon" class="chapitre">1. Récupérer le son</h3>
+        <div id="modelPara" class="chapter width_50">
+            <h2>4. Modéliser et paramétrer</h2>
+            <p>
+                <a href="https://Blender.org" target="_blank">Blender</a> reçoit désormais des variables associées au son.
+                Il ne me reste plus qu'à modéliser une scène.
+                Concernant le paramétrage, il est très simple de modifier des <span class="highLight">matériaux</span> et des <span class="highLight">modifiers</span> grâce à des commandes en python.
+            </p>
+            <img src="../images/vjing/modeling.png" class="media">
+        </div>
 
-			<p id="text">Dans cette première étape, je dois aménager une entrée audio. J'envisage donc de faire entrer le son à la manière d'un micro. Ainsi, un cohéquipier pourra m'envoyer du son par une prise jack de mon ordinateur.</p>
-
-			<img src="../images/vjing/ports.png" alt="Ports audio" id="petiteImg" title="Ports audio">
-
-			<h3 id="traitSon" class="chapitre">2. Traiter le son</h3>
-
-			<p id="text">Une fois le son dans mon ordinateur, je dois en faire quelque chose. Je ne peux pas l'utiliser de façon brute. Pour cela, je vais utiliser le logiciel <a href="https://cycling74.com/products/max" target="blank" title="Max/MSP">Max/MSP</a>.</p>
-
-			<div id="imageAnimée" style="background-image: url('../images/vjing/maxMsp.png')">
-				<div id="imgInfo">
-					<a href="https://cycling74.com/products/max" target="blank" title="Max/MSP">
-						<img src="../images/vjing/maxMspLogo.png" id="imgLink">
-					</a>
-				</div>
-			</div>
-
-			<p id="text">Ce logiciel me permet de lire le son entrant est d'en générer des variables numériques. Ces variables pourront être facilement interprétées par un programme.</p>
-
-			<h3 id="comBlender" class="chapitre">3. Communiquer avec Blender</h3>
-
-			<p id="text">Après avoir créé mes variables sur Max/MSP, j'ai dû les envoyer à <a href="https://Blender.org" target="blank" title="Blender">Blender</a>. Pour cela, j'ai recours à l'addon <a href="https://github.com/maybites/blender.NodeOSC" target="blank" title="Addon">NodeOCS</a> à ajouter à Blender.</p>
-
-			<p id="text">Cet addon me permet de créer un serveur local sur lequel les logiciels pourrons envoyer et recevoir des informations. Néanmoins, je ne peux pas faire transiter beaucoup d'informations. J'aurai besoin de traiter les quelques valeurs reçues par Blender afin de les distribuer aux différents objets paramétrés.</p>
-
-			<h3 id="modelPara" class="chapitre">4. Modéliser et paramétrer</h3>
-
-			<p id="text">Blender reçoit désormais des variables associées au son. Il ne me reste plus qu'à modéliser une scène. Concerant le paramétrage, il est trés simple de modifier des matériaux et des modifieurs grâce aux commandes python que l'on retrouve dans la console.</p>
-
-			<div id="imageAnimée" style="background-image: url('../images/vjing/modeling.png')">
-				<div id="imgInfo">
-					<a href="https://Blender.org" target="blank" title="Blender">
-						<img src="../images/vjing/blenderLogo.png" id="imgLink">
-					</a>
-				</div>
-			</div>
-
-			<h3 id="ptitPlus" class="chapitre">5. Des petits plus</h3>
-
-			<p id="text">J'ai remarqué que si l'on cherche à paramétrer beaucoup d'éléments, certains de ces éléments ne se mettait pas à jour. Pour palier à ce problème, j'ai du écrire un script dans Blender permettant de recevoir les informations communiqués par Max/MSP, puis de les distribuer au différents éléments paramétrés. Ce script se répète à chaque frame de l'animation (30Hz).</p>
-
-			<pre id="code">
+        <div id="ptitPlus" class="chapter width_50">
+            <h2>5. Des petits plus</h2>
+            <p>
+                J'ai remarqué que si l'on cherche à paramétrer beaucoup d'éléments, certains de ces éléments ne se mettait pas à jour.
+                Pour palier à ce problème, j'ai du écrire un script dans <a href="https://Blender.org" target="_blank">Blender</a> permettant de recevoir les informations communiqués par <a href="https://cycling74.com/products/max" target="_blank">Max/MSP</a>, puis de les distribuer au différents éléments paramétrés.
+                Ce script se répète à chaque frame de l'animation (30Hz).
+            </p>
+            <pre id="code">
 				<code>
 <span class="Cimportant">import</span> bpy
 
@@ -100,12 +119,12 @@ object <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span cla
     bass <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node_tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"Bass"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default_value
     <span class="Ccommentaire"># ---</span>
     object<span class="Celmt">.</span>scale<span class="Celmt">[<span class="Cnum">0</span>] =</span> bass
-    
+
     <span class="Ccommentaire"># --- MIDDLE ---</span>
     middle <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node_tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"Middle"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default_value
     <span class="Ccommentaire"># ---</span>
     object<span class="Celmt">.</span>scale<span class="Celmt">[<span class="Cnum">1</span>] =</span> middle
-    
+
     <span class="Ccommentaire"># --- HIGH ---</span>
     high <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node_tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"High"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default_value
     <span class="Ccommentaire"># ---</span>
@@ -115,20 +134,21 @@ object <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span cla
 bpy<span class="Celmt">.</span>app<span class="Celmt">.</span>handlers<span class="Celmt">.</span>frame_change_pre<span class="Celmt">.</span>append<span class="Celmt">(</span>run_script<span class="Celmt">)</span>
     			</code>
 			</pre>
+        </div>
 
-			<h3 id="result" class="chapitre">6. Résultat</h3>
+        <div id="result" class="chapter width_50">
+            <h2>6. Résultat</h2>
+            <iframe class="media"
+                    src="https://www.youtube.com/embed/ihAc6DB0p3E"
+                    allowfullscreen="allowfullscreen"
+                    mozallowfullscreen="mozallowfullscreen"
+                    msallowfullscreen="msallowfullscreen"
+                    oallowfullscreen="oallowfullscreen"
+                    webkitallowfullscreen="webkitallowfullscreen"></iframe>
+        </div>
 
-			<iframe
-				src="https://www.youtube.com/embed/ihAc6DB0p3E"
-				allowfullscreen="allowfullscreen"
-        		mozallowfullscreen="mozallowfullscreen" 
-        		msallowfullscreen="msallowfullscreen" 
-        		oallowfullscreen="oallowfullscreen" 
-        		webkitallowfullscreen="webkitallowfullscreen"></iframe>
-		</div>
+        <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">
 
-		<a href="#imgA" title="Haut de la page">
-			<img src="../images/haut.jpg" id="haut" class="arrow imgProfil">
-		</a>
-	</body>
+    </div>
+</body>
 </html>

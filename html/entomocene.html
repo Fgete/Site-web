@@ -39,14 +39,14 @@
 
         <div class="chapter width_50">
             <h2>Contexte</h2>
+            <h3>Intentions</h3>
             <p>
-                <legend>Intentions</legend>
                 Le jeu a pour intention de défouler le joueur dans une expérience rapide dynamique et pleine d’action.
                 De plus, le joueur sera plongé dans un univers glauque et repoussant. Les ennemis rampants et
                 grouillants dans tous les sens ajouteront au malaise.
             </p>
             <div class="width_100">
-                <legend>Références</legend>
+                <h3>Références</h3>
                 <div class="flex_column justify_between width_100">
                     <div class="flex_row width_100">
                         <p>
@@ -60,7 +60,8 @@
                             L’aspect graphique du jeu se rapproche du jeu Factorio avec ses modèles 3D et
                             volontairement pixélisés.
                             De plus l’ambiance globale se rapproche à la fois de <a href="https://fr.wikipedia.org/wiki/Factorio" target="_blank">Factorio</a> mais aussi de
-                            <a href="https://fr.wikipedia.org/wiki/The_Binding_of_Isaac" target="_blank">The Binding of Isaac</a> concernant l’impression d’insalubrité et de gêne que l’on peut ressentir.                        </p>
+                            <a href="https://fr.wikipedia.org/wiki/The_Binding_of_Isaac" target="_blank">The Binding of Isaac</a> concernant l’impression d’insalubrité et de gêne que l’on peut ressentir.
+                        </p>
                         <img src="../images/entomocene/factorio.png" class="media">
                     </div>
                 </div>
@@ -73,7 +74,8 @@
                 Mon jeu étant un <a href="https://fr.wikipedia.org/wiki/Roguelike" target="_blank">Rogue Like</a>, j'ai décidé de générer l'environnement procéduralement afin de garantir une expérience de jeu inédite à chaque partie.
                 La génération se divise en plusieurs étapes simples qui, mises bout à bout, donnent une carte cohérente et théoriquement infinie.
             </p>
-            <legend>Réglage de la carte</legend>
+
+            <h3>Réglage de la carte</h3>
             <div class="flex_row justify_between">
                 <p>
                     La future carte est, à son commencement, un objet vide comportant un script <span class="highLight">[Map Manager]</span>.
@@ -84,7 +86,7 @@
             </div>
             <img src="../images/entomocene/first_room.png" class="media">
 
-            <legend>Instanciement récursif</legend>
+            <h3>Instanciement récursif</h3>
             <p>
                 Une fois la première salle générée, elle va, en fonction des paramètres du <span class="highLight">[Map Manager]</span>, générer des nouvelles salles connexes.
                 Ensuite, les nouvelles salles prendront le rôle de la première salle et vont générer à leur tour de nouvelles salles.
@@ -92,7 +94,7 @@
             </p>
             <img src="../images/entomocene/map.png" class="media">
 
-            <legend>Habillage des salles</legend>
+            <h3>Habillage des salles</h3>
             <div class="flex_row justify_between">
                 <p>
                     A ce stade, la carte est quasiment terminée mais elle manque de réalisme.
@@ -101,15 +103,40 @@
                 <img src="../images/entomocene/murs.png" class="media">
             </div>
 
-            <legend>Placement de divers éléments</legend>
+            <h3>Placement de divers éléments</h3>
             <p>
                 Pour finir, on place les accésoires, les objets et les ennemis.
                 A l'instar des murs, sols, portes, les accéssoires, objets et ennemis sont piochés dans des listes.
             </p>
             <img src="../images/entomocene/result_map.png" class="media">
 
-            <legend>Lien vers les releases</legend>
-            <a href="https://lagstudio.notion.site/ENTOMOCENE-c26ea16fc44e4ad0bf3f9b51fceed0ce" target="_blank">Lien Notion du projet >></a>
+            <h3>Lien vers les releases</h3>
+            <p><a href="https://lagstudio.notion.site/ENTOMOCENE-c26ea16fc44e4ad0bf3f9b51fceed0ce" target="_blank">Lien Notion du projet >></a></p>
+        </div>
+
+        <div class="chapter width_50">
+            <h2>Galerie</h2>
+            <p>
+                Pour agrémenter l'univers du projet, j'ai créé plusieurs visuels :
+            </p>
+            <div class="flex_row justify_around width_100 margin_1">
+                <img src="../images/gallery/entomocene/mante0.jpg" class="width_30">
+                <img src="../images/gallery/entomocene/mante1.jpg" class="width_30">
+                <img src="../images/gallery/entomocene/mante2.jpg" class="width_30">
+            </div>
+            <div class="flex_row justify_around width_100 margin_1">
+                <img src="../images/gallery/entomocene/spider1.jpg" class="width_30">
+                <img src="../images/gallery/entomocene/spider2.jpg" class="width_30">
+                <img src="../images/gallery/entomocene/spider3.jpg" class="width_30">
+            </div>
+            <div class="flex_row justify_around width_100 margin_1">
+                <img src="../images/gallery/entomocene/spider0.jpg" class="width_30">
+                <img src="../images/gallery/entomocene/bugs.jpg"    class="width_30">
+            </div>
+            <div class="flex_row justify_around width_100 margin_1">
+                <img src="../images/gallery/entomocene/larve.jpg" class="width_30">
+                <img src="../images/gallery/entomocene/radio.jpg" class="width_30">
+            </div>
         </div>
 
         <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">

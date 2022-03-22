@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>L A G - Black Mesa Remake</title>
+		<meta charset="utf-8"/>
+		<link id="shortcutIcon" rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+		<link rel="stylesheet" type="text/css" href="../css/blackMesaRemake.css">
+	</head>
+	<body>
+		<header>
+			<a href="../index.html" class="underlined">
+				<div class="navigationButton">◄ Retour accueil</div>
+			</a>
+			<a href="../html/contact.html" class="underlined">
+				<div class="navigationButton">Me contacter ►</div>
+			</a>
+		</header>
+
+		<div id="mainPanel">
+			<h1 class="underlined">Black Mesa Remake</h1>
+
+			<div class="para">Le projet de remake fait suite au demake de l'examen de l'hivers 2019. Objectif : Faire un remake du demake de Black Mesa.</div>
+
+			<div class="para">
+				<h2 class="underlined">Le Demake de Black Mesa</h2>
+				<p>En fin de premier trimestre à Ludus Academie, nous avons eu un examen dont le sujet était de faire un Demake d'un jeu connu et recent. Mon binôme et moi avions choisi la license Half Life du studio Valve avec l'opus Black Mesa, un remake de Half Life 1.</p>
+				<p>Le demake est un exercice de style ou l'objectif est de faire l'inverse d'un remake. Il s'agit donc d'inverser le processus d'amélioration et de caricaturer l'oeuvre originale.</p>
+				<img class="imgAlone" src="../images/gallery/jeu0.png">
+			</div>
+
+			<div class="para">
+				<h2 class="underlined">Le Remake du Demake</h2>
+				<p>En fin de première année, nous avons décidé avec mon binôme d'agrandir l'équipe et de faire un remake de notre demake. Nos intentions étaient claires : utiliser Unity, faire de la 3D, et impressionner nos professeurs.</p>
+				<p>En effet, les moteurs 3D n'étaient pas vraiment au programme de la première année. Mais nous avons décidé de sortir des sentiers battus et d'apprendre à les utiliser. Et on en a appris des choses...</p>
+			</div>
+
+			<div class="para">
+				<h2 class="underlined">Level design</h2>
+				<p>Concernant le style de l'environnement, nous avons cherché à réaliser des salles et des éléments rappellant l'univers original.</p>
+
+				<div class="imgList">
+					<img src="../images/blackMesaRemake/Accueil.png">
+					<img src="../images/blackMesaRemake/corridor0.png">
+				</div>
+				<div class="imgList">
+					<img src="../images/blackMesaRemake/chemical.png">
+					<img src="../images/blackMesaRemake/corridor1.png">
+				</div>
+
+				<h3 class="underlined">Sound design</h3>
+				<p>Nous avons dynamisé les sons. Il sont filtrés et modifiés selon l'environnement. Les sons lointains sont sourd et étouffés et les grandes salles produisent de l'echo. De plus, une attention particulière à été porté aux bruits de pas qui changent en fonction du sol sur lequel le joueur évolu.</p>
+				<img class="imgAlone" src="../images/blackMesaRemake/soundDesign.png">
+
+				<h3 class="underlined">Light design</h3>
+				<p>Les lumières et éclairages ont été très travaillés afin d'offrir des environnements réalistes et cohérents. Nous avons utilisé différentes technologies telles que le HDR, le baking de lumières, les Light Probes (Orbes de refléxion) ou encore des Volumetric Scatter (Dispertion volumétrique).</p>
+				<img class="imgAlone" src="../images/blackMesaRemake/lightprobe.png">
+			</div>
+
+			<div class="para">
+				<h2 class="underlined">Le personnage</h2>
+				<h3 class="underlined">Les animations</h3>
+				<p>Le joueur incarne un agent de la sécurité. Le modèle 3D et les animations ont été obtenus sur internet. Nous avons dû organiser les animations avec un animator controler disponible avec le moteur Unity.</p>
+
+				<div class="imgList">
+					<img src="../images/blackMesaRemake/Character.png">
+					<img src="../images/blackMesaRemake/Animation.png">
+				</div>
+
+				<h3 class="underlined">Raycast aim</h3>
+				<p>Afin d'être précis dans les tirs du joueur, nous avons utilisé des raycast pour prédire si le tir touche sa cible avant même que l'animation ne se joue.</p>
+
+				<div class="imgList">
+					<img src="../images/blackMesaRemake/rayCastImpacts.png">
+					<img src="../images/blackMesaRemake/rayCastLaser.png">
+				</div>
+			</div>
+
+			<div class="para">
+				<h2 class="underlined">Le Head Crab</h2>
+				<p>Véritable icone de la pop culture, le Head Crab est un ennemi de base de la license. Cet ennemi cherche à sauter sur la tête de ses victimes pour s'accoupler avec. Nous avons particulièrement travaillé sur cet créature à la fois pour ne pas la rater mais aussi pour le plaisir de la recréer la plus fidèlement possible.</p>
+
+				<h3 class="underlined">Modélisation, rigging et animation</h3>
+				<p>Nous avons trouvé un modèle lowpoly d'un head crab sur internet. Nous l'avons utilisé comme base pour notre mesh que nous avons retravaillé. Ensuite, nous l'avons rig (création d'un squelette) et animé.</p>
+				<img class="imgAlone" src="../images/blackMesaRemake/HeadCrab rigging.png">
+
+				<h3 class="underlined">Le texturing</h3>
+				<p>Concernant les textures, celles fournis avec le modèle lowpoly ne convenaient plus. Nous avons alors fait un nouveau mapping du modèle puis nous l'avons texturé à l'aide de Substance Painter.</p>
+
+				<h3 class="underlined">Les sons</h3>
+				<p>Afin d'être un maximum fidèle à l'oeuvre originale, nous avons utilisé les sons originaux inimitables :</p>
+
+				<div class="soundList">
+					<audio controls src="../sounds/blackMesaRemake/attack2.wav">► Attaque</audio>
+					<audio controls src="../sounds/blackMesaRemake/die1.wav">► Mort</audio>
+					<audio controls src="../sounds/blackMesaRemake/idle3.wav">► Attente</audio>
+				</div>
+
+				<h3 class="underlined">Le ragdoll</h3>
+				<p>Le ragdoll du headcrab n'a pas été une mince affaire. En effet, dès que l'on touche à de la physique et surtout avec un objet complexe tel qu'un squelette, ça devient rapidement n'importe quoi. Néanmoins, nous somme arrivé à un équilibre vraiment convainquant et nous en sommes très fier !</p>
+
+				<div class="imgList">
+					<img src="../images/blackMesaRemake/Ragdoll1.png">
+					<img src="../images/blackMesaRemake/Ragdoll2.png">
+				</div>
+
+				<h3 class="underlined">L'IA</h3>
+				<p>Pour que le Head Crab soit un véritable ennemi, il faut qu'il en ai le comportement. Nous lui avons codé un comportement simple mais efficasse. S'il vous voit, il vous suit et s'il est assez proche, il vous saute dessus. Concernant, ses déplacements, le Head Crab suit une navigation map.</p>
+
+				<div class="imgList">
+					<img src="../images/blackMesaRemake/AI.png">
+					<img src="../images/blackMesaRemake/navigationMesh.png">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

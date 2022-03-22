@@ -1,0 +1,29 @@
+/* --Code-- */
+#code{
+    margin: auto;
+    color: white;
+}
+
+.Ccommentaire{
+    color: grey;
+}
+
+.Cimportant{
+    color: red;
+}
+
+.Celmt{
+    color: orange;
+}
+
+.Cattribut{
+    color: yellow;
+}
+
+.Cnum{
+    color: cyan;
+}
+
+.Cfunction{
+    color: green;
+}
