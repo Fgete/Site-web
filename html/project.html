@@ -10,16 +10,18 @@
 
 <script type="text/javascript" src="../js/project.js"></script>
 
-<body onload="EnterProject();" id="body" class="width_100 height_100">
+<body onload="EnterProject();" class="width_100 height_100">
     <div id="decorum" class="width_full height_full">
-        <a href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width_100 height_100"></a>
+        <div id="bgEnvironment" class="width_full height_full" style="background-image: url('../images/entomocene/door.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width_100 height_100"></div>
         <div id="mainScreen" class="width_full height_full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
     </div>
     <div id="projectContent" class="flex_column width_full">
 
         <div class="titleStrip">
+            <div style="background-image: url('../images/entomocene/door.png')" class="width_full height_100"></div>
             <h1>Project title</h1>
-            <h4 class="subtitle">Subtitle of this project.</h4>
+            <h4>Project subtitle</h4>
         </div>
 
         <p class="context width_30">
@@ -35,7 +37,7 @@
                 Eum maiores unde ut aliquid debitis et molestias animi.
                 Sit aliquam sint et vitae dolorem aut doloribus voluptatibus et voluptatibus veritatis qui doloremque laborum.
             </p>
-            <img src="../images/index/wallpaper_virgo.png">
+            <img src="../images/index/wallpaper_virgo.png" class="media">
         </div>
 
         <div class="chapter width_50">
@@ -46,8 +48,10 @@
                 Eum maiores unde ut aliquid debitis et molestias animi.
                 Sit aliquam sint et vitae dolorem aut doloribus voluptatibus et voluptatibus veritatis qui doloremque laborum.
             </p>
-            <img src="../images/index/wallpaper_virgo.png">
+            <img src="../images/index/wallpaper_virgo.png" class="media">
         </div>
+
+        <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">
 
     </div>
 </body>

@@ -109,7 +109,8 @@ body             {
 .margin_1        { margin: 1vw;   }
 .margin_05       { margin: .5vw;  }
 
-a                { text-decoration: none; color: var(--color_Main); cursor: pointer; }
+a                { text-decoration: none; color: var(--color_Main); cursor: pointer; transition: .5s; }
+a:hover          { background-color: var(--color_Main); color: var(--color_Grey); }
 h1, h2, h3       { color: var(--color_Main); }
 h1               { font-size: 2.5em; }
 h2               { font-size: 2em;   }

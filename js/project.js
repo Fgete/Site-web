@@ -13,7 +13,7 @@ function EnterProject(){
     mainScreen.style.transform  = "translateZ(-1000px) translateX(105px) rotateY(10deg)";
     mainScreen.style.pointerEvents = "";
     setTimeout(function () {
-        window.scrollTo(0, 120);
+        window.scrollTo(0, 150);
     }, 1000);
 }
 

@@ -8,7 +8,7 @@
 
 var tileCollection = [
 	["L A G", "./images/profil.jpg", "./html/contact.html", "", "Qui suis-je?"],
-	["Galerie", "./images/articles/galerie.png", "./html/galery.html", "", "J'etez-y un œil."],
+	["Galerie", "./images/articles/galerie.png", "./html/gallery.html", "", "J'etez-y un œil."],
 	["VJing", "./images/articles/vjing.png", "./html/vjing.html", "./images/index/wallpaper_vjing.png", "Projet VJing"],
 	["A.R.M.", "./images/articles/arm.png", "./html/arm.html", "./images/index/wallpaper_arm.png", "Projet de jeu d'horreur"],
 	["B.M. Remake", "./images/articles/BMRemake.png", "./html/blackMesaRemake.html", "./images/index/wallpaper_entomo.png", "Remake d'un Demake"],

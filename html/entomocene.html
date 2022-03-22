@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/default.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../css/project.css?v=1">
+</head>
+
+<script type="text/javascript" src="../js/project.js"></script>
+
+<body onload="EnterProject();" class="width_100 height_100">
+    <div id="decorum" class="width_full height_full">
+        <div id="bgEnvironment" class="width_full height_full" style="background-image: url('../images/entomocene/door.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width_100 height_100"></div>
+        <div id="mainScreen" class="width_full height_full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
+    </div>
+    <div id="projectContent" class="flex_column width_full">
+
+        <div class="titleStrip">
+            <div style="background-image: url('../images/entomocene/door.png')" class="width_full height_100"></div>
+            <h1>Entomocene</h1>
+            <h4>The Insect Age</h4>
+        </div>
+
+        <p class="context width_30">
+            Ce projet est réalisé dans le cadre du projet de fin d'année de Cycle 2 à Ludus Académie.
+        </p>
+
+        <div class="chapter width_50">
+            <h2>Entomocene, c'est quoi ?</h2>
+            <p>
+                Entomocene (The Insect Age) est un jeu <a href="https://fr.wikipedia.org/wiki/Beat_them_all" target="_blank">beat them all</a> de type <a href="https://fr.wikipedia.org/wiki/Roguelike" target="_blank">Rogue Like</a> mettant en scène une scientifique combattant des insectes géants.
+                C'est un concept de jeu qui me permet de me confronter à plusieurs difficultés tout en réalisant un jeu qui me tient à coeur et qui, je l'espère, vous plaira.
+            </p>
+            <img src="../images/entomocene/title.png" class="media">
+        </div>
+
+        <div class="chapter width_50">
+            <h2>Contexte</h2>
+            <p>
+                <legend>Intentions</legend>
+                Le jeu a pour intention de défouler le joueur dans une expérience rapide dynamique et pleine d’action.
+                De plus, le joueur sera plongé dans un univers glauque et repoussant. Les ennemis rampants et
+                grouillants dans tous les sens ajouteront au malaise.
+            </p>
+            <div class="width_100">
+                <legend>Références</legend>
+                <div class="flex_column justify_between width_100">
+                    <div class="flex_row width_100">
+                        <p>
+                            En terme de gameplay, je m'inspire du jeu <a href="https://fr.wikipedia.org/wiki/The_Binding_of_Isaac" target="_blank">The Binding of Isaac</a>.
+                            C'est un jeu simple en apparence simple mais cachant une complexité incroyable et un renouvelement du gameplay infini.
+                        </p>
+                        <img src="../images/entomocene/issac.png" class="media">
+                    </div>
+                    <div class="flex_row width_100">
+                        <p>
+                            L’aspect graphique du jeu se rapproche du jeu Factorio avec ses modèles 3D et
+                            volontairement pixélisés.
+                            De plus l’ambiance globale se rapproche à la fois de <a href="https://fr.wikipedia.org/wiki/Factorio" target="_blank">Factorio</a> mais aussi de
+                            <a href="https://fr.wikipedia.org/wiki/The_Binding_of_Isaac" target="_blank">The Binding of Isaac</a> concernant l’impression d’insalubrité et de gêne que l’on peut ressentir.                        </p>
+                        <img src="../images/entomocene/factorio.png" class="media">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter width_50">
+            <h2>Un environnement procédurale</h2>
+            <p>
+                Mon jeu étant un <a href="https://fr.wikipedia.org/wiki/Roguelike" target="_blank">Rogue Like</a>, j'ai décidé de générer l'environnement procéduralement afin de garantir une expérience de jeu inédite à chaque partie.
+                La génération se divise en plusieurs étapes simples qui, mises bout à bout, donnent une carte cohérente et théoriquement infinie.
+            </p>
+            <legend>Réglage de la carte</legend>
+            <div class="flex_row justify_between">
+                <p>
+                    La future carte est, à son commencement, un objet vide comportant un script <span class="highLight">[Map Manager]</span>.
+                    C'est ce script qui va accueillir les premiers réglages.
+                    Son rôle est d'instancier la première salle de la carte.
+                </p>
+                <img src="../images/entomocene/map_manager.png" class="media">
+            </div>
+            <img src="../images/entomocene/first_room.png" class="media">
+
+            <legend>Instanciement récursif</legend>
+            <p>
+                Une fois la première salle générée, elle va, en fonction des paramètres du <span class="highLight">[Map Manager]</span>, générer des nouvelles salles connexes.
+                Ensuite, les nouvelles salles prendront le rôle de la première salle et vont générer à leur tour de nouvelles salles.
+                Ce processus continu jusqu'à ce les conditions du <span class="highLight">[Map Manager]</span> soient respectées.
+            </p>
+            <img src="../images/entomocene/map.png" class="media">
+
+            <legend>Habillage des salles</legend>
+            <div class="flex_row justify_between">
+                <p>
+                    A ce stade, la carte est quasiment terminée mais elle manque de réalisme.
+                    C'est pourquoi, tous les murs, sols, portes vont être remplacer par des assets aléatoirement piochés dans des listes.
+                </p>
+                <img src="../images/entomocene/murs.png" class="media">
+            </div>
+
+            <legend>Placement de divers éléments</legend>
+            <p>
+                Pour finir, on place les accésoires, les objets et les ennemis.
+                A l'instar des murs, sols, portes, les accéssoires, objets et ennemis sont piochés dans des listes.
+            </p>
+            <img src="../images/entomocene/result_map.png" class="media">
+
+            <legend>Lien vers les releases</legend>
+            <a href="https://lagstudio.notion.site/ENTOMOCENE-c26ea16fc44e4ad0bf3f9b51fceed0ce" target="_blank">Lien Notion du projet >></a>
+        </div>
+
+        <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">
+
+    </div>
+</body>
+</html>
