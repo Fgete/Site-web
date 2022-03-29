@@ -1,8 +1,13 @@
 terminalState = 0;
 terminalText = null;
-terminalFolderSelect = 0;
+terminalFolderSelect = "0";
+loginTime = null;
 
+// State = 0
 function TerminalOn() {
+    if (terminalState !== 0)
+        return;
+
     buttonLight = document.getElementById("terminalButtonLight");
     buttonLight.style.background      = "none";
     buttonLight.style.backgroundColor = "lime";
@@ -89,40 +94,63 @@ function TerminalOn() {
     }, 1000);
 }
 
+// State = 1
 function TerminalPasswordScreen() {
     terminalText.innerHTML = "Pwd: _ _ _ _";
     terminalState = 1;
 }
 
+// State = 2
 function TerminalAccessGranted() {
     terminalText.innerHTML = ">> Access granted";
     terminalState = 2;
+    loginTime = Date();
     setTimeout(function () {
         PrintFolderScreen(terminalFolderSelect);
     }, 2000);
 }
 
 document.addEventListener('keydown', function(event) {
-    if (event.key === "Enter") {
-        CheckCommand(document.getElementById("terminalInput").value);
+    if (event.key === "Enter" || event.key === "ArrowRight" || event.key === "Space") {
+        if (terminalState === 1)
+            CheckCommand(document.getElementById("terminalInput").value);
+        if (terminalState === 2){
+            if (terminalFolderSelect === "1") {
+                terminalState = 2.1;
+                terminalFolderSelect = "10";
+                PrintFolderScreen(terminalFolderSelect);
+            }
+        }
     }
 
     if (event.key === "ArrowUp") {
         if (terminalState === 2){
-            if (terminalFolderSelect === 0)
-                terminalFolderSelect = 2;
+            if (terminalFolderSelect === "0")
+                terminalFolderSelect = "2";
+            else if (terminalFolderSelect === "2")
+                terminalFolderSelect = "1";
             else
-                terminalFolderSelect--;
+                terminalFolderSelect = "0";
             PrintFolderScreen(terminalFolderSelect);
         }
     }
 
     if (event.key === "ArrowDown") {
         if (terminalState === 2){
-            if (terminalFolderSelect === 2)
-                terminalFolderSelect = 0;
+            if (terminalFolderSelect === "2")
+                terminalFolderSelect = "0";
+            else if (terminalFolderSelect === "0")
+                terminalFolderSelect = "1";
             else
-                terminalFolderSelect++;
+                terminalFolderSelect = "2";
+            PrintFolderScreen(terminalFolderSelect);
+        }
+    }
+
+    if (event.key === "Escape" || event.key === "ArrowLeft") {
+        if (terminalState === 2.1 && terminalFolderSelect === "10"){
+            terminalFolderSelect = "1";
+            terminalState = 2;
             PrintFolderScreen(terminalFolderSelect);
         }
     }
@@ -134,32 +162,50 @@ function CheckCommand(command){
         TerminalAccessGranted();
 }
 
+// State = 2
 function PrintFolderScreen(n) {
-    if (n === 0)
+    if (n === "0") // Data
         terminalText.innerHTML =
             "user<br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╟─ <span>data</span><br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╟─ tmp<br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╙─ os<br/>";
-    else if (n === 1)
+            " ║<br/>" +
+            " ╟─ <span>data</span><br/>" +
+            " ║<br/>" +
+            " ╟─ tmp<br/>" +
+            " ║<br/>" +
+            " ╙─ os<br/>";
+    else if (n === "1") // Temp
         terminalText.innerHTML =
             "user<br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╟─ data<br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╟─ <span>tmp</span><br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╙─ os<br/>";
-    else if (n === 2)
+            " ║<br/>" +
+            " ╟─ data<br/>" +
+            " ║<br/>" +
+            " ╟─ <span>tmp</span><br/>" +
+            " ║<br/>" +
+            " ╙─ os<br/>";
+    else if (n === "2") // Os
         terminalText.innerHTML =
             "user<br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╟─ data<br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╟─ tmp<br/>" +
-            "&nbsp║<br/>" +
-            "&nbsp╙─ <span>os</span><br/>";
+            " ║<br/>" +
+            " ╟─ data<br/>" +
+            " ║<br/>" +
+            " ╟─ tmp<br/>" +
+            " ║<br/>" +
+            " ╙─ <span>os</span><br/>";
+    else if (n === "10") // Temp -> file
+        terminalText.innerHTML =
+            "user<br/>" +
+            " ║<br/>" +
+            " ╟─ data<br/>" +
+            " ║<br/>" +
+            " ╟─ tmp ──┐<br/>" +
+            " ║        └─ <span>7EGEWlaG6O</span><br/>" +
+            " ╙─ os<br/>";
+    else if (n === "100"){
+        terminalText.innerHTML =
+            "user/tmp/<span>7EGEWlaG6O</span><br/>";
+    }
+}
+
+function Back(){
+    window.location.href = "./arm.html";
 }

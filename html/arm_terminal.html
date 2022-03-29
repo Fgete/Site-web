@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>A.R.M. Terminal</title>
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/terminal.css">
+    <script type="text/javascript" src="../js/terminal.js"></script>
+</head>
+<body>
+    <img id="imgBack" src="../images/logos/play.png" onclick="Back();">
+
+    <div id="terminal">
+        <div id="terminalScreen">
+            <div id="terminalText"></div>
+            <input id="terminalInput" type="text" placeholder=">_" hidden>
+        </div>
+        <div id="terminalButtons" class="flex_row justify_end">
+            <div id="terminalBrand">ARM-SCOPE</div>
+            <div id="terminalButtonLight"></div>
+            <div id="terminalButtonPower" onclick="TerminalOn();">
+                <img src="../images/logos/power.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
