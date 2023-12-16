@@ -1,0 +1,36 @@
+@font-face {
+  font-family: entomocene-trash;
+  src: url(../fonts/entomocene-trash.ttf);
+}
+
+@font-face {
+  font-family: entomocene-simple;
+  src: url(../fonts/entomocene-simple.ttf);
+}
+
+@font-face {
+  font-family: entomocene-text;
+  src: url(../fonts/entomocene-text.ttf);
+}
+
+body { background-image: url("../images/entomocene/splash.png"); }
+#projectContent { background: linear-gradient(90deg, #0000 20%, #000a 25%, #000a 75%, #0000 80%); }
+
+p { font-family: entomocene-simple; color: #000a; font-weight: bold; }
+a { color: #000; }
+h1, h2, h3 { font-family: entomocene-simple; filter: drop-shadow(0 0 5px #000) !important; margin: 0; }
+h4, h5, h6 { font-family: entomocene-trash; filter: drop-shadow(0 0 5px #000) !important; }
+
+h1 { font-size: 5em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2.5em; }
+h4 { font-size: 2em; }
+
+.titleStrip h1 { transform: translateY(-20px); }
+.titleStrip h4 { transform: translateY(35px); }
+
+/* top | right | bottom | left */
+.text { font-family: entomocene-text; color: #000a; }
+.context { text-align: right; font-size: .9em; }
+.paper0 { background-image: url("../images/entomocene/paper0.png") !important; filter: drop-shadow(0 0 20px #000); background-size: 100% 100% !important; padding: 20px 70px 50px 70px !important; }
+.paper1 { background-image: url("../images/entomocene/paper1.png") !important; filter: drop-shadow(0 0 20px #000); background-size: 100% 100% !important; padding: 20px 50px 50px 30px !important; }
