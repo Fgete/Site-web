@@ -12,20 +12,20 @@ header           {
 header img       { height: 100%; mix-blend-mode: multiply; }
 header div       {
     height: 100%;
-    color: var(--color_Main);
+    color: var(--colorMain);
     cursor: pointer;
     transition: .5s;
 }
 
 header div:hover {
-    background-color: var(--color_Main);
+    background-color: var(--colorMain);
     color: var(--color_Grey);
 }
 
 .header_selected {
     height: 100%;
     box-sizing: border-box;
-    border-bottom: solid 2px var(--color_Main);
+    border-bottom: solid 2px var(--colorMain);
 }
 
 #bigTitle        {

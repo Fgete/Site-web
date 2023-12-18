@@ -37,7 +37,7 @@ body {
 
 .titleStrip {
     width: 100%;
-    background-color: #00000055;
+    background-color: #0005;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,19 +63,18 @@ body {
 
 .context {
     text-align: center;
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(90deg, #0000 0%, #0003 50%, #0000 100%);
     padding: 10px 0 10px 0;
 }
 
 .chapter h2, .chapter h3, legend {
-    color: var(--color_Main);
     filter: drop-shadow(0 0 10px black);
 }
 
 .chapter p, .chapter fieldset {
     text-align: justify;
     text-justify: inter-word;
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(90deg, #0000 0%, #0003 50%, #0000 100%);
     padding: 10px 0 10px 0;
     border: none;
 }
@@ -110,3 +109,8 @@ img { border-radius: 3px; }
     font-style: italic;
     color: var(--color_Second);
 }
+
+/* --- PROJECTS --- */
+.projectTile { background-color: #0005; padding: 5px; border-radius: 5px; box-shadow: 0 0 10px #0005; cursor: pointer; z-index: 0; }
+.projectTile:hover { transform: scale(1.1); background-color: #222; box-shadow: 0 0 50px #000; z-index: 1; }
+.projectTile p { background: none; font-size: .8em; height: 50px; margin: 0 10px 0 10px; }

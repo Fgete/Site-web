@@ -4,7 +4,11 @@
 		<title>L A G - Index</title>
 		<meta charset="utf-8"/>
 		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
-		<link rel="stylesheet" type="text/css" href="./css/default.css">
+		<link rel="stylesheet" type="text/css" href="./css/colors.css">
+	    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
+	    <link rel="stylesheet" type="text/css" href="./css/default.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
 		<link rel="stylesheet" type="text/css" href="./css/spinner.css">
 		<link rel="stylesheet" type="text/css" href="./css/terminal.css">
@@ -14,21 +18,21 @@
 	<script type="text/javascript" src="./js/index.js"></script>
 	<script type="text/javascript" src="./js/terminal.js"></script>
 
-	<body class="flex_column" onload="SetTilesPosition(index); EnterScreen();">
-		<header class="flex_row justify_start">
+	<body class="flex-column" onload="SetTilesPosition(index); EnterScreen();">
+		<header class="flex-row justify-start">
 			<img src="./images/logo_white.png">
-			<div class="width_150p flex_row justify_around header_selected" onclick="ExitScreenWithUrl('#');">Accueil</div>
-			<div class="width_150p flex_row justify_around" onclick="ExitScreenWithUrl('./html/gallery.html');">Galerie</div>
-			<div class="width_150p flex_row justify_around" onclick="ExitScreenWithUrl('./html/projects.html');">Projets</div>
-			<div class="width_150p flex_row justify_around" onclick="ExitScreenWithUrl('./html/contact.html');">Me contacter</div>
-			<div id="bigTitle" class="flex_column justify_start">
+			<div class="width-150p flex-row justify-around header-selected" onclick="ExitScreenWithUrl('#');">Accueil</div>
+			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/gallery.html');">Galerie</div>
+			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/projects.html');">Projets</div>
+			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/contact.html');">Me contacter</div>
+			<div id="bigTitle" class="flex-column justify-start">
 				<h1>François GETE</h1>
 				<h2>Développeur</h2>
 				<h3>de jeux vidéos</h3>
 			</div>
 		</header>
 
-		<div id="spinnerContainer" class="width_full height_full flex_column justify_around">
+		<div id="spinnerContainer" class="width-full height-full flex-column justify-around">
 			<div id="spinnerOrigin">
 				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
 					<h3>L A G</h3>
@@ -57,38 +61,38 @@
 			</div>
 		</div>
 
-		<div id="panelContainer" class="width_50 height_full">
-			<div class="panel width_80 height_70">
+		<div id="panelContainer" class="width-50 height-full">
+			<div class="panel width-80 height-70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Toutes mes informations</h1>
 				<h2>pour me connaitre et me contacter.</h2>
 				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/contact.html');">En savoir plus ►</a>
 			</div>
-			<div class="panel width_80 height_70">
+			<div class="panel width-80 height-70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Projet volumineux</h1>
 				<h2>de survie horrifique.</h2>
 				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/entomocene.html');">En savoir plus ►</a>
 			</div>
-			<div class="panel width_80 height_70">
+			<div class="panel width-80 height-70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Ici vous trouverez</h1>
 				<h2>certaines de mes créations 3D.</h2>
 				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/gallery.html');">En savoir plus ►</a>
 			</div>
-			<div class="panel width_80 height_70">
+			<div class="panel width-80 height-70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">J'ai branché une entrée</h1>
 				<h2>audio dans Blender.</h2>
 				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/vjing.html');">En savoir plus ►</a>
 			</div>
-			<div class="panel width_80 height_70">
+			<div class="panel width-80 height-70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Mon premier projet</h1>
 				<h2>sur Unity.</h2>
 				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/arm.html');">En savoir plus ►</a>
 			</div>
-			<div class="panel width_80 height_70">
+			<div class="panel width-80 height-70">
 				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
 				<h1 class="paddingLeft">Un exercice de style</h1>
 				<h2>pour bien pratiquer.</h2>

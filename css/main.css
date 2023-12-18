@@ -1,0 +1,53 @@
+html   { scrollbar-width: thin; scrollbar-color: var(--colorMain) var(--color_GreyAlpha); }
+body   { font-size: 1.1em; font-family: "Trebuchet MS", serif; background-size: 100vw 100vh; background: radial-gradient(circle, var(--color_LighterGrey) 0%, var(--color_LightGrey) 69%, var(--color_Grey) 100%) fixed; }
+iframe { border: none; }
+
+.border_top      { border-top: solid 3px var(--colorMain); }
+.border_bottom   { border-bottom: solid 3px var(--colorMain); }
+.network         {
+    width: 90px;
+    height: 90px;
+    color: var(--colorMain);
+    background-color: var(--color_GreyAlpha);
+    border-radius: 5px;
+    box-shadow: 0 0 30px var(--color_GreyAlpha);
+    cursor: pointer;
+}
+.network:hover   {
+    color: black;
+    background-color: var(--colorMain);
+    box-shadow: 0 0 30px var(--colorMain);
+    border-radius: 20px;
+}
+.network_dis     {
+    width: 90px;
+    height: 90px;
+    color: var(--TextColor);
+    background-color: var(--color_GreyAlpha);
+    border-radius: 5px;
+    box-shadow: 0 0 30px var(--color_GreyAlpha);
+    cursor: not-allowed;
+}
+
+.network img         { width: 60%; height: 60%; filter: invert(75%) sepia(100%) saturate(300%) hue-rotate(-15deg) brightness(90%); }
+.network_dis img     { width: 40px; height: 40px; filter: invert(75%) }
+.network:hover img   { filter: none; }
+
+.mission             { width: 100%; }
+.mission:hover       { filter: drop-shadow(0 0 10px var(--colorMain)); transform: translateY(-10px) rotateX(20deg); }
+.transition          { transition: .5s; }
+
+a                    { text-decoration: none; color: var(--colorMain) !important; cursor: pointer; transition: .5s; }
+a:hover              { background-color: var(--colorMain) !important; color: var(--color_Grey) !important; }
+h1, h2, h3, legend   { color: var(--colorMain); }
+h1                   { font-size: 2.5em; }
+h2                   { font-size: 2em;   }
+h3                   { font-size: 1.7em; }
+h4                   { color: var(--textColor); }
+h5                   { color: var(--textColor); }
+p                    { color: var(--textColor); }
+label                { width: 100%; margin-top: 1vw; color: var(--colorMain); }
+.headerWhite         { color: var(--textColor); }
+.paddingLeft         { padding-left: 2vw; }
+.positionBottomRight { position: absolute; bottom: 2vw; right: 2vw; }
+.fSize2              { font-size: 2em; }

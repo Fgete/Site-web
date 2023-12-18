@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <title>VJing</title>
     <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
     <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
     <link rel="stylesheet" type="text/css" href="../css/project.css">
-    <link rel="stylesheet" type="text/css" href="../css/code.css">
 </head>
 
 <script type="text/javascript" src="../js/project.js"></script>
 
-<body onload="EnterProject();" class="width_100 height_100">
-    <div id="decorum" class="width_full height_full">
-        <div id="bgEnvironment" class="width_full height_full" style="background-image: url('../images/vjing/vjing A.png')"></div>
-        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width_100 height_100"></div>
-        <div id="mainScreen" class="width_full height_full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
+<body onload="EnterProject();" class="width-100 height-100">
+    <div id="decorum" class="width-full height-full">
+        <div id="bgEnvironment" class="width-full height-full" style="background-image: url('../images/vjing/vjing A.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
+        <div id="mainScreen" class="width-full height-full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
     </div>
-    <div id="projectContent" class="flex_column width_full">
+    <div id="projectContent" class="flex-column width-full">
 
         <div class="titleStrip">
-            <div style="background-image: url('../images/vjing/vjing A.png')" class="width_full height_100"></div>
+            <div style="background-image: url('../images/vjing/vjing A.png')" class="width-full height-100"></div>
             <h1>Projet VJing</h1>
             <h4>Mixer de la vidéo</h4>
         </div>
 
-        <p class="context width_30">
+        <p class="context width-30">
             Le <span class="highLight">VJing</span> est un terme large qui désigne la performance visuelle en temps réel.
             Les caractéristiques du <span class="highLight">VJing</span> sont la création ou la manipulation de l'image en temps réel via la médiation technologique et en direction d'un public, en synchronisation avec la musique.
         </p>
 
-        <div class="chapter width_50">
+        <div class="chapter width-50">
             <h2>But du projet</h2>
             <p>
                 <span class="highLight">Mon objectif :</span> Réaliser une performance visuelle live autonôme.
@@ -53,7 +56,7 @@
             </p>
         </div>
 
-        <div id="recupSon" class="chapter width_50">
+        <div id="recupSon" class="chapter width-50">
             <h2>1. Récupérer le son</h2>
             <p>
                 Dans cette première étape, je dois aménager une entrée audio.
@@ -63,12 +66,12 @@
             <img src="../images/vjing/ports.png" class="media">
         </div>
 
-        <div id="traitSon" class="chapter width_50">
+        <div id="traitSon" class="chapter width-50">
             <h2>2. Traiter le son</h2>
             <p>
                 Une fois le son dans mon ordinateur, je dois en faire quelque chose.
                 Je ne peux pas l'utiliser de façon brute.
-                Pour cela, je vais utiliser le logiciel <a href="https://cycling74.com/products/max" target="_blank">Max/MSP</a>.
+                Pour cela, je vais utiliser le logiciel <a href="https://cycling74.com/products/max" target="-blank">Max/MSP</a>.
             </p>
             <img src="../images/vjing/maxMsp.png" class="media">
             <p>
@@ -77,34 +80,34 @@
             </p>
         </div>
 
-        <div id="comBlender" class="chapter width_50">
+        <div id="comBlender" class="chapter width-50">
             <h2>3. Communiquer avec Blender</h2>
             <p>
-                Après avoir créé mes variables sur <a href="https://cycling74.com/products/max" target="_blank">Max/MSP</a>, j'ai dû les envoyer à <a href="https://Blender.org" target="_blank">Blender</a>.
-                Pour cela, j'ai recours à l'addon <a href="https://github.com/maybites/blender.NodeOSC" target="_blank">NodeOCS</a> que j'ai ajouté à <a href="https://Blender.org" target="_blank">Blender</a>.
+                Après avoir créé mes variables sur <a href="https://cycling74.com/products/max" target="-blank">Max/MSP</a>, j'ai dû les envoyer à <a href="https://Blender.org" target="-blank">Blender</a>.
+                Pour cela, j'ai recours à l'addon <a href="https://github.com/maybites/blender.NodeOSC" target="-blank">NodeOCS</a> que j'ai ajouté à <a href="https://Blender.org" target="-blank">Blender</a>.
             </p>
             <p>
                 Cet addon me permet de créer un serveur local sur lequel les logiciels pourrons envoyer et recevoir des informations.
                 Néanmoins, je ne peux pas faire transiter beaucoup d'informations.
-                J'aurai besoin de traiter les quelques valeurs reçues par <a href="https://Blender.org" target="_blank">Blender</a> afin de les distribuer aux différents objets paramétrés.
+                J'aurai besoin de traiter les quelques valeurs reçues par <a href="https://Blender.org" target="-blank">Blender</a> afin de les distribuer aux différents objets paramétrés.
             </p>
         </div>
 
-        <div id="modelPara" class="chapter width_50">
+        <div id="modelPara" class="chapter width-50">
             <h2>4. Modéliser et paramétrer</h2>
             <p>
-                <a href="https://Blender.org" target="_blank">Blender</a> reçoit désormais des variables associées au son.
+                <a href="https://Blender.org" target="-blank">Blender</a> reçoit désormais des variables associées au son.
                 Il ne me reste plus qu'à modéliser une scène.
                 Concernant le paramétrage, il est très simple de modifier des <span class="highLight">matériaux</span> et des <span class="highLight">modifiers</span> grâce à des commandes en python.
             </p>
             <img src="../images/vjing/modeling.png" class="media">
         </div>
 
-        <div id="ptitPlus" class="chapter width_50">
+        <div id="ptitPlus" class="chapter width-50">
             <h2>5. Des petits plus</h2>
             <p>
                 J'ai remarqué que si l'on cherche à paramétrer beaucoup d'éléments, certains de ces éléments ne se mettait pas à jour.
-                Pour palier à ce problème, j'ai du écrire un script dans <a href="https://Blender.org" target="_blank">Blender</a> permettant de recevoir les informations communiqués par <a href="https://cycling74.com/products/max" target="_blank">Max/MSP</a>, puis de les distribuer au différents éléments paramétrés.
+                Pour palier à ce problème, j'ai du écrire un script dans <a href="https://Blender.org" target="-blank">Blender</a> permettant de recevoir les informations communiqués par <a href="https://cycling74.com/products/max" target="-blank">Max/MSP</a>, puis de les distribuer au différents éléments paramétrés.
                 Ce script se répète à chaque frame de l'animation (30Hz).
             </p>
             <pre id="code">
@@ -114,29 +117,29 @@
 <span class="Ccommentaire"># Assignation des objects controllés</span>
 object <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>objects<span class="Celmt">[<span class="Cattribut">'objectName'</span>]</span>
 
-<span class="Cfunction">def</span> run_script<span class="Celmt">(</span>scene<span class="Celmt">):</span>
+<span class="Cfunction">def</span> run-script<span class="Celmt">(</span>scene<span class="Celmt">):</span>
     <span class="Ccommentaire"># --- BASS ---</span>
-    bass <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node_tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"Bass"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default_value
+    bass <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node-tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"Bass"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default-value
     <span class="Ccommentaire"># ---</span>
     object<span class="Celmt">.</span>scale<span class="Celmt">[<span class="Cnum">0</span>] =</span> bass
 
     <span class="Ccommentaire"># --- MIDDLE ---</span>
-    middle <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node_tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"Middle"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default_value
+    middle <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node-tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"Middle"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default-value
     <span class="Ccommentaire"># ---</span>
     object<span class="Celmt">.</span>scale<span class="Celmt">[<span class="Cnum">1</span>] =</span> middle
 
     <span class="Ccommentaire"># --- HIGH ---</span>
-    high <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node_tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"High"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default_value
+    high <span class="Celmt">=</span> bpy<span class="Celmt">.</span>data<span class="Celmt">.</span>materials<span class="Celmt">[<span class="Cattribut">"receptionMaterial"</span>].</span>node-tree<span class="Celmt">.</span>nodes<span class="Celmt">[<span class="Cattribut">"High"</span>].</span>outputs<span class="Celmt">[<span class="Cnum">0</span>].</span>default-value
     <span class="Ccommentaire"># ---</span>
     object<span class="Celmt">.</span>scale<span class="Celmt">[<span class="Cnum">2</span>] =</span> high
 
 <span class="Ccommentaire"># Lancer le script à chaque frame</span>
-bpy<span class="Celmt">.</span>app<span class="Celmt">.</span>handlers<span class="Celmt">.</span>frame_change_pre<span class="Celmt">.</span>append<span class="Celmt">(</span>run_script<span class="Celmt">)</span>
+bpy<span class="Celmt">.</span>app<span class="Celmt">.</span>handlers<span class="Celmt">.</span>frame-change-pre<span class="Celmt">.</span>append<span class="Celmt">(</span>run-script<span class="Celmt">)</span>
     			</code>
 			</pre>
         </div>
 
-        <div id="result" class="chapter width_50">
+        <div id="result" class="chapter width-50">
             <h2>6. Résultat</h2>
             <iframe class="media"
                     src="https://www.youtube.com/embed/ihAc6DB0p3E"

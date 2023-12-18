@@ -31,6 +31,6 @@ h4 { font-size: 2em; }
 
 /* top | right | bottom | left */
 .text { font-family: entomocene-text; color: #000a; }
-.context { text-align: right; font-size: .9em; }
-.paper0 { background-image: url("../images/entomocene/paper0.png") !important; filter: drop-shadow(0 0 20px #000); background-size: 100% 100% !important; padding: 20px 70px 50px 70px !important; }
-.paper1 { background-image: url("../images/entomocene/paper1.png") !important; filter: drop-shadow(0 0 20px #000); background-size: 100% 100% !important; padding: 20px 50px 50px 30px !important; }
+.context { font-size: .9em; }
+.paper0 { background-image: url("../images/entomocene/paper0.png") !important; filter: drop-shadow(0 0 20px #000); background-size: 100% 100% !important; padding: 20px 50px 20px 50px !important; }
+.paper1 { background-image: url("../images/entomocene/paper1.png") !important; filter: drop-shadow(0 0 20px #000); background-size: 100% 100% !important; padding: 20px 30px 30px 20px !important; text-align: right !important; }

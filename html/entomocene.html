@@ -4,140 +4,102 @@
     <meta charset="UTF-8">
     <title>Entomocene</title>
     <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
     <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
     <link rel="stylesheet" type="text/css" href="../css/project.css">
     <link rel="stylesheet" type="text/css" href="../css/entomocene.css">
 </head>
 
 <script type="text/javascript" src="../js/project.js"></script>
 
-<body onload="EnterProject();" class="width_100 height_100">
-    <div id="decorum" class="width_full height_full">
-        <div id="bgEnvironment" class="width_full height_full" style="background-image: url('../images/entomocene/fire.png')"></div>
-        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width_100 height_100"></div>
-        <div id="mainScreen" class="width_full height_full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
+<body onload="EnterProject();" class="width-100 height-100">
+    <div id="decorum" class="width-full height-full">
+        <div id="bgEnvironment" class="width-full height-full" style="background-image: url('../images/entomocene/fire.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
+        <div id="mainScreen" class="width-full height-full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
     </div>
-    <div id="projectContent" class="flex_column width_full">
+    <div id="projectContent" class="flex-column width-full">
 
         <div class="titleStrip">
-            <div style="background-image: url('../images/entomocene/fire.png')" class="width_full height_100"></div>
+            <div style="background-image: url('../images/entomocene/fire.png')" class="width-full height-100"></div>
             <h1>Entomocene</h1>
             <h4>The Insect Age</h4>
         </div>
 
-        <p class="context width_30 text paper1">
+        <p class="context width-30 text paper1">
             Ce projet est realise dans le l'obtention du diplome Master a Ludus Academie (2o23-2o24).
         </p>
 
-        <div class="chapter width_50">
-            <h2>Entomocene, c'est quoi ?</h2>
+        <div class="chapter width-50">
+            <h2>Que se passe t-il ici ?</h2>
             <p class="paper0">
-                Entomocene (The Insect Age) est un jeu <a href="https://fr.wikipedia.org/wiki/Beat_them_all" target="_blank">beat them all</a> de type <a href="https://fr.wikipedia.org/wiki/Roguelike" target="_blank">Rogue Like</a> mettant en scène une scientifique combattant des insectes géants.
-                C'est un concept de jeu qui me permet de me confronter à plusieurs difficultés tout en réalisant un jeu qui me tient à coeur et qui, je l'espère, vous plaira.
+                Entomocene (The Insect Age) est un projet de jeu en développement. Il s'agit d'un jeu de survie horreur aventure dans un univers post-apocalyptique infesté d'insectes géants.
+                Ce jeu terrifant et saisissant pour immergera dans cet univers cauchemardesque. Vous serez confronté à une nature froide et impitoyable.<br><br>
+                Armez-vous et explorez prudemment votre environnement à la recherce de ressources et d'éventuelles survivants.<br>
+                <img src="../images/entomocene/banniere.png" class="width-60 margin-left-20">
             </p>
-            <img src="../images/entomocene/title.png" class="media">
-        </div>
 
-        <div class="chapter width_50">
-            <h2>Contexte</h2>
             <h3>Intentions</h3>
-            <p class="paper0">
-                Le jeu a pour intention de défouler le joueur dans une expérience rapide dynamique et pleine d’action.
-                De plus, le joueur sera plongé dans un univers glauque et repoussant. Les ennemis rampants et
-                grouillants dans tous les sens ajouteront au malaise.
+            <div class="flex-row justify-around">
+                <p class="paper0 width-30">
+                    L'intention est de plonger le joueur dans une aventure qu'il n'oubliera pas. Le jeu se veut réaliste avec une forte attention apportée à la photographie. L'évolution sera difficile et poussera le joueur à adopter un comportement prudent et réfléchi.
+                </p>
+                <img src="../images/entomocene/nest.png" class="width-50">
+            </div>
+
+            <h3>Le proof of concept</h3>
+            <div class="flex-row justify-around">
+                <img src="../images/entomocene/result_map.png" class="width-50">
+                <p class="paper0 width-30">
+                    Lors de la première année de développement, le jeu s'orientait vers une dimension plus arcade avec des mécaniques de jeu proches du Rogue Like. Les niveau étaient procéduraux et l'aspect graphique était retro.<br><br>
+                    J'ai pu, grâce à ce projet, élaborer le coeur du gameplay et le faire tester auprès de joueurs. Les retours ont été fortement encourageants !
+                </p>
+            </div>
+
+            <h2 class="margin-top-100p">2023 : début de la Refonte</h2>
+            <p class="paper1 context text">
+                Arrive a un stade de ma formation, le jeu Entomocene ne reflete plus l'etat de mes competences. J'ai alors decide d'en faire une refonte COMPLETE !
             </p>
-            <div class="width_100">
-                <h3>Références</h3>
-                <div class="flex_column justify_between width_100">
-                    <div class="flex_row width_100">
-                        <p class="paper0">
-                            En terme de gameplay, je m'inspire du jeu <a href="https://fr.wikipedia.org/wiki/The_Binding_of_Isaac" target="_blank">The Binding of Isaac</a>.
-                            C'est un jeu simple en apparence simple mais cachant une complexité incroyable et un renouvelement du gameplay infini.
-                        </p>
-                        <img src="../images/entomocene/issac.png" class="media">
-                    </div>
-                    <div class="flex_row width_100">
-                        <p class="paper0">
-                            L’aspect graphique du jeu se rapproche du jeu Factorio avec ses modèles 3D et
-                            volontairement pixélisés.
-                            De plus l’ambiance globale se rapproche à la fois de <a href="https://fr.wikipedia.org/wiki/Factorio" target="_blank">Factorio</a> mais aussi de
-                            <a href="https://fr.wikipedia.org/wiki/The_Binding_of_Isaac" target="_blank">The Binding of Isaac</a> concernant l’impression d’insalubrité et de gêne que l’on peut ressentir.
-                        </p>
-                        <img src="../images/entomocene/factorio.png" class="media">
-                    </div>
-                </div>
+
+            <h3 class="margin-top-50p">Refonte des interfaces</h3>
+            <div class="flex-row justify-around">
+                <img src="../images/entomocene/ui0.png" class="width-40">
+                <img src="../images/entomocene/ui1.png" class="width-40">
+            </div>
+
+            <h3 class="margin-top-50p">Refonte de l'environnement</h3>
+            <div class="flex-row justify-around">
+                <img src="../images/entomocene/env0.png" class="width-30">
+                <img src="../images/entomocene/env1.png" class="width-30">
+                <img src="../images/entomocene/env2.png" class="width-30">
             </div>
         </div>
 
-        <div class="chapter width_50">
-            <h2>Un environnement procédurale</h2>
-            <p class="paper0">
-                Mon jeu étant un <a href="https://fr.wikipedia.org/wiki/Roguelike" target="_blank">Rogue Like</a>, j'ai décidé de générer l'environnement procéduralement afin de garantir une expérience de jeu inédite à chaque partie.
-                La génération se divise en plusieurs étapes simples qui, mises bout à bout, donnent une carte cohérente et théoriquement infinie.
-            </p>
-
-            <h3>Réglage de la carte</h3>
-            <div class="flex_row justify_between">
-                <p class="paper0">
-                    La future carte est, à son commencement, un objet vide comportant un script <span class="highLight">[Map Manager]</span>.
-                    C'est ce script qui va accueillir les premiers réglages.
-                    Son rôle est d'instancier la première salle de la carte.
-                </p>
-                <img src="../images/entomocene/map_manager.png" class="media">
-            </div>
-            <img src="../images/entomocene/first_room.png" class="media">
-
-            <h3>Instanciement récursif</h3>
-            <p class="paper0">
-                Une fois la première salle générée, elle va, en fonction des paramètres du <span class="highLight">[Map Manager]</span>, générer des nouvelles salles connexes.
-                Ensuite, les nouvelles salles prendront le rôle de la première salle et vont générer à leur tour de nouvelles salles.
-                Ce processus continu jusqu'à ce les conditions du <span class="highLight">[Map Manager]</span> soient respectées.
-            </p>
-            <img src="../images/entomocene/map.png" class="media">
-
-            <h3>Habillage des salles</h3>
-            <div class="flex_row justify_between">
-                <p class="paper0">
-                    A ce stade, la carte est quasiment terminée mais elle manque de réalisme.
-                    C'est pourquoi, tous les murs, sols, portes vont être remplacer par des assets aléatoirement piochés dans des listes.
-                </p>
-                <img src="../images/entomocene/murs.png" class="media">
-            </div>
-
-            <h3>Placement de divers éléments</h3>
-            <p class="paper0">
-                Pour finir, on place les accésoires, les objets et les ennemis.
-                A l'instar des murs, sols, portes, les accéssoires, objets et ennemis sont piochés dans des listes.
-            </p>
-            <img src="../images/entomocene/result_map.png" class="media">
-
-            <h3>Lien vers les releases</h3>
-            <p><a href="https://lagstudio.notion.site/ENTOMOCENE-c26ea16fc44e4ad0bf3f9b51fceed0ce" target="_blank">Lien Notion du projet >></a></p>
-            <p><a href="https://lag-studio.itch.io/entomocene" target="_blank">Lien Itchio du projet >></a></p>
-        </div>
-
-        <div class="chapter width_50">
+        <div class="chapter width-50">
             <h2>Galerie</h2>
             <p class="paper0">
                 Pour agrémenter l'univers du projet, j'ai créé plusieurs visuels :
             </p>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/gallery/entomocene/mante0.jpg" class="width_30">
-                <img src="../images/gallery/entomocene/mante1.jpg" class="width_30">
-                <img src="../images/gallery/entomocene/mante2.jpg" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/gallery/entomocene/mante0.jpg" class="width-30">
+                <img src="../images/gallery/entomocene/mante1.jpg" class="width-30">
+                <img src="../images/gallery/entomocene/mante2.jpg" class="width-30">
             </div>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/gallery/entomocene/spider1.jpg" class="width_30">
-                <img src="../images/gallery/entomocene/spider2.jpg" class="width_30">
-                <img src="../images/gallery/entomocene/spider3.jpg" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/gallery/entomocene/spider1.jpg" class="width-30">
+                <img src="../images/gallery/entomocene/spider2.jpg" class="width-30">
+                <img src="../images/gallery/entomocene/spider3.jpg" class="width-30">
             </div>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/gallery/entomocene/spider0.jpg" class="width_30">
-                <img src="../images/gallery/entomocene/bugs.jpg"    class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/gallery/entomocene/spider0.jpg" class="width-30">
+                <img src="../images/gallery/entomocene/bugs.jpg"    class="width-30">
             </div>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/gallery/entomocene/larve.jpg" class="width_30">
-                <img src="../images/gallery/entomocene/radio.jpg" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/gallery/entomocene/larve.jpg" class="width-30">
+                <img src="../images/gallery/entomocene/radio.jpg" class="width-30">
             </div>
         </div>
 
