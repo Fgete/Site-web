@@ -25,8 +25,22 @@
         </div>
     </header>
 
+    <div>
+        <p id="width-debug" style="color: white;"></p>
+    </div>
+
 </body>
 
+<script>
+    
+    para = document.getElementById("width-debug");
 
+    function UpdateWidthDebug() {
+        para.innerHTML = window.innerWidth;
+    }
+
+    interval = setInterval(UpdateWidthDebug, 100);
+
+</script>
 
 </html>
