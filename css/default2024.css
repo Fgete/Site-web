@@ -20,7 +20,7 @@ header>div                 { width: calc(100% - 2 * var(--header_padding)); disp
 
 
 /* --- QUERIES --- */
-@media (max-width: 960px), (orientation: portrait) {
+@media (max-width: 960px), (orientation: portrait),  {
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
 #header-menu               { flex-direction: column; justify-content: flex-start; }
