@@ -1,6 +1,7 @@
 :root {
     /* ---  PAGE  --- */
     --frontier_width:         960px;
+    --font_size_ratio:        1;
 
     /* --- HEADER --- */
     --header_height:          50px;
@@ -17,10 +18,13 @@ header                     { width: 100%; height: var(--header_height); padding:
 header>div                 { width: calc(100% - 2 * var(--header_padding)); display: flex; justify-content: space-between; }
 #header-logo img           { height: var(--header_height); filter: drop-shadow(0 0 10px var(--highlight)); }
 #header-menu               { height: var(--header_height); width: 50%; display: flex; justify-content: flex-end; align-items: center; }
-#header-menu p             { height: var(--header_height); cursor: pointer; display: none; position: absolute; right: 7%; margin: 0; align-items: center; color: var(--highlight); font-size: 1.5em; }
-#header-menu a             { height: var(--header_height); padding: 0 25px 0 25px; text-decoration: none; color: var(--highlight); }
+#header-menu p             { height: var(--header_height); cursor: pointer; display: none; position: absolute; right: 7%; margin: 0; align-items: center; color: var(--highlight); font-size: 5em; }
+#header-menu a             { height: var(--header_height); padding: 0 25px 0 25px; text-decoration: none; color: var(--highlight); font-size: calc(var(--font_size_ratio) * 1em); }
 #header-menu a div         { height: var(--header_height); display: flex; justify-content: center; align-items: center; transition: .2s; }
 #header-menu a:hover div   { color: #fff; filter: drop-shadow(0 0 10px var(--highlight)); }
+
+/* ---  PAGE  --- */
+p                          { font-size: calc(var(--font_size_ratio) * 1em); }
 
 
 
@@ -28,7 +32,7 @@ header>div                 { width: calc(100% - 2 * var(--header_padding)); disp
 @media (min-width: var(--frontier_width))  {
 /* ---     DESKTOP      --- */
 /* --- HEADER (default) --- */
-:root                      { --header_height: 50px; }
+:root                      { --header_height: 50px; --font_size_ratio: 1; }
 #header-menu               { flex-direction: row; justify-content: flex-end; }
 #header-menu p             { display: none; }
 #header-menu a             { display: block; padding: 0 25px 0 25px; width: 150px; background-color: #0000; }
@@ -38,7 +42,7 @@ header>div                 { width: calc(100% - 2 * var(--header_padding)); disp
 @media (max-width: var(--frontier_width)), (orientation: portrait)  {
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
-:root                      { --header_height: 200px; }
+:root                      { --header_height: 200px; --font_size_ratio: 3; }
 #header-menu               { flex-direction: column; justify-content: flex-start; }
 #header-menu p             { display: flex; }
 #header-menu a             { display: none; padding: 0 10px 0 0; width: calc(100% - 10px); height: 100%; background-color: var(--hd_background); }
