@@ -33,12 +33,19 @@
 	--dark:                    #343a40;
 
     /* colors */
-    --colorMain:              #ffaa00;
-    --colorSecond:            #ffcc55;
+    --colorMain:               #ffaa00;
+    --colorSecond:             #ffcc55;
     --color_GreyAlpha:         #222222aa;
     --color_Grey:              #222222;
     --color_LightGrey:         #444444;
     --color_LighterGrey:       #666666;
     --color_White:             #dddddd;
     --textColor:               #ddd;
+
+    /* Background Gradient */
+    --bgg_inner:               #676156;
+    --bgg_outter:              #1e1d1c;
+
+    /* Header */
+    --hd_background:           #0005;
 }

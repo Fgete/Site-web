@@ -1,0 +1,11 @@
+:root {
+	/* System */
+	--highlight:               #fa0;
+	
+    /* Background Gradient */
+    --bgg_inner:               #676156;
+    --bgg_outter:              #1e1d1c;
+
+    /* Header */
+    --hd_background:           #0005;
+}
