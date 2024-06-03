@@ -27,16 +27,19 @@
 
     <div>
         <p id="width-debug" style="color: white;"></p>
+        <p id="orientation-debug" style="color: white;"></p>
     </div>
 
 </body>
 
 <script>
     
-    para = document.getElementById("width-debug");
+    width = document.getElementById("width-debug");
+    orien = document.getElementById("orientation-debug");
 
     function UpdateWidthDebug() {
-        para.innerHTML = window.innerWidth;
+        width.innerHTML = window.innerWidth;
+        orien.innerHTML = screen.orientation.type;
     }
 
     interval = setInterval(UpdateWidthDebug, 100);
