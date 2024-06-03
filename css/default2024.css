@@ -1,4 +1,6 @@
 :root {
+    /* ---  PAGE  --- */
+    --frontier_width:         960px;
     /* --- HEADER --- */
     --header_height:          50px;
     --header_padding:         5%;
@@ -20,7 +22,17 @@ header>div                 { width: calc(100% - 2 * var(--header_padding)); disp
 
 
 /* --- QUERIES --- */
-@media (max-width: 960px), (orientation: portrait),  {
+@media (min-width: var(--frontier_width))  {
+/* ---     DESKTOP      --- */
+/* --- HEADER (default) --- */
+#header-menu               { flex-direction: row; justify-content: flex-end; }
+#header-menu p             { display: none; }
+#header-menu a             { display: block; padding: 0 25px 0 25px; width: 150px; background-color: #0000; }
+#header-menu a:first-child { display: block; padding: 0 25px 0 25px; }
+#header-menu a div         { justify-content: center; }
+}
+
+@media (max-width: var(--frontier_width)), (orientation: portrait)  {
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
 #header-menu               { flex-direction: column; justify-content: flex-start; }
@@ -29,14 +41,4 @@ header>div                 { width: calc(100% - 2 * var(--header_padding)); disp
 #header-menu a:first-child { padding: var(--header_height) 10px 0 0; }
 #header-menu:hover a       { display: block; }
 #header-menu a div         { justify-content: flex-end; }
-}
-
-@media (min-width: 961px)  {
-/* ---     DESKTOP      --- */
-/* --- HEADER (default) --- */
-#header-menu               { flex-direction: row; justify-content: flex-end; }
-#header-menu p             { display: none; }
-#header-menu a             { display: block; padding: 0 25px 0 25px; width: 150px; background-color: #0000; }
-#header-menu a:first-child { display: block; padding: 0 25px 0 25px; }
-#header-menu a div         { justify-content: center; }
 }
