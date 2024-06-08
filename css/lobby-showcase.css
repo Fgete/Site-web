@@ -1,0 +1,30 @@
+:root {
+	--glow-effect:    3px;
+}
+
+#showcase {
+	perspective: 200px;
+	
+
+	width: 100%;
+	height: 900px;
+
+	background: radial-gradient(ellipse at top right, #fa05, transparent),
+				radial-gradient(ellipse at bottom left, #fff1, transparent),
+				radial-gradient(ellipse at bottom, #333, transparent);
+}
+
+#showcase .left-panel {
+	padding: 2em;
+
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	transform: rotateY(5deg);
+
+	filter: drop-shadow(10px 10px 0 #0005);
+}
+
+#showcase p           { margin: 0; color: var(--sc_title); font-family: 'Xolonium', sans-serif; font-weight: bold; white-space: nowrap; filter: drop-shadow(0 0 var(--glow-effect) var(--sc_title)); }
+#showcase .highlight  { color: var(--sc_highlight); filter: drop-shadow(0 0 var(--glow-effect) var(--sc_highlight)); }
+#showcase .lowlight   { color: var(--sc_lowlight); filter: drop-shadow(0 0 var(--glow-effect) var(--sc_lowlight)); }
