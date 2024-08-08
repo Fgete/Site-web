@@ -13,6 +13,11 @@
 	--scaX:           8;
 	--scaY:           4;
 	--scaZ:           4;
+
+	--cyberX:         -25%;
+	--cyberY:         -35%;
+	--decalX:         .5%;
+	--decalY:         1%;
 }
 
 #showcase {
@@ -45,73 +50,85 @@
 	width: 192vh;
 	height: 108vh;
 	top: 0;
-	transform: translate3d(-25%, -35%, 0px);
 }
 
 #sc-cyan {
-	filter: drop-shadow(0 0 10px #0ff5);
+	transform: translate3d(var(--cyberX), var(--cyberY), 0);
+	filter: drop-shadow(0 0 10px #0ff5) saturate(.5) brightness(2);
 	animation: 10s ease 0s infinite alternate sc-cyan;
 }
 #sc-red {
-	filter: drop-shadow(0 0 10px #f005);
+	transform: translate3d(var(--cyberX), var(--cyberY), 0);
+	filter: drop-shadow(0 0 10px #f005) saturate(.5) brightness(2);
 	animation: 10s ease .33s infinite alternate sc-red;
 }
 #sc-glitch0 {
-	transform: translate3d(-50%, 20%, 0px) scale(.8, .4) rotateZ(180deg) !important;
+	transform: translate3d(-50%, 20%, 0px) scale(.8, .4) rotateZ(180deg);
 	filter: sepia(5) saturate(5) brightness(.5) hue-rotate(-55deg);
+	animation: 2s ease 0s infinite running sc-glitch0;
+	animation-timing-function: steps(2, end);
 }
 #sc-glitch1 {
-	opacity: 30%;
-	transform: translate3d(-30%, -75%, 0px) scale(.8, .4) !important;
+	opacity: .3;
+	transform: translate3d(-30%, -75%, 0px) scale(.8, .4);
 	filter: sepia(5) saturate(5) brightness(.5) hue-rotate(-55deg);
+	animation: 2s ease .5s infinite running sc-glitch1;
+	animation-timing-function: steps(2, end);
 }
 #sc-glass0 {
-	opacity: 60%;
-	transform: translate3d(-60%, -35%, 0px) scale(.7) rotateZ(90deg) !important;
+	opacity: .6;
+	transform: translate3d(-60%, -35%, 0px) scale(.7) rotateZ(90deg);
 }
 #sc-glass1 {
-	opacity: 60%;
-	transform: translate3d(-20%, -50%, 0px) scale(.5) rotateZ(90deg) !important;
+	opacity: .6;
+	transform: translate3d(-20%, -50%, 0px) scale(.5) rotateZ(90deg);
 }
 #sc-portrait {
-	transform: translate3d(-7%, -30%, 0px) scale(.25, .9) !important;
+	opacity: .7;
+	filter: brightness(1.5);
+	transform: translate3d(-7%, -30%, 0px) scale(.22, 1);
 }
-
 
 
 #showcase p           { margin: 0; color: var(--sc_title); font-family: 'Xolonium', sans-serif; font-weight: bold; white-space: nowrap; filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
 #showcase .highlight  { color: var(--sc_highlight); filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
 #showcase .lowlight   { color: var(--sc_lowlight); filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
 
-@keyframes test {
-	0%   { opacity: 0%; }
-	100% { opacity: 100%; }
-}
 
 @keyframes sc-cyan {
-	0%   { transform: translate3d(  -25%, -35%, 0px); }
-	10%  { transform: translate3d(-24.5%, -35%, 0px); }
-	20%  { transform: translate3d(  -25%, -35%, 0px); }
-	30%  { transform: translate3d(-25.5%, -35%, 0px); }
-	40%  { transform: translate3d(-24.5%, -35%, 0px); }
-	50%  { transform: translate3d(  -25%, -35%, 0px); }
-	60%  { transform: translate3d(-25.5%, -35%, 0px); }
-	70%  { transform: translate3d(-24.5%, -35%, 0px); }
-	80%  { transform: translate3d(  -25%, -35%, 0px); }
-	90%  { transform: translate3d(-25.5%, -35%, 0px); }
-	100% { transform: translate3d(  -25%, -35%, 0px); }
+	0%   { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
+	10%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); }
+	20%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
+	30%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); }
+	40%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); }
+	50%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
+	60%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); }
+	70%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); }
+	80%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
+	90%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); }
+	100% { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
 }
 
 @keyframes sc-red {
-	0%   { transform: translate3d(-25%,   -35%, 0px); }
-	10%  { transform: translate3d(-25%, -34.5%, 0px); }
-	20%  { transform: translate3d(-25%,   -35%, 0px); }
-	30%  { transform: translate3d(-25%, -35.5%, 0px); }
-	40%  { transform: translate3d(-25%, -34.5%, 0px); }
-	50%  { transform: translate3d(-25%,   -35%, 0px); }
-	60%  { transform: translate3d(-25%, -35.5%, 0px); }
-	70%  { transform: translate3d(-25%, -34.5%, 0px); }
-	80%  { transform: translate3d(-25%,   -35%, 0px); }
-	90%  { transform: translate3d(-25%, -35.5%, 0px); }
-	100% { transform: translate3d(-25%,   -35%, 0px); }
+	0%   { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
+	10%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); }
+	20%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
+	30%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); }
+	40%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); }
+	50%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
+	60%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); }
+	70%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); }
+	80%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
+	90%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); }
+	100% { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
+}
+
+@keyframes sc-glitch0 {
+	from { transform: translate3d(-50%, 20%, 0px) scale(.8, .4) rotateZ(360deg); }
+	to   { transform: translate3d(-50%, 20%, 0px) scale(.8, .4) rotateZ(0deg);   }
+}
+
+@keyframes sc-glitch1 {
+	from { transform: translate3d(-30%, -75%, 0px) scale(.8, .4) rotateZ(360deg); }
+	to   { transform: translate3d(-30%, -75%, 0px) scale(.8, .4) rotateZ(0deg);   }
 }
