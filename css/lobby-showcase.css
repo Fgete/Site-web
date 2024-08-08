@@ -62,7 +62,7 @@
 }
 #sc-glitch1 {
 	opacity: 30%;
-	transform: translate3d(-30%, -80%, 0px) scale(.8, .4) !important;
+	transform: translate3d(-30%, -75%, 0px) scale(.8, .4) !important;
 	filter: sepia(5) saturate(5) brightness(.5) hue-rotate(-55deg);
 }
 #sc-glass0 {
