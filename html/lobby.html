@@ -38,13 +38,13 @@
             <img id="sc-glass1"   class="screen" src="../images/lobby/glass1.png">
             <img id="sc-portrait" class="screen" src="../images/lobby/portrait.png">
             
-            <p style="font-size: 7.8vh;  line-height: 0;">FRANCOIS</p>
-            <p style="font-size: 14.5vh; line-height: 17vh;">GETE</p>
-            <p style="font-size: 5.5vh;  line-height: 0;">════════════</p>
-            <p style="font-size: 5.4vh;  line-height: 9vh;">DEVELOPPEUR</p>
-            <p style="font-size: 7.5vh;  line-height: 1vh;">JEU VIDEO</p>
-            <p style="font-size: 9.3vh;  line-height: 13vh;">ARTISTE</p>
-            <p style="font-size: 13vh;   line-height: 3vh; transform: scaleX(2.5) translateX(28%);">3D</p>
+            <p class="sc-title" style="font-size: 7.8vh;  line-height: 0;">FRANCOIS</p>
+            <p class="sc-title" style="font-size: 14.5vh; line-height: 17vh;">GETE</p>
+            <p class="sc-title" style="font-size: 5.5vh;  line-height: 0;">════════════</p>
+            <p class="sc-title" style="font-size: 5.4vh;  line-height: 9vh;">DEVELOPPEUR</p>
+            <p class="sc-title" style="font-size: 7.5vh;  line-height: 1vh;">JEU VIDEO</p>
+            <p class="sc-title" style="font-size: 9.3vh;  line-height: 13vh;">ARTISTE</p>
+            <p class="sc-title" style="font-size: 13vh;   line-height: 3vh; transform: scaleX(2.5) translateX(28%);">3D</p>
         </div>
     </div>
 
@@ -64,12 +64,55 @@
     width = document.getElementById("width-debug");
     orien = document.getElementById("orientation-debug");
 
+    blendModes = [
+        "normal",
+        "multiply",
+        "screen",
+        "overlay",
+        "darken",
+        "lighten",
+        "color-dodge",
+        "color-burn",
+        "hard-light",
+        "soft-light",
+        "difference",
+        "exclusion",
+        "hue",
+        "saturation",
+        "color",
+        "luminosity",
+        "plus-darker",
+        "plus-lighter",
+    ];
+
     function UpdateWidthDebug() {
         width.innerHTML = window.innerWidth;
         orien.innerHTML = screen.orientation.type;
     }
 
-    interval = setInterval(UpdateWidthDebug, 100);
+    async function SetBlendModeToShowcaseTitles() {
+        titles = document.getElementsByClassName('sc-title');
+
+        for (j = 0; j < 10; j++){
+            for (i = 0; i < titles.length; i++){
+                titles[i].style.mixBlendMode = blendModes[Math.floor(Math.random() * (blendModes.length - 1))];
+                titles[i].style.transform = "translateX(" + Math.floor(Math.random() * 100) + "px)";
+            }
+            await sleep(50);
+            for (i = 0; i < titles.length; i++){
+                titles[i].style.mixBlendMode = "normal";
+                titles[i].style.transform = i == titles.length - 1 ? "scaleX(2.5) translateX(28%)" : "translateX(0px)";
+            }
+        }
+            
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    interval   = setInterval(UpdateWidthDebug, 100);
+    blendModer = setInterval(SetBlendModeToShowcaseTitles, 3000);
 
 </script>
 

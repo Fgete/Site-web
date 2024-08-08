@@ -90,7 +90,6 @@
 	transform: translate3d(-7%, -30%, 0px) scale(.22, 1);
 }
 
-
 #showcase p           { margin: 0; color: var(--sc_title); font-family: 'Xolonium', sans-serif; font-weight: bold; white-space: nowrap; filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
 #showcase .highlight  { color: var(--sc_highlight); filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
 #showcase .lowlight   { color: var(--sc_lowlight); filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
