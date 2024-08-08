@@ -22,14 +22,16 @@
 	width: 100%;
 	height: 66vh;
 
-	background: radial-gradient(ellipse at top right, #fa05, transparent),
-				radial-gradient(ellipse at bottom left, #fff1, transparent),
-				radial-gradient(ellipse at bottom, #333, transparent);
+	background: radial-gradient(ellipse at top right, #f003, transparent),
+				radial-gradient(ellipse at bottom left, #0ff3, transparent),
+				radial-gradient(ellipse at bottom, #0005, transparent);
 	background-color: #0009;
+	/*
 	background-image: url("../images/lobby/portrait.png");
 	background-size: 50vh;
 	background-repeat: no-repeat;
 	background-position: 90% 25%;
+	*/
 }
 
 #showcase .left-panel {
@@ -56,9 +58,20 @@
 	filter: drop-shadow(0 0 10px #0ff5);
 	animation: 10s ease 0s infinite alternate sc-cyan;
 }
-#sc-red  {
+#sc-red {
 	filter: drop-shadow(0 0 10px #f005);
 	animation: 10s ease .33s infinite alternate sc-red;
+}
+#sc-glass0 {
+	opacity: 60%;
+	transform: translate3d(-60%, -35%, 0px) scale(.7) rotateZ(90deg) !important;
+}
+#sc-glass1 {
+	opacity: 60%;
+	transform: translate3d(-20%, -50%, 0px) scale(.5) rotateZ(90deg) !important;
+}
+#sc-portrait {
+	transform: translate3d(-7%, -30%, 0px) scale(.25, .9) !important;
 }
 
 
