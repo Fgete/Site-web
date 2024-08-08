@@ -53,6 +53,7 @@
 }
 
 #sc-cyan {
+	opacity: .8;
 	transform: translate3d(var(--cyberX), var(--cyberY), 0);
 	filter: drop-shadow(0 0 10px #0ff5) saturate(.5) brightness(2);
 	animation: 10s ease 0s infinite alternate sc-cyan;
@@ -96,31 +97,31 @@
 
 
 @keyframes sc-cyan {
-	0%   { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
-	10%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); }
-	20%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
-	30%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); }
-	40%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); }
-	50%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
-	60%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); }
-	70%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); }
-	80%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
-	90%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); }
-	100% { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); }
+	0%   { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); opacity:  1; }
+	10%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); opacity: .5; }
+	20%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); opacity: .8; }
+	30%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); opacity: .5; }
+	40%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); opacity:  1; }
+	50%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); opacity: .5; }
+	60%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); opacity: .8; }
+	70%  { transform: translate3d(calc(var(--cyberX) - var(--decalX)), var(--cyberY), 0); opacity: .5; }
+	80%  { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); opacity:  1; }
+	90%  { transform: translate3d(calc(var(--cyberX) + var(--decalX)), var(--cyberY), 0); opacity: .5; }
+	100% { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); opacity: .8; }
 }
 
 @keyframes sc-red {
-	0%   { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
-	10%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); }
-	20%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
-	30%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); }
-	40%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); }
-	50%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
-	60%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); }
-	70%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); }
-	80%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
-	90%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); }
-	100% { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); }
+	0%   { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); opacity:  1; }
+	10%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); opacity: .5; }
+	20%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); opacity: .8; }
+	30%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); opacity: .5; }
+	40%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); opacity:  1; }
+	50%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); opacity: .5; }
+	60%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); opacity: .8; }
+	70%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) - var(--decalY)), 0); opacity: .5; }
+	80%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); opacity:  1; }
+	90%  { transform: translate3d(var(--cyberX), calc(var(--cyberY) + var(--decalY)), 0); opacity: .5; }
+	100% { transform: translate3d(var(--cyberX), calc(var(--cyberY) + 0%)           , 0); opacity: .8; }
 }
 
 @keyframes sc-glitch0 {
