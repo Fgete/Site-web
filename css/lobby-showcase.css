@@ -26,12 +26,6 @@
 				radial-gradient(ellipse at bottom left, #0ff3, transparent),
 				radial-gradient(ellipse at bottom, #0005, transparent);
 	background-color: #0009;
-	/*
-	background-image: url("../images/lobby/portrait.png");
-	background-size: 50vh;
-	background-repeat: no-repeat;
-	background-position: 90% 25%;
-	*/
 }
 
 #showcase .left-panel {
@@ -46,7 +40,7 @@
 			rotateX(var(--rotX)) rotateY(var(--rotY)) rotateZ(var(--rotZ));
 }
 
-#showcase .left-panel .glitch{
+#showcase .left-panel .screen{
 	position: absolute;
 	width: 192vh;
 	height: 108vh;
@@ -61,6 +55,15 @@
 #sc-red {
 	filter: drop-shadow(0 0 10px #f005);
 	animation: 10s ease .33s infinite alternate sc-red;
+}
+#sc-glitch0 {
+	transform: translate3d(-50%, 20%, 0px) scale(.8, .4) rotateZ(180deg) !important;
+	filter: sepia(5) saturate(5) brightness(.5) hue-rotate(-55deg);
+}
+#sc-glitch1 {
+	opacity: 30%;
+	transform: translate3d(-30%, -80%, 0px) scale(.8, .4) !important;
+	filter: sepia(5) saturate(5) brightness(.5) hue-rotate(-55deg);
 }
 #sc-glass0 {
 	opacity: 60%;
