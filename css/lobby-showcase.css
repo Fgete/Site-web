@@ -1,17 +1,35 @@
 :root {
-	--glow-effect:    3px;
+	--glow-effect:    20px;
+	--glow-color:     #0ff;
+
+	--rotX:           10deg;
+	--rotY:           0deg;
+	--rotZ:           10deg;
+
+	--traX:           -150px;
+	--traY:           0px;
+	--traZ:           -300px;
+
+	--scaX:           8;
+	--scaY:           4;
+	--scaZ:           4;
 }
 
 #showcase {
-	perspective: 200px;
-	
+	perspective: 300px;
+	overflow: hidden;	
 
 	width: 100%;
-	height: 900px;
+	height: 66vh;
 
 	background: radial-gradient(ellipse at top right, #fa05, transparent),
 				radial-gradient(ellipse at bottom left, #fff1, transparent),
 				radial-gradient(ellipse at bottom, #333, transparent);
+	background-color: #0009;
+	background-image: url("../images/lobby/portrait.png");
+	background-size: 50vh;
+	background-repeat: no-repeat;
+	background-position: 90% 25%;
 }
 
 #showcase .left-panel {
@@ -20,11 +38,64 @@
 	position: absolute;
 	left: 10%;
 	top: 10%;
-	transform: rotateY(5deg);
-
-	filter: drop-shadow(10px 10px 0 #0005);
+	transform:
+			scale3d(var(--scaX), var(--scaY), var(--scaZ))
+			translate3d(var(--traX), var(--traY), var(--traZ))
+			rotateX(var(--rotX)) rotateY(var(--rotY)) rotateZ(var(--rotZ));
 }
 
-#showcase p           { margin: 0; color: var(--sc_title); font-family: 'Xolonium', sans-serif; font-weight: bold; white-space: nowrap; filter: drop-shadow(0 0 var(--glow-effect) var(--sc_title)); }
-#showcase .highlight  { color: var(--sc_highlight); filter: drop-shadow(0 0 var(--glow-effect) var(--sc_highlight)); }
-#showcase .lowlight   { color: var(--sc_lowlight); filter: drop-shadow(0 0 var(--glow-effect) var(--sc_lowlight)); }
+#showcase .left-panel .glitch{
+	position: absolute;
+	width: 192vh;
+	height: 108vh;
+	top: 0;
+	transform: translate3d(-25%, -35%, 0px);
+}
+
+#sc-cyan {
+	filter: drop-shadow(0 0 10px #0ff5);
+	animation: 10s ease 0s infinite alternate sc-cyan;
+}
+#sc-red  {
+	filter: drop-shadow(0 0 10px #f005);
+	animation: 10s ease .33s infinite alternate sc-red;
+}
+
+
+
+#showcase p           { margin: 0; color: var(--sc_title); font-family: 'Xolonium', sans-serif; font-weight: bold; white-space: nowrap; filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
+#showcase .highlight  { color: var(--sc_highlight); filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
+#showcase .lowlight   { color: var(--sc_lowlight); filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
+
+@keyframes test {
+	0%   { opacity: 0%; }
+	100% { opacity: 100%; }
+}
+
+@keyframes sc-cyan {
+	0%   { transform: translate3d(  -25%, -35%, 0px); }
+	10%  { transform: translate3d(-24.5%, -35%, 0px); }
+	20%  { transform: translate3d(  -25%, -35%, 0px); }
+	30%  { transform: translate3d(-25.5%, -35%, 0px); }
+	40%  { transform: translate3d(-24.5%, -35%, 0px); }
+	50%  { transform: translate3d(  -25%, -35%, 0px); }
+	60%  { transform: translate3d(-25.5%, -35%, 0px); }
+	70%  { transform: translate3d(-24.5%, -35%, 0px); }
+	80%  { transform: translate3d(  -25%, -35%, 0px); }
+	90%  { transform: translate3d(-25.5%, -35%, 0px); }
+	100% { transform: translate3d(  -25%, -35%, 0px); }
+}
+
+@keyframes sc-red {
+	0%   { transform: translate3d(-25%,   -35%, 0px); }
+	10%  { transform: translate3d(-25%, -34.5%, 0px); }
+	20%  { transform: translate3d(-25%,   -35%, 0px); }
+	30%  { transform: translate3d(-25%, -35.5%, 0px); }
+	40%  { transform: translate3d(-25%, -34.5%, 0px); }
+	50%  { transform: translate3d(-25%,   -35%, 0px); }
+	60%  { transform: translate3d(-25%, -35.5%, 0px); }
+	70%  { transform: translate3d(-25%, -34.5%, 0px); }
+	80%  { transform: translate3d(-25%,   -35%, 0px); }
+	90%  { transform: translate3d(-25%, -35.5%, 0px); }
+	100% { transform: translate3d(-25%,   -35%, 0px); }
+}

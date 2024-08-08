@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtuagaming</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/project.css">
+</head>
+
+<script type="text/javascript" src="../js/project.js"></script>
+
+<body onload="EnterProject();" class="width-100 height-100">
+    <div id="decorum" class="width-full height-full">
+        <div id="bgEnvironment" class="width-full height-full" style="background-image: url('../images/virtuagaming/showcase.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
+        <div id="mainScreen" class="width-full height-full" onclick="GoUp(); ExitProjectWithUrl('../html/projects.html');"></div>
+    </div>
+    <div id="projectContent" class="flex-column width-full">
+
+        <div class="titleStrip">
+            <div style="background-image: url('../images/virtuagaming/showcase.png')" class="width-full height-100"></div>
+            <h1>Virtuagaming</h1>
+            <h4>Turbo Pit</h4>
+        </div>
+
+        <p class="context width-30">
+            Le jeu <span class="highLight">Turbo Pit</span> a été développé en tant que démonstration technique.
+            Ce projet démontre le potentiel de la technologie Virtuagaming développée par <a href="http://sealion.fr" target="blank">Sealion</a>.
+        </p>
+
+        <div class="chapter width-50">
+            <h2>La technologie</h2>
+            <p>
+                <a href="http://sealion.fr" target="blank">Sealion</a>, une jeune entreprise de divertissement numérique, possède un produit phare : le Virtualium. Afin de compléter l'autonomie et l'interactivité du produit, le module Virtuagaming a été conceptualisé puis produit.
+            </p>
+            <p>
+                Ce module consiste en la prise de controle d'un appareil connecté à l'aide de son téléphone sans téléchargement. Flasher un QR, puis on est prêt.
+            </p>
+        </div>
+
+        <div class="chapter width-50">
+            <h2>Turbo Pit</h2>
+            <p>
+                <a href="http://sealion.fr" target="blank">Turbo Pit</a> est un jeu de bagarre de voiture. Avec le virtualium, personnalisez la carosserie de votre véhicule puis avec le Virtuagaming, prenez le contrôle de celui-ci.
+            </p>
+        </div>
+
+        <div class="chapter width-50">
+            <h2>Aperçus</h2>
+            <div class="flex-row justify-around">
+                <img src="../images/virtuagaming/image0.png" class="width-70">
+            </div>
+        </div>
+
+        <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">
+
+    </div>
+</body>
+</html>
