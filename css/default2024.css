@@ -10,8 +10,6 @@
     --header_padding:         5%;
 }
 
-
-
 html                       { scrollbar-width: thin; scrollbar-color: var(--mainColor) var(--secondColor); }
 body                       { margin: 0; padding: 0; font-size: 1.1em; font-family: "Trebuchet MS", serif; background-size: var(--body_width) var(--body_height); background: radial-gradient(circle, var(--bgg_inner) 0%, var(--bgg_outter) 100%) fixed; }
 

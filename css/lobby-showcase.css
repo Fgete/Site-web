@@ -20,6 +20,7 @@
 	--decalY:         1%;
 }
 
+html { overflow: hidden; }
 body { overflow: hidden; }
 
 #showcase {
