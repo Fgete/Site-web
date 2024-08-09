@@ -102,6 +102,7 @@ body { overflow: hidden; }
 /* --- HEADER (default) --- */
 :root                 { --traX: -100px; --traY: -100px; --traZ: -350px; --scaX: 12; }
 #sc-portrait          { transform: translate3d(calc(var(--cyberX) + 18%), calc(var(--cyberY) + 5%), 0px) scale(.22, 1); }
+#sc-glass1            { transform: translate3d(calc(var(--cyberX) + 5%), calc(var(--cyberY) - 15%), 0px) scale(.5) rotateZ(90deg); }
 }
 
 @media (max-width: var(--frontier_width)), (orientation: portrait)  {
@@ -109,6 +110,7 @@ body { overflow: hidden; }
 /* --- HEADER (dropdown menu) --- */
 :root                 { --traX: 0%; --traY: -50%; --traZ: -500px; --scaX: 8; }
 #sc-portrait          { transform: translate3d(calc(var(--cyberX) - 10vw), calc(var(--cyberY) + 50%), 0px) scale(.16, .5); }
+#sc-glass1            { transform: translate3d(calc(var(--cyberX) - 5%), calc(var(--cyberY) - 35%), 0px) scale(.5) rotateZ(90deg); }
 }
 
 @keyframes sc-cyan {
