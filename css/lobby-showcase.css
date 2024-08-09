@@ -107,7 +107,7 @@ body { overflow: hidden; }
 @media (max-width: var(--frontier_width)), (orientation: portrait)  {
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
-:root                 { --traX: 0%; --traY: -100%; --traZ: -500px; --scaX: 8; }
+:root                 { --traX: 0%; --traY: -50%; --traZ: -500px; --scaX: 8; }
 #sc-portrait          { transform: translate3d(calc(var(--cyberX) - 10vw), calc(var(--cyberY) + 50%), 0px) scale(.16, .5); }
 }
 
