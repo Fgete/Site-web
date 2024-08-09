@@ -32,7 +32,7 @@ p                          { font-size: calc(var(--font_size_ratio) * 1em); }
 @media (min-width: var(--frontier_width)) {
 /* ---     DESKTOP      --- */
 /* --- HEADER (default) --- */
-:root                      { --body_width: 100vw; --body_height: 100vh; --header_height: 50px; --font_size_ratio: 1; }
+:root                      { --body_width: 100vw; --body_height: 100vh; --header_height: 50px; }
 #header-menu               { flex-direction: row; justify-content: flex-end; }
 #header-menu p             { display: none; }
 #header-menu a             { display: block; padding: 0 25px 0 25px; width: 150px; background-color: #0000; }
@@ -42,7 +42,7 @@ p                          { font-size: calc(var(--font_size_ratio) * 1em); }
 @media (max-width: var(--frontier_width)), (orientation: portrait)  {
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
-:root                      { --body_width: 100dvw; --body_height: 100dvh; --header_height: 100px; --font_size_ratio: 3; }
+:root                      { --body_width: 100dvw; --body_height: 100dvh; --header_height: 100px; }
 #header-menu               { flex-direction: column; justify-content: flex-start; }
 #header-menu p             { display: flex; }
 #header-menu a             { display: none; padding: 0 10px 0 0; width: calc(100% - 10px); height: 100%; background-color: var(--hd_background); }
