@@ -100,15 +100,15 @@ body { overflow: hidden; }
 @media (min-width: var(--frontier_width))  {
 /* ---     DESKTOP      --- */
 /* --- HEADER (default) --- */
-:root                 { --traX: -100px; --traY: -100px; }
+:root                 { --traX: -100px; --traY: -100px; --traZ: -350px; --scaX: 12; }
 #sc-portrait          { transform: translate3d(calc(var(--cyberX) + 18%), calc(var(--cyberY) + 5%), 0px) scale(.22, 1); }
 }
 
 @media (max-width: var(--frontier_width)), (orientation: portrait)  {
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
-:root                 { --traX: 0%; --traY: -100%; }
-#sc-portrait          { transform: translate3d(calc(var(--cyberX) - 10vw), calc(var(--cyberY) + 50%), 0px) scale(.16, .75); }
+:root                 { --traX: 0%; --traY: -100%; --traZ: -500px; --scaX: 8; }
+#sc-portrait          { transform: translate3d(calc(var(--cyberX) - 10vw), calc(var(--cyberY) + 50%), 0px) scale(.16, .5); }
 }
 
 @keyframes sc-cyan {
