@@ -46,7 +46,7 @@ body { overflow: hidden; }
 			rotateX(var(--rotX)) rotateY(var(--rotY)) rotateZ(var(--rotZ));
 }
 
-#showcase .left-panel .screen{
+#showcase .left-panel .screen {
 	position: absolute;
 	width: 192vh;
 	height: 108vh;

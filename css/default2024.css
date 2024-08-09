@@ -4,6 +4,8 @@
     --font_size_ratio:        1;
 
     /* --- HEADER --- */
+    --body_width:             100vw;
+    --body_height:            100vh;
     --header_height:          50px;
     --header_padding:         5%;
 }
@@ -11,10 +13,10 @@
 
 
 html                       { scrollbar-width: thin; scrollbar-color: var(--mainColor) var(--secondColor); }
-body                       { margin: 0; padding: 0; font-size: 1.1em; font-family: "Trebuchet MS", serif; background-size: 100vw 100vh; background: radial-gradient(circle, var(--bgg_inner) 0%, var(--bgg_outter) 100%) fixed; }
+body                       { margin: 0; padding: 0; font-size: 1.1em; font-family: "Trebuchet MS", serif; background-size: var(--body_width) var(--body_height); background: radial-gradient(circle, var(--bgg_inner) 0%, var(--bgg_outter) 100%) fixed; }
 
 /* --- HEADER --- */
-header                     { z-index: 1; width: 100vw; height: var(--header_height); padding: 0 var(--header_padding) 0 var(--header_padding); background-color: var(--hd_background); }
+header                     { z-index: 1; width: var(--body_width); height: var(--header_height); padding: 0 var(--header_padding) 0 var(--header_padding); background-color: var(--hd_background); }
 header>div                 { z-index: 1; width: calc(100% - 2 * var(--header_padding)); display: flex; justify-content: space-between; }
 #header-logo img           { z-index: 1; height: var(--header_height); filter: drop-shadow(0 0 10px var(--hd_title)); }
 #header-menu               { z-index: 1; height: var(--header_height); width: 50%; display: flex; justify-content: flex-end; align-items: center; }
@@ -29,10 +31,10 @@ p                          { font-size: calc(var(--font_size_ratio) * 1em); }
 
 
 /* --- QUERIES --- */
-@media (min-width: var(--frontier_width))  {
+@media (min-width: var(--frontier_width)) {
 /* ---     DESKTOP      --- */
 /* --- HEADER (default) --- */
-:root                      { --header_height: 50px; --font_size_ratio: 1; }
+:root                      { --body_width: 100vw; --body_height: 100vh; --header_height: 50px; --font_size_ratio: 1; }
 #header-menu               { flex-direction: row; justify-content: flex-end; }
 #header-menu p             { display: none; }
 #header-menu a             { display: block; padding: 0 25px 0 25px; width: 150px; background-color: #0000; }
@@ -42,7 +44,7 @@ p                          { font-size: calc(var(--font_size_ratio) * 1em); }
 @media (max-width: var(--frontier_width)), (orientation: portrait)  {
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
-:root                      { --header_height: 200px; --font_size_ratio: 3; }
+:root                      { --body_width: 100dvw; --body_height: 100dvh; --header_height: 200px; --font_size_ratio: 3; }
 #header-menu               { flex-direction: column; justify-content: flex-start; }
 #header-menu p             { display: flex; }
 #header-menu a             { display: none; padding: 0 10px 0 0; width: calc(100% - 10px); height: 100%; background-color: var(--hd_background); }
