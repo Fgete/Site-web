@@ -6,13 +6,13 @@
 	--rotY:           0deg;
 	--rotZ:           10deg;
 
-	--traX:           -150px;
-	--traY:           0px;
-	--traZ:           -300px;
+	--traX:           -100px;
+	--traY:           -100px;
+	--traZ:           -350px;
 
-	--scaX:           8;
-	--scaY:           4;
-	--scaZ:           4;
+	--scaX:           12;
+	--scaY:           6;
+	--scaZ:           6;
 
 	--cyberX:         -25%;
 	--cyberY:         -35%;
@@ -20,12 +20,13 @@
 	--decalY:         1%;
 }
 
+body { overflow: hidden; }
+
 #showcase {
 	perspective: 300px;
-	overflow: hidden;	
 
-	width: 100%;
-	height: 66vh;
+	width: 100vw;
+	height: 100vh;
 
 	background: radial-gradient(ellipse at top right, #f003, transparent),
 				radial-gradient(ellipse at bottom left, #0ff3, transparent),
@@ -64,36 +65,50 @@
 	animation: 10s ease .33s infinite alternate sc-red;
 }
 #sc-glitch0 {
-	transform: translate3d(-50%, 20%, 0px) scale(.8, .4) rotateZ(180deg);
+	transform: translate3d(calc(var(--cyberX) - 25%), calc(var(--cyberY) + 55%), 0px) scale(1.2, .4) rotateZ(180deg);
 	filter: sepia(5) saturate(5) brightness(.5) hue-rotate(-55deg);
 	animation: 2s ease 0s infinite running sc-glitch0;
 	animation-timing-function: steps(2, end);
 }
 #sc-glitch1 {
 	opacity: .3;
-	transform: translate3d(-30%, -75%, 0px) scale(.8, .4);
+	transform: translate3d(calc(var(--cyberX) - 5%), calc(var(--cyberY) - 40%), 0px) scale(1.2, .6);
 	filter: sepia(5) saturate(5) brightness(.5) hue-rotate(-55deg);
 	animation: 2s ease .5s infinite running sc-glitch1;
 	animation-timing-function: steps(2, end);
 }
 #sc-glass0 {
 	opacity: .6;
-	transform: translate3d(-60%, -35%, 0px) scale(.7) rotateZ(90deg);
+	transform: translate3d(calc(var(--cyberX) - 35%), calc(var(--cyberY) + 0%), 0px) scale(.7) rotateZ(90deg);
 }
 #sc-glass1 {
 	opacity: .6;
-	transform: translate3d(-20%, -50%, 0px) scale(.5) rotateZ(90deg);
+	transform: translate3d(calc(var(--cyberX) + 5%), calc(var(--cyberY) - 15%), 0px) scale(.5) rotateZ(90deg);
 }
 #sc-portrait {
 	opacity: .7;
 	filter: brightness(1.5);
-	transform: translate3d(-7%, -30%, 0px) scale(.22, 1);
+	transform: translate3d(calc(var(--cyberX) + 18%), calc(var(--cyberY) + 5%), 0px) scale(.22, 1);
 }
 
 #showcase p           { margin: 0; color: var(--sc_title); font-family: 'Xolonium', sans-serif; font-weight: bold; white-space: nowrap; filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
 #showcase .highlight  { color: var(--sc_highlight); filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
 #showcase .lowlight   { color: var(--sc_lowlight); filter: drop-shadow(0 0 var(--glow-effect) var(--glow-color)); }
 
+/* --- QUERIES --- */
+@media (min-width: var(--frontier_width))  {
+/* ---     DESKTOP      --- */
+/* --- HEADER (default) --- */
+:root                      { --traX: -100px; --traY: -100px; }
+#sc-portrait               { transform: translate3d(calc(var(--cyberX) + 18%), calc(var(--cyberY) + 5%), 0px) scale(.22, 1); }
+}
+
+@media (max-width: var(--frontier_width)), (orientation: portrait)  {
+/* ---         MOBILE         --- */
+/* --- HEADER (dropdown menu) --- */
+:root                      { --traX: 0%; --traY: -100%; }
+#sc-portrait               { transform: translate3d(calc(var(--cyberX) - 10vw), calc(var(--cyberY) + 50%), 0px) scale(.16, .75); }
+}
 
 @keyframes sc-cyan {
 	0%   { transform: translate3d(calc(var(--cyberX) + 0%)           , var(--cyberY), 0); opacity:  1; }
@@ -124,11 +139,11 @@
 }
 
 @keyframes sc-glitch0 {
-	from { transform: translate3d(-50%, 20%, 0px) scale(.8, .4) rotateZ(360deg); }
-	to   { transform: translate3d(-50%, 20%, 0px) scale(.8, .4) rotateZ(0deg);   }
+	from { transform: translate3d(calc(var(--cyberX) - 25%), calc(var(--cyberY) + 55%), 0px) scale(1.2, .4) rotateZ(360deg); }
+	to   { transform: translate3d(calc(var(--cyberX) - 25%), calc(var(--cyberY) + 55%), 0px) scale(1.2, .4) rotateZ(0deg);   }
 }
 
 @keyframes sc-glitch1 {
-	from { transform: translate3d(-30%, -75%, 0px) scale(.8, .4) rotateZ(360deg); }
-	to   { transform: translate3d(-30%, -75%, 0px) scale(.8, .4) rotateZ(0deg);   }
+	from { transform: translate3d(calc(var(--cyberX) - 5%), calc(var(--cyberY) - 40%), 0px) scale(1.2, .6) rotateZ(360deg); }
+	to   { transform: translate3d(calc(var(--cyberX) - 5%), calc(var(--cyberY) - 40%), 0px) scale(1.2, .6) rotateZ(0deg);   }
 }
