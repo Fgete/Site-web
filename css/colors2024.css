@@ -8,8 +8,10 @@
 
     /* Header */
     --hd_background:           #0005;
-    --hd_title:                #f00;
-    --hd_highlight:            #0ff;
+    --hd_title:                #f77;
+    --hd_title_glow:           #f00;
+    --hd_highlight:            #7ff;
+    --hd_highlight_glow:       #0ff;
 
     /* Showcase */
     --sc_title:                #000c;

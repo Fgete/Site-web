@@ -19,8 +19,8 @@ header>div                 { width: calc(100% - 2 * var(--header_padding)); disp
 #header-logo img           { height: var(--header_height); filter: drop-shadow(0 0 10px var(--hd_title)); }
 #header-menu               { height: var(--header_height); width: 50%; display: flex; justify-content: flex-end; align-items: center; }
 #header-menu p             { height: var(--header_height); cursor: pointer; display: none; position: absolute; right: 7%; margin: 0; align-items: center; color: var(--hd_title); font-size: 5em; }
-#header-menu a             { height: var(--header_height); padding: 0 25px 0 25px; text-decoration: none; color: var(--hd_title); font-size: calc(var(--font_size_ratio) * 1em); }
-#header-menu a div         { height: var(--header_height); display: flex; justify-content: center; align-items: center; transition: .2s; }
+#header-menu a             { height: var(--header_height); font-family: 'Xolonium', sans-serif; padding: 0 25px 0 25px; text-decoration: none; color: var(--hd_title); font-size: calc(var(--font_size_ratio) * 1em); }
+#header-menu a div         { height: var(--header_height); display: flex; justify-content: center; align-items: center; transition: .2s; filter: drop-shadow(0 0 10px var(--hd_title_glow)); }
 #header-menu a:hover div   { color: var(--hd_highlight); filter: drop-shadow(0 0 10px var(--hd_highlight)); }
 
 /* ---  PAGE  --- */
