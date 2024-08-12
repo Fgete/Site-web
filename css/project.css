@@ -1,14 +1,7 @@
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
 
-body {
-    overflow-x: hidden;
-}
-
-#decorum {
-    perspective: 800px;
-}
+#decorum { perspective: 800px; }
 
 #mainScreen {
     position: absolute;
@@ -114,3 +107,18 @@ img { border-radius: 3px; }
 .projectTile { background-color: #0005; padding: 5px; border-radius: 5px; box-shadow: 0 0 10px #0005; cursor: pointer; z-index: 0; }
 .projectTile:hover { transform: scale(1.1); background-color: #222; box-shadow: 0 0 50px #000; z-index: 1; }
 .projectTile p { background: none; font-size: .8em; height: 50px; margin: 0 10px 0 10px; }
+
+/* --- QUERIES --- */
+@media (min-width: var(--frontier_width)) {
+/* ---     DESKTOP      --- */
+/* --- HEADER (default) --- */
+#decorum { height: 100dvh; }
+#mainScreen embed { display: block; }
+}
+
+@media (max-width: var(--frontier_width)), (orientation: portrait)  {
+/* ---         MOBILE         --- */
+/* --- HEADER (dropdown menu) --- */
+#decorum { height: calc(100dvw * .56); }
+#mainScreen embed { display: none; }
+}

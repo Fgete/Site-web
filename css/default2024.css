@@ -4,14 +4,14 @@
     --font_size_ratio:        1;
 
     /* --- HEADER --- */
-    --body_width:             100vw;
-    --body_height:            100vh;
+    --body_width:             100dvw;
+    --body_height:            100dvh;
     --header_height:          50px;
     --header_padding:         5%;
 }
 
 html                       { scrollbar-width: thin; scrollbar-color: var(--mainColor) var(--secondColor); }
-body                       { margin: 0; padding: 0; font-size: 1.1em; font-family: "Trebuchet MS", serif; background-size: var(--body_width) var(--body_height); background: radial-gradient(circle, var(--bgg_inner) 0%, var(--bgg_outter) 100%) fixed; }
+body                       { margin: 0; padding: 0; font-size: 1.1em; font-family: "Trebuchet MS", serif; background-size: var(--body_width) var(--body_height); background: radial-gradient(circle, var(--bgg_inner) 0%, var(--bgg_outter) 100%); }
 
 /* --- HEADER --- */
 header                     { z-index: 1; width: var(--body_width); height: var(--header_height); padding: 0 var(--header_padding) 0 var(--header_padding); background-color: var(--hd_background); }

@@ -101,7 +101,7 @@ body { overflow: hidden; }
 #connection-panel     { position: absolute; width: 100dvw; height: 100px; top: calc(50dvh - 50px); left: 0; background-color: #0005; font-family: 'Xolonium', sans-serif; color: var(--hd_title); filter: drop-shadow(0 0 10px var(--hd_title_glow)); display: flex; justify-content: center; align-items: center; font-size: 2em; opacity: 0; }
 
 /* --- QUERIES --- */
-@media (min-width: var(--frontier_width))  {
+@media (min-width: var(--frontier_width)) {
 /* ---     DESKTOP      --- */
 /* --- HEADER (default) --- */
 :root                 { --traX: -100px; --traY: -100px; --traZ: -350px; --scaX: 12; }

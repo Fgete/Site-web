@@ -1,66 +1,28 @@
-body { overflow-x: hidden; }
+body                           { overflow-x: hidden; }
 
-#content {
-	display: flex;
-	flex-direction: column;
+#content                       { display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 20%; margin: auto; padding: 10px; background-color: var(--hd_background); font-family: 'Xolonium', sans-serif; }
+#content img                   { height: 20dvh; }
+#content h1                    { color: var(--hd_highlight); filter: drop-shadow(0 0 10px var(--hd_highlight_glow)); }
+#content .lines                { text-align: center; }
+#content .lines p              { margin: 0px; color: var(--sc_title); font-family: 'Xolonium', sans-serif; font-weight: bold; white-space: nowrap; }
 
-	justify-content: flex-start;
-	align-items: center;
+#contact-container             { width: 80%; display: flex; flex-direction: column; justify-content: space-around; }
+#contact-container a           { width: calc(100% - 10px); height: 4dvh; display: flex; justify-content: flex-start; align-items: center; font-size: 2em; text-decoration: none; color: #000; transition: .5s; opacity: .8; padding: 5px; margin-bottom: 10px; background-color: var(--hd_background); border-radius: 5px; }
+#contact-container a:hover     { box-shadow: 0 0 10px var(--hd_highlight_glow); transform: scale(1.1); }
+#contact-container a img       { width: 4dvh; height: 4dvh; margin-right: 10px; transition: .5s; }
+#contact-container a:hover img { filter: invert(1) drop-shadow(0 0 10px var(--hd_highlight_glow)); }
+#contact-container a p         { transition: .5s; }
+#contact-container a:hover p   { filter: drop-shadow(0 0 10px var(--hd_highlight_glow)); color: var(--hd_highlight_glow); }
 
-	width: 20%;
-	height: calc(100dvh - var(--header_height));
-
-	margin: auto;
-	padding: 10px;
-
-	background-color: var(--hd_background);
-	font-family: 'Xolonium', sans-serif;
+/* --- QUERIES --- */
+@media (min-width: var(--frontier_width)) {
+/* ---     DESKTOP      --- */
+/* --- HEADER (default) --- */
+#content { width: 20%; padding: 10px; }
 }
 
-#content img { height: 20dvh; }
-#content h1 { color: var(--hd_highlight); filter: drop-shadow(0 0 10px var(--hd_highlight_glow)); }
-
-#content .lines { text-align: center; }
-
-#content .lines p {
-	margin: 0px;
-	color: var(--sc_title);
-	font-family: 'Xolonium', sans-serif;
-	font-weight: bold;
-	white-space: nowrap;
-}
-
-#contact-container {
-	width: 80%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-#contact-container a {
-	width: 8dvh;
-	height: 8dvh;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	font-size: 500%;
-	text-decoration: none;
-	color: #000;
-
-	margin: 1.5dvh;
-	transition: .5s;
-	opacity: .8;
-}
-
-#contact-container a:hover {
-	filter: drop-shadow(0 0 10px var(--hd_highlight_glow));
-	transform: scale(1.1);
-}
-
-#contact-container a img {
-	width: 8dvh;
-	height: 8dvh;
+@media (max-width: var(--frontier_width)), (orientation: portrait)  {
+/* ---         MOBILE         --- */
+/* --- HEADER (dropdown menu) --- */
+#content { width: 100dvw; padding: 0; }
 }
