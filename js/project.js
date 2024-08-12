@@ -1,23 +1,24 @@
-function ExitProjectWithUrl(url){
+function ExitProjectWithUrl(url, delay) {
     ExitProject();
     setTimeout(function () {
         window.location.href = url;
         EnterProject();
-    }, 1000);
+    }, delay);
+    console.log(delay);
 }
 
-function EnterProject(){
+function EnterProject() {
     mainScreen = document.getElementById("mainScreen");
-    mainScreen.style.transition = "2.5s";
-    mainScreen.style.width      = "88%";
-    mainScreen.style.transform  = "translateZ(-1000px) translateX(105px) rotateY(10deg)";
+    mainScreen.style.transition = "1s";
+    mainScreen.style.width      = "88dvw";
+    mainScreen.style.transform  = "translateZ(-1000px) translateX(6dvw) rotateY(7deg)";
     mainScreen.style.pointerEvents = "";
     setTimeout(function () {
         window.scrollTo(0, 150);
     }, 1000);
 }
 
-function ExitProject(){
+function ExitProject() {
     mainScreen = document.getElementById("mainScreen");
     mainScreen.style.transition = ".5s";
     mainScreen.style.width      = "100%";

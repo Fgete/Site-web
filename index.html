@@ -1,108 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<title>L A G - Index</title>
-		<meta charset="utf-8"/>
-		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
-		<link rel="stylesheet" type="text/css" href="./css/colors.css">
-	    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
-	    <link rel="stylesheet" type="text/css" href="./css/default.css">
-		<link rel="stylesheet" type="text/css" href="./css/main.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, height=100, initial-scale=1">
+    <title>L A G - Lobby</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="./css/colors2024.css">
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./css/default2024.css">
+    <link rel="stylesheet" type="text/css" href="./css/lobby-showcase.css">
+    <!-- FONTS -->
+    <link href="https://fonts.cdnfonts.com/css/xolonium" rel="stylesheet">
+</head>
 
-		<link rel="stylesheet" type="text/css" href="./css/index.css">
-		<link rel="stylesheet" type="text/css" href="./css/spinner.css">
-		<link rel="stylesheet" type="text/css" href="./css/terminal.css">
-	</head>
+<body>
 
-	<script type="text/javascript" src="./js/spinner.js"></script>
-	<script type="text/javascript" src="./js/index.js"></script>
-	<script type="text/javascript" src="./js/terminal.js"></script>
+    <header>
+        <div>
+            <div id="header-logo">
+                <img src="./images/logo_white.png">
+            </div>
+            <div id="header-menu">
+                <a href="#" style="pointer-events: none;"><div></div></a>
+                <a onclick="GoToUrl('./html/projects.html')" style="cursor: pointer;"><div>Réalisations</div></a>
+                <a onclick="GoToUrl('./html/contact.html')" style="cursor: pointer;"><div>Me contacter</div></a>
+                <p>☰</p>
+            </div>
+        </div>
+    </header>
 
-	<body class="flex-column" onload="SetTilesPosition(index); EnterScreen();">
-		<header class="flex-row justify-start">
-			<img src="./images/logo_white.png">
-			<div class="width-150p flex-row justify-around header-selected" onclick="ExitScreenWithUrl('#');">Accueil</div>
-			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/gallery.html');">Galerie</div>
-			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/projects.html');">Projets</div>
-			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/contact.html');">Me contacter</div>
-			<div id="bigTitle" class="flex-column justify-start">
-				<h1>François GETE</h1>
-				<h2>Développeur</h2>
-				<h3>de jeux vidéos</h3>
-			</div>
-		</header>
+    <div id="showcase">
+        <div class="left-panel">
+            <img id="sc-glitch0"  class="screen" src="./images/lobby/glitch-plane.png">
+            <img id="sc-glitch1"  class="screen" src="./images/lobby/glitch-plane.png">
+            <img id="sc-red"      class="screen" src="./images/lobby/sc_red_composed.png">
+            <img id="sc-cyan"     class="screen" src="./images/lobby/sc_cyan_composed.png">
+            <img id="sc-glass0"   class="screen" src="./images/lobby/glass0.png">
+            <img id="sc-glass1"   class="screen" src="./images/lobby/glass1.png">
+            <img id="sc-portrait" class="screen" src="./images/lobby/portrait.png">
 
-		<div id="spinnerContainer" class="width-full height-full flex-column justify-around">
-			<div id="spinnerOrigin">
-				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
-					<h3>L A G</h3>
-					<h5>Qui suis-je ?</h5>
-				</div></div>
-				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
-					<h3>Entomocene</h3>
-					<h5>The Insect Age</h5>
-				</div></div>
-				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
-					<h3>Galerie 3D</h3>
-					<h5>Découvrez mes créations !</h5>
-				</div></div>
-				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
-					<h3>VJing</h3>
-					<h5>Modéliser avec du son en temps réel.</h5>
-				</div></div>
-				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
-					<h3>A.R.M.</h3>
-					<h5>Jeu d'horreur dans l'univers de SCP.</h5>
-				</div></div>
-				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
-					<h3>B.M. Remake</h3>
-					<h5>Exercice : Refaire Half Life 1</h5>
-				</div></div>
-			</div>
-		</div>
+            <p style="font-size: 7.8vh;  line-height: 0;">FRANCOIS</p>
+            <p style="font-size: 14.5vh; line-height: 17vh;">GETE</p>
+            <p style="font-size: 5.5vh;  line-height: 0;">════════════</p>
+            <p style="font-size: 5.4vh;  line-height: 9vh;">DEVELOPPEUR</p>
+            <p style="font-size: 7.5vh;  line-height: 1vh;">JEU VIDEO</p>
+            <p style="font-size: 9.3vh;  line-height: 13vh;">ARTISTE</p>
+            <p style="font-size: 13vh;   line-height: 3vh; transform: scaleX(2.5) translateX(28%);">3D</p>
+        </div>
+    </div>
 
-		<div id="panelContainer" class="width-50 height-full">
-			<div class="panel width-80 height-70">
-				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
-				<h1 class="paddingLeft">Toutes mes informations</h1>
-				<h2>pour me connaitre et me contacter.</h2>
-				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/contact.html');">En savoir plus ►</a>
-			</div>
-			<div class="panel width-80 height-70">
-				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
-				<h1 class="paddingLeft">Projet volumineux</h1>
-				<h2>de survie horrifique.</h2>
-				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/entomocene.html');">En savoir plus ►</a>
-			</div>
-			<div class="panel width-80 height-70">
-				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
-				<h1 class="paddingLeft">Ici vous trouverez</h1>
-				<h2>certaines de mes créations 3D.</h2>
-				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/gallery.html');">En savoir plus ►</a>
-			</div>
-			<div class="panel width-80 height-70">
-				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
-				<h1 class="paddingLeft">J'ai branché une entrée</h1>
-				<h2>audio dans Blender.</h2>
-				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/vjing.html');">En savoir plus ►</a>
-			</div>
-			<div class="panel width-80 height-70">
-				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
-				<h1 class="paddingLeft">Mon premier projet</h1>
-				<h2>sur Unity.</h2>
-				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/arm.html');">En savoir plus ►</a>
-			</div>
-			<div class="panel width-80 height-70">
-				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
-				<h1 class="paddingLeft">Un exercice de style</h1>
-				<h2>pour bien pratiquer.</h2>
-				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/blackMesaRemake.html');">En savoir plus ►</a>
-			</div>
-		</div>
+    <div id="connection-panel">
+        <p>Connection...</p>
+    </div>
 
-		<div id="screenOff"></div>
+    <div>
+        <p id="width-debug" style="color: white;"></p>
+        <p id="orientation-debug" style="color: white;"></p>
+    </div>
 
-		<footer></footer>
-	</body>
+    <div id="content">
+        <div class="large-title"></div>
+    </div>
+
+</body>
+
+<script>
+    
+    width = document.getElementById("width-debug");
+    orien = document.getElementById("orientation-debug");
+
+    blendModes = [
+        "normal",
+        "multiply",
+        "screen",
+        "overlay",
+        "darken",
+        "lighten",
+        "color-dodge",
+        "color-burn",
+        "hard-light",
+        "soft-light",
+        "difference",
+        "exclusion",
+        "hue",
+        "saturation",
+        "color",
+        "luminosity",
+        "plus-darker",
+        "plus-lighter",
+    ];
+
+    function UpdateWidthDebug() {
+        width.innerHTML = window.innerWidth;
+        orien.innerHTML = screen.orientation.type;
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function SetBlendModeToShowcaseTitles() {
+        titles = document.getElementsByClassName('sc-title');
+
+        for (j = 0; j < 10; j++){
+            for (i = 0; i < titles.length; i++){
+                titles[i].style.mixBlendMode = blendModes[Math.floor(Math.random() * (blendModes.length - 1))];
+                titles[i].style.transform = "translateX(" + Math.floor(Math.random() * 100) + "px)";
+            }
+            await sleep(50);
+            for (i = 0; i < titles.length; i++){
+                titles[i].style.mixBlendMode = "normal";
+                titles[i].style.transform = i == titles.length - 1 ? "scaleX(2.5) translateX(28%)" : "translateX(0px)";
+            }
+        }
+    }
+    
+    async function GoToUrl(url) {
+        console.log("go to url : '" + url + "'");
+        // Connection panel
+        document.getElementById("connection-panel").style.opacity = "1";
+        // Rotation
+        document.documentElement.style.setProperty('--rotX', '20deg');
+        document.documentElement.style.setProperty('--rotY', '0deg');
+        document.documentElement.style.setProperty('--rotZ', '-40deg');
+        // Position
+        document.documentElement.style.setProperty('--traZ', '-100px');
+        // VFX
+        document.documentElement.style.setProperty('--blur-effect', '50px');
+        
+        await sleep(1500);
+
+        window.location.href = url;
+    }
+
+    async function SetupScreen() {
+        // Rotation
+        document.documentElement.style.setProperty('--rotX', '10deg');
+        document.documentElement.style.setProperty('--rotY', '0deg');
+        document.documentElement.style.setProperty('--rotZ', '10deg');
+        // Position
+        document.documentElement.style.setProperty('--traZ', '-350px');
+        // VFX
+        document.documentElement.style.setProperty('--blur-effect', '0px');
+    }
+
+    interval   = setInterval(UpdateWidthDebug, 100);
+    blendModer = setInterval(SetBlendModeToShowcaseTitles, 5000);
+    // SetupScreen();
+
+</script>
 
 </html>

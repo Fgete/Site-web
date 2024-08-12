@@ -18,18 +18,20 @@
     <div id="decorum" class="width-full height-full">
         <div id="bgEnvironment" class="width-full height-full" style="background-image: url('../images/gifs/particle0.gif')"></div>
         <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
-        <div id="mainScreen" class="width-full height-full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
+        <div id="mainScreen" class="width-full height-full" onclick="GoUp(); ExitProjectWithUrl('../index.html', 1000);">
+            <embed id="mainScreen" class="width-100 height-100" type="text/html" src="../index.html" style="pointer-events: none;"></embed>
+        </div>
     </div>
     <div id="projectContent" class="flex-column width-full">
 
         <div class="titleStrip">
             <div style="background-image: url('../images/gifs/particle0.gif')" class="width-full height-100"></div>
-            <h1>Mes projets</h1>
-            <h4>(certains sont portés disparus...)</h4>
+            <h1>Mes réalisations</h1>
+            <h4>(certaines sont portées disparues...)</h4>
         </div>
 
         <p class="context width-30">
-            Ici, vous trouverez mes différents projets. Des projets de jeu, des projets expérimentaux et autres...
+            Ici, vous trouverez mes différentes réalisations. Des projets de jeu, des projets expérimentaux et autres...
         </p>
 
         <div class="chapter width-50">
@@ -40,37 +42,37 @@
 
             <div id="projectsContainer" class="width-100 flex-row justify-around flex-wrap">
                 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./entomocene.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./entomocene.html', 0);" title="Visiter">
                     <img src="../images/entomocene/miniature.png" class="width-100">
                     <legend>Entomocene - The insect age</legend>
                     <p>Projet (volumineux) de jeu de survie en vue du dessus dans un univers post-apocalyptique rempli d'insectes géants. <span class="underlined">[Unity3D]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./liminal-museum.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./liminal-museum.html', 0);" title="Visiter">
                     <img src="../images/liminal-museum/miniature.png" class="width-100">
                     <legend>Liminal Museum</legend>
                     <p>Jeu non-euclidien d'exploration. Visitez le musée de Jacob Kamiński. <span class="underlined">[Unity3D]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./virtuagaming.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./virtuagaming.html', 0);" title="Visiter">
                     <img src="../images/virtuagaming/miniature.png" class="width-100">
                     <legend>Virtuagaming</legend>
                     <p>Produit développé par Sealion. Démonstration technique du Virtuagaming. <span class="underlined">[Unity3D]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./vjing-unity.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./vjing-unity.html', 0);" title="Visiter">
                     <img src="../images/vjing-unity/miniature.png" class="width-100">
                     <legend>VJing Unity</legend>
                     <p>Outil de mixe vidéo temps réel. <span class="underlined">[Unity]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./minestra.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./minestra.html', 0);" title="Visiter">
                     <img src="../images/minestra/miniature.png" class="width-100">
                     <legend>Minéstra</legend>
                     <p>Exercice de style où l'on devait recréer l'ambiance d'un document de level design fournit. <span class="underlined">[Unity3D]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./entomocene-arcade.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./entomocene-arcade.html', 0);" title="Visiter">
                     <img src="../images/apercu.png" class="width-100">
                     <legend>Doom-like en Web</legend>
                     <p>Exercice de style où l'on devait créer une expérience web intéractive. <span class="underlined">[Web]</span></p>
@@ -84,13 +86,13 @@
 
             <div id="projectsContainer" class="width-100 flex-row justify-around flex-wrap">
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./virtualium.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./virtualium.html', 0);" title="Visiter">
                     <img src="../images/virtualium/miniature.png" class="width-100">
                     <legend>Virtualium</legend>
                     <p>Produit développé par Sealion. Environnement intéractif pour l'événementiel. <span class="underlined">[Unity3D]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./emergeance.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./emergeance.html', 0);" title="Visiter">
                     <img src="../images/emergeance/miniature.png" class="width-100">
                     <legend>Emergeance</legend>
                     <p>Petite expérience où l'on manipule les relations entre des particules. Certaines configurations font apparaître des comportements étonnants. <span class="underlined">[Unity3D]</span></p>
@@ -104,13 +106,13 @@
 
             <div id="projectsContainer" class="width-100 flex-row justify-around flex-wrap">
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./arm.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./arm.html', 0);" title="Visiter">
                     <img src="../images/arm/miniature.png" class="width-100">
                     <legend>A.R.M. Project</legend>
                     <p>Démo de jeu d'horreur à la première personne dans l'univers de SCP. <span class="underlined">[Unity3D]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./sl-office.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./sl-office.html', 0);" title="Visiter">
                     <img src="../images/sl-office/miniature.png" class="width-100">
                     <legend>SL Office</legend>
                     <p>Projet visant à créer un outil back-office permettant la création et la gestion de sites web. <span class="underlined">[Web]</span></p>
@@ -124,13 +126,13 @@
 
             <div id="projectsContainer" class="width-100 flex-row justify-around flex-wrap">
                 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./green-team.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./green-team.html', 0);" title="Visiter">
                     <img src="../images/gallery/greenTeam.png" class="width-100">
                     <legend>Green Team</legend>
                     <p>Un petit jeu sérieux sur le thème de l'éco-responsabilité. Incarnez un dirigeant devant jongler entre finance, écologie et opinion publique. <span class="underlined">[Unity3D]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./vjing.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./vjing.html', 0);" title="Visiter">
                     <img src="../images/vjing/miniature.png" class="width-100">
                     <legend>VJing</legend>
                     <p>Mixer l'image avec du son en utilisant Blender. <span class="underlined">[Blender]</span></p>
@@ -144,13 +146,13 @@
 
             <div id="projectsContainer" class="width-100 flex-row justify-around flex-wrap">
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./engine-sdl.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./engine-sdl.html', 0);" title="Visiter">
                     <img src="../images/apercu.png" class="width-100">
                     <legend>Moteur SDL</legend>
                     <p>Projet personnel de développement. Je voulais, par curiosité, développer mon propre moteur de jeu. <span class="underlined">[C++ SDL]</span></p>
                 </div>
 
-                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./blackMesaRemake.html');" title="Visiter">
+                <div class="projectTile width-40 margin-top-10p transition" onclick="GoUp(); ExitProjectWithUrl('./blackMesaRemake.html', 0);" title="Visiter">
                     <img src="../images/blackMesaRemake/Portal.png" class="width-100">
                     <legend>Black Mesa De-Remake</legend>
                     <p>Un exercice de style sur Unity. <span class="underlined">[Unity3D]</span></p>

@@ -4,13 +4,105 @@
 		<title>L A G - Index</title>
 		<meta charset="utf-8"/>
 		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
-		<link rel="stylesheet" type="text/css" href="css/index_old.css">
+		<link rel="stylesheet" type="text/css" href="./css/colors.css">
+	    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
+	    <link rel="stylesheet" type="text/css" href="./css/default.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<link rel="stylesheet" type="text/css" href="./css/spinner.css">
+		<link rel="stylesheet" type="text/css" href="./css/terminal.css">
 	</head>
-	<body onload="TilePosition(1), LoadingScreen(), BuildContact('./html/contact.html', './css/contactLink.css')">
-		<script type="text/javascript" src="./js/index - contact.js"> // --- CONTACT --- </script>
-		<script type="text/javascript" src="./js/index - loading.js"> // --- LOADING SCREEN --- </script>
-		<script type="text/javascript" src="./js/index - navigation.js"> // --- INDEX NAVIGATION --- </script>
-		<script type="text/javascript" src="./js/index - game.js"> // --- GAME --- </script>
-		<script type="text/javascript" src="./js/index - build.js"> // --- BUILDING --- </script>
+
+	<script type="text/javascript" src="./js/spinner.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/terminal.js"></script>
+
+	<body class="flex-column" onload="SetTilesPosition(index); EnterScreen();">
+		<header class="flex-row justify-start">
+			<img src="./images/logo_white.png">
+			<div class="width-150p flex-row justify-around header-selected" onclick="ExitScreenWithUrl('#');">Accueil</div>
+			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/gallery.html');">Galerie</div>
+			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/projects.html');">Projets</div>
+			<div class="width-150p flex-row justify-around" onclick="ExitScreenWithUrl('./html/contact.html');">Me contacter</div>
+			<div id="bigTitle" class="flex-column justify-start">
+				<h1>François GETE</h1>
+				<h2>Développeur</h2>
+				<h3>de jeux vidéos</h3>
+			</div>
+		</header>
+
+		<div id="spinnerContainer" class="width-full height-full flex-column justify-around">
+			<div id="spinnerOrigin">
+				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
+					<h3>L A G</h3>
+					<h5>Qui suis-je ?</h5>
+				</div></div>
+				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
+					<h3>Entomocene</h3>
+					<h5>The Insect Age</h5>
+				</div></div>
+				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
+					<h3>Galerie 3D</h3>
+					<h5>Découvrez mes créations !</h5>
+				</div></div>
+				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
+					<h3>VJing</h3>
+					<h5>Modéliser avec du son en temps réel.</h5>
+				</div></div>
+				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
+					<h3>A.R.M.</h3>
+					<h5>Jeu d'horreur dans l'univers de SCP.</h5>
+				</div></div>
+				<div class="tileOrigin"><div class="tile" onclick="SetSelected(true)">
+					<h3>B.M. Remake</h3>
+					<h5>Exercice : Refaire Half Life 1</h5>
+				</div></div>
+			</div>
+		</div>
+
+		<div id="panelContainer" class="width-50 height-full">
+			<div class="panel width-80 height-70">
+				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
+				<h1 class="paddingLeft">Toutes mes informations</h1>
+				<h2>pour me connaitre et me contacter.</h2>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/contact.html');">En savoir plus ►</a>
+			</div>
+			<div class="panel width-80 height-70">
+				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
+				<h1 class="paddingLeft">Projet volumineux</h1>
+				<h2>de survie horrifique.</h2>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/entomocene.html');">En savoir plus ►</a>
+			</div>
+			<div class="panel width-80 height-70">
+				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
+				<h1 class="paddingLeft">Ici vous trouverez</h1>
+				<h2>certaines de mes créations 3D.</h2>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/gallery.html');">En savoir plus ►</a>
+			</div>
+			<div class="panel width-80 height-70">
+				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
+				<h1 class="paddingLeft">J'ai branché une entrée</h1>
+				<h2>audio dans Blender.</h2>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/vjing.html');">En savoir plus ►</a>
+			</div>
+			<div class="panel width-80 height-70">
+				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
+				<h1 class="paddingLeft">Mon premier projet</h1>
+				<h2>sur Unity.</h2>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/arm.html');">En savoir plus ►</a>
+			</div>
+			<div class="panel width-80 height-70">
+				<img src="./images/logos/play.png" class="backImg" onclick="SetSelected(false)">
+				<h1 class="paddingLeft">Un exercice de style</h1>
+				<h2>pour bien pratiquer.</h2>
+				<a class="positionBottomRight fSize2" onclick="ExitScreenWithUrl('./html/blackMesaRemake.html');">En savoir plus ►</a>
+			</div>
+		</div>
+
+		<div id="screenOff"></div>
+
+		<footer></footer>
 	</body>
+
 </html>
