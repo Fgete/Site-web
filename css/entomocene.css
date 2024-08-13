@@ -13,7 +13,7 @@
   src: url(../fonts/entomocene-text.ttf);
 }
 
-body { background-image: url("../images/entomocene/splash.png"); }
+body { background-image: url("../images/entomocene/splash.png"); background-repeat: no-repeat; background-attachment: fixed; }
 #projectContent { background: linear-gradient(90deg, #0000 20%, #000a 25%, #000a 75%, #0000 80%); }
 
 p { font-family: entomocene-simple; color: #000a; font-weight: bold; }

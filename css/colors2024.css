@@ -1,6 +1,7 @@
 :root {
 	/* System */
 	--highlight:               #fa0;
+    --font:                    #bbb;
 	
     /* Background Gradient */
     --bgg_inner:               #676156;

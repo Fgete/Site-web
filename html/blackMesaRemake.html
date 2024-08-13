@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
     <title>Black Mesa Remake</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, height=100, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
     <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
     <link rel="stylesheet" type="text/css" href="../css/project.css">
 </head>
 
 <script type="text/javascript" src="../js/project.js"></script>
 
-<body onload="EnterProject();" class="width_100 height_100">
-    <div id="decorum" class="width_full height_full">
-        <div id="bgEnvironment" class="width_full height_full" style="background-image: url('../images/blackMesaRemake/hall0.png')"></div>
-        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width_100 height_100"></div>
-        <div id="mainScreen" class="width_full height_full" onclick="GoUp(); ExitProjectWithUrl('../index.html');"></div>
+<body onload="EnterProject();" class="width-100 height-100">
+    <div id="decorum" class="width-full height-full">
+        <div id="bgEnvironment" class="width-full height-full" style="background-image: url('../images/virtuagaming/showcase.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
+        <div id="mainScreen" class="width-100 height-100" onclick="GoUp(); ExitProjectWithUrl('./projects.html', 1000);">
+            <embed class="width-100 height-100" type="text/html" src="./projects.html" style="pointer-events: none;"></embed>
+        </div>
     </div>
     <div id="projectContent" class="flex_column width_full">
 

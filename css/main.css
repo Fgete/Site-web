@@ -1,28 +1,28 @@
-html   { scrollbar-width: thin; scrollbar-color: var(--colorMain) var(--color_GreyAlpha); }
-body   { font-size: 1.1em; font-family: "Trebuchet MS", serif; background-size: 100vw 100vh; background: radial-gradient(circle, var(--color_LighterGrey) 0%, var(--color_LightGrey) 69%, var(--color_Grey) 100%) fixed; }
+html   { scrollbar-width: thin; scrollbar-color: var(--highlight) var(--color_GreyAlpha); }
+body   { font-size: 1.1em; font-family: "Trebuchet MS", serif; }
 iframe { border: none; }
 
-.border_top      { border-top: solid 3px var(--colorMain); }
-.border_bottom   { border-bottom: solid 3px var(--colorMain); }
+.border_top      { border-top: solid 3px var(--highlight); }
+.border_bottom   { border-bottom: solid 3px var(--highlight); }
 .network         {
     width: 90px;
     height: 90px;
-    color: var(--colorMain);
+    color: var(--highlight);
     background-color: var(--color_GreyAlpha);
     border-radius: 5px;
     box-shadow: 0 0 30px var(--color_GreyAlpha);
     cursor: pointer;
 }
 .network:hover   {
-    color: black;
-    background-color: var(--colorMain);
-    box-shadow: 0 0 30px var(--colorMain);
+    color: var(--font);
+    background-color: var(--highlight);
+    box-shadow: 0 0 30px var(--highlight);
     border-radius: 20px;
 }
 .network_dis     {
     width: 90px;
     height: 90px;
-    color: var(--TextColor);
+    color: var(--font);
     background-color: var(--color_GreyAlpha);
     border-radius: 5px;
     box-shadow: 0 0 30px var(--color_GreyAlpha);
@@ -34,20 +34,20 @@ iframe { border: none; }
 .network:hover img   { filter: none; }
 
 .mission             { width: 100%; }
-.mission:hover       { filter: drop-shadow(0 0 10px var(--colorMain)); transform: translateY(-10px) rotateX(20deg); }
+.mission:hover       { filter: drop-shadow(0 0 10px var(--highlight)); transform: translateY(-10px) rotateX(20deg); }
 .transition          { transition: .5s; }
 
-a                    { text-decoration: none; color: var(--colorMain) !important; cursor: pointer; transition: .5s; }
-a:hover              { background-color: var(--colorMain) !important; color: var(--color_Grey) !important; }
-h1, h2, h3, legend   { color: var(--colorMain); }
+a                    { text-decoration: none; color: var(--highlight) !important; cursor: pointer; transition: .5s; }
+a:hover              { background-color: var(--highlight) !important; color: var(--color_Grey) !important; }
+h1, h2, h3, legend   { color: var(--highlight); }
 h1                   { font-size: 2.5em; }
 h2                   { font-size: 2em;   }
 h3                   { font-size: 1.7em; }
-h4                   { color: var(--textColor); }
-h5                   { color: var(--textColor); }
-p                    { color: var(--textColor); }
-label                { width: 100%; margin-top: 1vw; color: var(--colorMain); }
-.headerWhite         { color: var(--textColor); }
+h4                   { color: var(--font); }
+h5                   { color: var(--font); }
+p                    { color: var(--font); }
+label                { width: 100%; margin-top: 1vw; color: var(--highlight); }
+.headerWhite         { color: var(--font); }
 .paddingLeft         { padding-left: 2vw; }
 .positionBottomRight { position: absolute; bottom: 2vw; right: 2vw; }
 .fSize2              { font-size: 2em; }
