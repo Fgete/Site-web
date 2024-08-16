@@ -14,11 +14,11 @@ body { overflow-x: hidden; }
 .titleStrip h1  { height: 0; filter: drop-shadow(0 0 10px black); text-align: center; }
 .titleStrip h4  { z-index: 10; }
 
-.context { text-align: center; background: linear-gradient(90deg, #0000 0%, #0003 50%, #0000 100%); padding: 10px 0 10px 0; }
+.context { width: 50%; text-align: center; background: linear-gradient(90deg, #0000 0%, #0003 50%, #0000 100%); padding: 10px 0 10px 0; }
 
-.chapter                         { width: 50%; }
-.chapter h2, .chapter h3, legend { filter: drop-shadow(0 0 10px black); }
-.chapter p, .chapter fieldset    { text-align: justify; text-justify: inter-word; background: linear-gradient(90deg, #0000 0%, #0003 50%, #0000 100%); padding: 10px 0 10px 0; border: none; }
+.chapter                                      { width: 50%; }
+.chapter h1, .chapter h2, .chapter h3, legend { filter: drop-shadow(0 0 10px black); }
+.chapter p, .chapter fieldset                 { text-align: justify; text-justify: inter-word; background: linear-gradient(90deg, #0000 0%, #0003 50%, #0000 100%); padding: 10px 0 10px 0; border: none; }
 
 .media { margin-left: 20%; width: 60%; max-height: 200px; object-fit: contain; }
 
@@ -40,9 +40,12 @@ img { border-radius: 3px; }
 /* ---     DESKTOP      --- */
 /* --- HEADER (default) --- */
 #decorum            { height: 100dvh; }
+#bgEnvironment      { background-size: cover; }
 #mainScreen embed   { display: block; }
+.titleStrip         { height: 130px; }
 .titleStrip h1      { font-size: 2.5em; }
-.context            { width: 30%; }
+.titleStrip div     { background-size: cover; height: 130px; }
+.context            { width: 30%; margin: 0px; }
 .chapter            { width: 50%; }
 .chapter h1         { text-align: left; font-size: 2.5em; }
 .projectTile legend { font-size: 1.5em; text-align: left; }
@@ -53,11 +56,15 @@ img { border-radius: 3px; }
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
 #decorum            { height: calc(100dvw * .56); }
+#bgEnvironment      { background-size: contain; }
 #mainScreen embed   { display: none; }
+.titleStrip         { height: 100px; }
 .titleStrip h1      { font-size: 1.5em; }
-.context            { width: 100%; }
+.titleStrip div     { background-size: contain; height: 100px; }
+.context            { width: 100%; margin: 10px; }
 .chapter            { width: 100%; }
 .chapter h1         { text-align: center; font-size: 2em; margin: 80px 0 10px 0; }
+.chapter p          { margin: 10px; }
 .projectTile legend { font-size: 1em; text-align: center; }
 .projectTile p      { font-size: .6em; }
 }
