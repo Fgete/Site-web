@@ -48,6 +48,7 @@ body { overflow-x: hidden; }
 .titleStrip h1 {
     height: 0;
     filter: drop-shadow(0 0 10px black);
+    text-align: center;
 }
 
 .titleStrip h4 {
@@ -60,6 +61,8 @@ body { overflow-x: hidden; }
     padding: 10px 0 10px 0;
 }
 
+.chapter { width: 50%; }
+
 .chapter h2, .chapter h3, legend {
     filter: drop-shadow(0 0 10px black);
 }
@@ -71,8 +74,6 @@ body { overflow-x: hidden; }
     padding: 10px 0 10px 0;
     border: none;
 }
-
-legend { font-size: 1.5em; }
 
 .media {
     margin-left: 20%;
@@ -104,21 +105,34 @@ img { border-radius: 3px; }
 }
 
 /* --- PROJECTS --- */
-.projectTile { background-color: #0005; padding: 5px; border-radius: 5px; box-shadow: 0 0 10px #0005; cursor: pointer; z-index: 0; }
-.projectTile:hover { transform: scale(1.1); background-color: #222; box-shadow: 0 0 50px #000; z-index: 1; }
-.projectTile p { background: none; font-size: .8em; height: 50px; margin: 0 10px 0 10px; }
+.projectTile        { overflow: hidden; background-color: #0005; padding: 5px; border-radius: 5px; box-shadow: 0 0 10px #0005; cursor: pointer; z-index: 0; }
+.projectTile:hover  { transform: scale(1.1); background-color: #222; box-shadow: 0 0 50px #000; z-index: 1; }
+.projectTile legend { font-size: 1.5em; }
+.projectTile p      { background: none; font-size: .8em; height: 50px; margin: 0 10px 0 10px; }
 
 /* --- QUERIES --- */
 @media (min-width: var(--frontier_width)) {
 /* ---     DESKTOP      --- */
 /* --- HEADER (default) --- */
-#decorum { height: 100dvh; }
-#mainScreen embed { display: block; }
+#decorum            { height: 100dvh; }
+#mainScreen embed   { display: block; }
+.titleStrip h1      { font-size: 2.5em; }
+.context            { width: 30%; }
+.chapter            { width: 50%; }
+.chapter h1         { text-align: left; font-size: 2.5em; }
+.projectTile legend { font-size: 1.5em; text-align: left; }
+.projectTile p      { font-size: .8em; }
 }
 
 @media (max-width: var(--frontier_width)), (orientation: portrait)  {
 /* ---         MOBILE         --- */
 /* --- HEADER (dropdown menu) --- */
-#decorum { height: calc(100dvw * .56); }
-#mainScreen embed { display: none; }
+#decorum            { height: calc(100dvw * .56); }
+#mainScreen embed   { display: none; }
+.titleStrip h1      { font-size: 1.5em; }
+.context            { width: 100%; }
+.chapter            { width: 100%; }
+.chapter h1         { text-align: center; font-size: 2em; margin: 80px 0 10px 0; }
+.projectTile legend { font-size: 1em; text-align: center; }
+.projectTile p      { font-size: .6em; }
 }
