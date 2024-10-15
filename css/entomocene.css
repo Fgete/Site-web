@@ -19,7 +19,7 @@ body { background-image: url("../images/entomocene/splash.png"); background-repe
 p { font-family: entomocene-simple; color: #000a; font-weight: bold; }
 a { color: #000; }
 h1, h2, h3 { font-family: entomocene-simple; filter: drop-shadow(0 0 5px #000) !important; margin: 0; }
-h4, h5, h6 { font-family: entomocene-trash; filter: drop-shadow(0 0 5px #000) !important; }
+h4, h5, h6 { font-family: entomocene-trash; filter: drop-shadow(0 0 5px #000) !important; margin: 0; }
 
 h1 { font-size: 5em; }
 h2 { font-size: 3em; }
