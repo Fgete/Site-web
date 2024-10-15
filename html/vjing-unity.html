@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Liminal Museum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, height=100, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors2024.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/default2024.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/project.css">
+</head>
+
+<script type="text/javascript" src="../js/project.js"></script>
+
+<body onload="EnterProject();" class="width-100 height-100">
+    <div id="decorum" class="width-full height-full">
+        <div id="bgEnvironment" class="width-100 height-100" style="background-image: url('../images/vjing-unity/showcase.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
+        <div id="mainScreen" class="width-100 height-100" onclick="GoUp(); ExitProjectWithUrl('./projects.html', 1000);">
+            <embed class="width-100 height-100" type="text/html" src="./projects.html" style="pointer-events: none;"></embed>
+        </div>
+    </div>
+    <div id="projectContent" class="flex-column width-full">
+
+        <div class="titleStrip">
+            <div style="background-image: url('../images/vjing-unity/showcase.png')" class="width-full height-100"></div>
+            <h1>VJing - Unity</h1>
+            <h4>Logiciel de mix vidéo en temps réel</h4>
+        </div>
+
+        <p class="context">
+            Un <span class="highLight">vidéo-jockey</span>, abrégé sous le sigle <span class="highLight">VJ</span>, est une personne qui est à l'origine d'une animation visuelle projetée sans plus d'indications sur les techniques utilisées ou les choix graphiques effectués. Le <span class="highLight">VJing</span> est un terme large qui désigne la performance visuelle en temps réel.
+        </p>
+
+        <div class="chapter flex-row justify-between">
+            <p class="width-50">
+                J'avais déjà, il y a des années, tenté de mixer du visuel avec de la musique. J'avais envoyé du son (en temps réel) dans le logiciel de 3D Blender. Puis un programme en Python (dans Blender) modifiait différents paramètres de plusieurs modèle 3D et de plusieurs Shaders.<br><br>
+                Dans cette nouvelle version, faites sur Unity, Blender n'intervient plus. Le son peut être importé (toujours en temps réel) via différents canaux paramètrables. Ici, il sera traité et impactera, à nouveau, la scène chargée.
+            </p>
+            <img src="../images/vjing-unity/vjing_old.png" class="width-40">
+        </div>
+
+        <div class="chapter">
+            <h1>Entrées MIDI</h1>
+            <div class="flex-row justify-between">
+                <img src="../images/vjing-unity/akai.jpg" class="width-40">
+                <p class="width-50">
+                    J'avais sous la main un controleur MIDI de marque Akai. Je l'ai connecté à Unity et j'ai mis en place un input controler avec le nouveau input system de Unity.<br><br>
+                    Une fois setup, les potars et les différents boutons permettent de manipuler un large panel d'éléments des différentes scène instantiées en parallèle.
+                </p>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <h1>Aperçus</h1>
+            <div class="flex-row justify-around">
+                <img src="../images/liminal-museum/image0.png" class="width-30">
+                <img src="../images/liminal-museum/image2.png" class="width-40">
+                <img src="../images/liminal-museum/image1.png" class="width-30">
+            </div>
+        </div>
+
+        <div id="result" class="chapter">
+            <h1>Résultat</h1>
+
+            <div class="flex-row justify-around">
+                <a class="width-30" href="https://lag-studio.itch.io/liminal-museum" target="blank">
+                    <img class="width-100" src="../images/logos/itchio.svg">
+                </a>
+                <iframe
+                    style="border-radius: 5px;"
+                    src="https://youtu.be/wAxaHih1epM?si=_LWZd6pUOWPKiiUN"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="flex-row justify-center">
+                
+            </div>
+        </div>
+
+        <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">
+
+    </div>
+</body>
+</html>
