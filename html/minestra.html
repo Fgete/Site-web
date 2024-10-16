@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Liminal Museum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, height=100, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors2024.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/default2024.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/project.css">
+</head>
+
+<script type="text/javascript" src="../js/project.js"></script>
+
+<body onload="EnterProject();" class="width-100 height-100">
+    <div id="decorum" class="width-full height-full">
+        <div id="bgEnvironment" class="width-100 height-100" style="background-image: url('../images/minestra/showcase.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
+        <div id="mainScreen" class="width-100 height-100" onclick="GoUp(); ExitProjectWithUrl('./projects.html', 1000);">
+            <embed class="width-100 height-100" type="text/html" src="./projects.html" style="pointer-events: none;"></embed>
+        </div>
+    </div>
+    <div id="projectContent" class="flex-column width-full">
+
+        <div class="titleStrip">
+            <div style="background-image: url('../images/minestra/showcase.png')" class="width-full height-100"></div>
+            <h1>Minestra</h1>
+            <h4>Exercice de style avec LDD fourni</h4>
+        </div>
+
+        <p class="context">
+            <span class="highLight">Minestra</span> est un concept de jeu pensé par le développeur Jeffrey ZUMKIR. Il s'agit d'un univers imaginaire mellant fantastique et société industrielle.
+        </p>
+
+        <div class="chapter flex-row justify-between">
+            <p class="width-50">
+                Lors d'un exercice de style de 3 jours, nous avons chacun écrit un Level Design Document succinct que nous avons confié à un autre étudiant. Ensuite, nous avons dû construire un niveau immersif en se concentrant sur la narration environnementale.
+            </p>
+            <img src="../images/minestra/showcase.png" class="width-40">
+        </div>
+
+        <div class="chapter">
+            <h1>Aperçus</h1>
+            <div class="flex-row justify-around">
+                <img src="../images/minestra/image0.png" class="width-30">
+                <img src="../images/minestra/image1.png" class="width-40">
+                <img src="../images/minestra/image2.png" class="width-30">
+            </div>
+            <div class="flex-row justify-around margin-top-10p">
+                <img src="../images/minestra/image3.png" class="width-30">
+                <img src="../images/minestra/image4.png" class="width-40">
+                <img src="../images/minestra/image5.png" class="width-30">
+            </div>
+        </div>
+
+        <div id="result" class="chapter">
+            <h1>Résultat</h1>
+
+            <div class="flex-row justify-around">
+                <a class="width-30" href="https://lag-studio.itch.io/minestra" target="blank">
+                    <img class="width-100" src="../images/logos/itchio.svg">
+                </a>
+            </div>
+        </div>
+
+        <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">
+
+    </div>
+</body>
+</html>
