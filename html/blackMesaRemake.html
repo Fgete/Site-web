@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=100, height=100, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
-    <link rel="stylesheet" type="text/css" href="../css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../css/colors2024.css">
     <link rel="stylesheet" type="text/css" href="../css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/default2024.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
 
     <link rel="stylesheet" type="text/css" href="../css/project.css">
@@ -17,26 +17,26 @@
 
 <body onload="EnterProject();" class="width-100 height-100">
     <div id="decorum" class="width-full height-full">
-        <div id="bgEnvironment" class="width-full height-full" style="background-image: url('../images/virtuagaming/showcase.png')"></div>
+        <div id="bgEnvironment" class="width-full height-full" style="background-image: url('../images/blackMesaRemake/showcase.png')"></div>
         <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
         <div id="mainScreen" class="width-100 height-100" onclick="GoUp(); ExitProjectWithUrl('./projects.html', 1000);">
             <embed class="width-100 height-100" type="text/html" src="./projects.html" style="pointer-events: none;"></embed>
         </div>
     </div>
-    <div id="projectContent" class="flex_column width_full">
+    <div id="projectContent" class="flex-column width-full">
 
         <div class="titleStrip">
-            <div style="background-image: url('../images/blackMesaRemake/hall0.png')" class="width_full height_100"></div>
+            <div style="background-image: url('../images/blackMesaRemake/showcase.png')" class="width-full height-100"></div>
             <h1>Black Mesa Remake</h1>
             <h4>Exercice de style</h4>
         </div>
 
-        <p class="context width_30">
+        <p class="context width-30">
             Le projet de <span class="highLight">remake</span> fait suite au <span class="highLight">demake</span> de l'examen de l'hivers 2019.
             <span class="highLight">Objectif :</span> Faire un remake du <span class="highLight">demake</span> de <span class="highLight">Black Mesa</span>.
         </p>
 
-        <div class="chapter width_50">
+        <div class="chapter width-50">
             <h2>Le Demake de Black Mesa</h2>
             <p>
                 En fin de premier trimestre à <span class="highLight">Ludus Académie</span>, nous avons eu un examen dont le sujet était de faire un <span class="highLight">demake</span> d'un jeu connu et recent.
@@ -49,7 +49,7 @@
             <img src="../images/gallery/jeu0.png" class="media">
         </div>
 
-        <div class="chapter width_50">
+        <div class="chapter width-50">
             <h2>Le Remake du Demake</h2>
             <p>
                 En fin de première année, nous avons décidé avec mon binôme d'agrandir l'équipe et de faire un remake de notre <span class="highLight">demake</span>.
@@ -62,19 +62,19 @@
             </p>
         </div>
 
-        <div class="chapter width_50">
+        <div class="chapter width-50">
             <h2>Level design</h2>
             <p>
                 Concernant le style de l'environnement, nous avons cherché à réaliser des salles et des éléments rappelant l'univers original.
             </p>
 
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/blackMesaRemake/Accueil.png" class="width_30">
-                <img src="../images/blackMesaRemake/corridor0.png" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/blackMesaRemake/Accueil.png" class="width-30">
+                <img src="../images/blackMesaRemake/corridor0.png" class="width-30">
             </div>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/blackMesaRemake/chemical.png" class="width_30">
-                <img src="../images/blackMesaRemake/corridor1.png" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/blackMesaRemake/chemical.png" class="width-30">
+                <img src="../images/blackMesaRemake/corridor1.png" class="width-30">
             </div>
 
             <h3>Sound design</h3>
@@ -94,7 +94,7 @@
             <img src="../images/blackMesaRemake/lightprobe.png" class="media">
         </div>
 
-        <div class="chapter width_50">
+        <div class="chapter width-50">
             <h2>Le personnage</h2>
             <h3>Les animations</h3>
             <p>
@@ -102,22 +102,22 @@
                 Le modèle 3D et les animations ont été obtenus sur internet.
                 Nous avons dû organiser les animations avec un animator controller disponible avec le moteur Unity.
             </p>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/blackMesaRemake/Character.png" class="width_30">
-                <img src="../images/blackMesaRemake/Animation.png" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/blackMesaRemake/Character.png" class="width-30">
+                <img src="../images/blackMesaRemake/Animation.png" class="width-30">
             </div>
 
             <h3>Raycast aim</h3>
             <p>
                 Afin d'être précis dans les tirs du joueur, nous avons utilisé des raycast pour prédire si le tir touche sa cible avant même que l'animation ne se joue.
             </p>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/blackMesaRemake/rayCastImpacts.png" class="width_30">
-                <img src="../images/blackMesaRemake/rayCastLaser.png" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/blackMesaRemake/rayCastImpacts.png" class="width-30">
+                <img src="../images/blackMesaRemake/rayCastLaser.png" class="width-30">
             </div>
         </div>
 
-        <div class="chapter width_50">
+        <div class="chapter width-50">
             <h2>Le Head Crab</h2>
             <p>
                 Véritable icône de la pop culture, le Head Crab est un ennemi de base de la license.
@@ -143,7 +143,7 @@
             <p>
                 Afin d'être un maximum fidèle à l'œuvre originale, nous avons utilisé les sons originaux inimitables :
             </p>
-            <div class="width_100 flex_column">
+            <div class="width-100 flex-column">
                 <audio controls src="../sounds/blackMesaRemake/attack2.wav">► Attaque</audio>
                 <audio controls src="../sounds/blackMesaRemake/die1.wav">► Mort</audio>
                 <audio controls src="../sounds/blackMesaRemake/idle3.wav">► Attente</audio>
@@ -155,9 +155,9 @@
                 En effet, dès que l'on touche à de la physique et surtout avec un objet complexe tel qu'un squelette, ça devient rapidement n'importe quoi.
                 Néanmoins, nous sommes arrivés à un équilibre vraiment convainquant et nous en sommes très fier !
             </p>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/blackMesaRemake/Ragdoll1.png" class="width_30">
-                <img src="../images/blackMesaRemake/Ragdoll2.png" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/blackMesaRemake/Ragdoll1.png" class="width-30">
+                <img src="../images/blackMesaRemake/Ragdoll2.png" class="width-30">
             </div>
 
             <h3>L'IA</h3>
@@ -167,9 +167,9 @@
                 S'il vous voit, il vous suit et s'il est assez proche, il vous saute dessus.
                 Concernant, ses déplacements, le Head Crab suit une navigation map.
             </p>
-            <div class="flex_row justify_around width_100 margin_1">
-                <img src="../images/blackMesaRemake/AI.png" class="width_30">
-                <img src="../images/blackMesaRemake/navigationMesh.png" class="width_30">
+            <div class="flex-row justify-around width-100 margin-1">
+                <img src="../images/blackMesaRemake/AI.png" class="width-30">
+                <img src="../images/blackMesaRemake/navigationMesh.png" class="width-30">
             </div>
 
 
