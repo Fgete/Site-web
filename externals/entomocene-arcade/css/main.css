@@ -1,0 +1,39 @@
+body             { overflow: hidden; }
+h1, h3           { filter: drop-shadow(0 0 10px #0008); color: var(--secondColor); margin: 0; }
+h2, h4           { filter: drop-shadow(0 0 10px #0008); color: var(--secondColor); margin: 0; }
+
+/* --- WEB PAGE --- */
+.background      { background-image: url("../images/bg.png"); background-repeat: no-repeat; background-size: 100vw 100vh; background-color: var(--mainBG); }
+.perspective     { backface-visibility: visible; transform-style: preserve-3d; perspective-origin: 100% 100%; }
+
+#title           { position: absolute; top: -50px; font-size: 8em; }
+#screenContainer { position: relative; display: flex; width: calc(1440px * .6); height: calc(1080px * .5); background-color: var(--panel); border-radius: 5px; }
+#screen          { position: absolute; top: 80px; filter: sepia(.5) saturate(2); background-image: url("../images/sky1.1.png"); background-size: cover; background-color: var(--black); perspective: 300px; overflow: hidden; }
+#overlay         { position: absolute; top: 80px; filter: sepia(.5) saturate(2); background-image: url("../images/shotgun0.png"); background-size: 30%; background-repeat: no-repeat; background-position: 50% 120%; }
+
+/* --- GAME ELEMENTS --- */
+#mapOrigin       { position: relative; }
+.element         { position: absolute; width: 100px; height: 100px; top: -50px; left: -50px; background-size: contain; background-repeat: no-repeat; transform: rotate3d(0, 0, 1, 45deg); }
+
+.wall            { background-image: url("../images/wall2.2.png");   }
+.ground          { background-image: url("../images/ground0.1.png"); }
+.roof            { background-image: url("../images/roof0.1.png");   }
+.barrel          { background-image: url("../images/barrel0.1.png"); }
+.spider          { background-image: url("../images/spider.gif");    }
+.boss            { background-image: url("../images/boss.gif");      }
+.particle        {
+	background-image: url("../images/blood.gif");
+	border-radius: 50%;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	animation-duration: .5s;
+	animation-name: fadeOut;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	from { opacity: 100%; scale:  .5; }
+	to   { opacity: 0%;   scale: 1.5; }
+}

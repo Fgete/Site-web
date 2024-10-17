@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Entomocene Arcade</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, height=100, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors2024.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/default2024.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/project.css">
+</head>
+
+<script type="text/javascript" src="../js/project.js"></script>
+
+<body onload="EnterProject();" class="width-100 height-100">
+    <div id="decorum" class="width-full height-full">
+        <div id="bgEnvironment" class="width-100 height-100" style="background-image: url('../images/entomocene-arcade/showcase.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
+        <div id="mainScreen" class="width-100 height-100" onclick="GoUp(); ExitProjectWithUrl('./projects.html', 1000);">
+            <embed class="width-100 height-100" type="text/html" src="./projects.html" style="pointer-events: none;"></embed>
+        </div>
+    </div>
+    <div id="projectContent" class="flex-column width-full">
+
+        <div class="titleStrip">
+            <div style="background-image: url('../images/entomocene-arcade/showcase.png')" class="width-full height-100"></div>
+            <h1>Entomocene Arcade</h1>
+            <h4>Expérimentation en full-web</h4>
+        </div>
+
+        <p class="context">
+            Nous devions créer en 3 jours une expérience web immersive. J'ai décidé de tenter une expérience qui me restait dans la tête depuis des mois : faire un Doom-Like en full-web (sans bibliothèque graphique).
+        </p>
+
+        <div class="chapter flex-row justify-between">
+            <p class="width-50">
+                J'avais déjà expérimenté, en web, de bidouiller les <span class="highLight">transform</span> de balises afin de les orienter en 3D avec de la perspective.<br><br>
+                De là, j'ai imaginé que du HTML+CSS pouvait servir de support de rendu. Certes, ces technologies ne sont pas conventionnelles, mais je voulais quand même essayer.
+            </p>
+            <a class="width-40" href="./archives/test -- puzzle.html" target="blank" title="Cliquer pour tester">
+                <img src="../images/entomocene-arcade/image0.png" class="width-100">
+            </a>
+            
+        </div>
+
+        <div class="chapter">
+            <h1>De la data vers le rendu</h1>
+            <div class="flex-row justify-between">
+                <img src="../images/entomocene-arcade/image1.png" class="width-30">
+                <img src="../images/entomocene-arcade/image2.png" class="width-30">
+                <p class="width-30">
+                    J'ai fait en sorte d'avoir des tableaux de données simples qui seront lus puis interprétés pour construire l'environnement 3D. Ici, chaque caractère constituera un bloc. Chaque caractère sera construit en "3D" div par div.<br><br>
+                    L'environnement est construit en deux temps. Dans un premier temps, les structures élémentaires sont construites (murs, sol, etc...). Puis dans un second temps, les objects dynamiques sont construits (tonneaux, ennemis, etc...).
+                </p>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <h1>Les déplacements</h1>
+            <div class="flex-row justify-between">
+                <p class="width-40">
+                    Pour se déplacer (en FPS), je ne peux pas simplement déplacer une caméra car le concept de caméra n'existe pas, ici. C'est l'environnement que je dois déplacer de manière à rendre cohérent le placement de celui-ci.<br><br>
+                    Pour cela, j'ai placé TOUS les éléments de l'environnement dans un parent, puis (en CSS) je manipule son <span class="highLight">transform</span>.
+                </p>
+                <img src="../images/entomocene-arcade/image3.png" class="width-50">
+            </div>
+            <p class="width-100">
+                ANECDOTE : Dans un transform CSS, les instructions sont appliquées dans l'ordre de lecture. Si on écrit la rotation puis la translation, l'objet est tourné puis déplacé. Cela permet des facilités du type : je tourne l'objet vers sa destination puis je le fais aller tout droit vers sa destination.
+            </p>
+        </div>
+
+        <div class="chapter">
+            <h1>Les raycasts</h1>
+            <div class="flex-row justify-between">
+                <img src="../images/entomocene-arcade/image4.png" class="width-50">
+                <p class="width-40">
+                    Afin de pouvoir tirer sur une cible, il est nécessaire de vérifier si la cible est bien sur le curseur. Dans ce sens, utiliser un raycast serait pertinent. Seulement, dans notre contexte, les raycasts n'existent pas. Il va falloir les inventer.<br><br>
+                    Un raycast est une demi droite (en géométrie). Une demi droite est définie par deux choses : un point d'émission et une direction. Je peux déduire le placement du point d'émission en fonction du placement du parent de l'environnement. Ensuite la direction du raycast peut se déduire par l'orientation de ce même parent. Voilà, nous avons notre raycast.
+                </p>
+            </div>
+            <div class="flex-row justify-between">
+                <p class="width-50">
+                    Avoir un raycast c'est bien ! Mais l'utilité d'un raycast est d'en extraire des informations. Je veux s'avoir si un mon raycast touche un ennemi ou un objet. Géométriquement, je doit savoir si une demi droite intersecte un disque (car je travaille en deux dimentions).<br><br>
+                    Pour résoudre cette intersection, je dois connaître l'angle entre le raycast et la cible testée. De cet angle et avec la distance de la cible je peut déduire le segment opposé. Le segment opposé représente la distance entre le centre de la cible et le point le plus proche du raycast. Si la longueur du segment est inférieur ou égale au rayon de la cible, alors, il y a intersection.
+                </p>
+                <img src="../images/entomocene-arcade/image5.png" class="width-40">
+            </div>
+        </div>
+
+        <div id="result" class="chapter">
+            <h1>Résultat</h1>
+
+            <a class="width-100 flex-row justify-center" href="../externals/entomocene-arcade/index.html" target="blank" title="Cliquer pour tester">
+                <img src="../images/entomocene-arcade/miniature.png" class="width-40">
+            </a>
+        </div>
+
+        <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">
+
+    </div>
+</body>
+</html>

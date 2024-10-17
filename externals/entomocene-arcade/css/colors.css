@@ -1,0 +1,17 @@
+:root {
+	--mainColor:#0af;
+	--secondColor:#fa0;
+	--mainColorAlpha:#0af5;
+	--secondColorAlpha:#fa05;
+	--mainColorAlphaZ:#0af0;
+
+	--white:#fff;
+	--whiteAlpha:#fff9;
+	--black:#000;
+	--blackAlpha:#0002;
+	--greyAlpha:#aaa5;
+	--red:#f50;
+
+	--mainBG:#111;
+	--panel:#fff5;
+}

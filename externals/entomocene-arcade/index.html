@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>ENTOMOCENE ARCADE</title>
+		<meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
+		<link rel="stylesheet" type="text/css" href="./css/colors.css">
+		<link rel="stylesheet" type="text/css" href="./css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="./css/default.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+	</head>
+
+	<script src="./js/data.js"></script>
+	<script src="./js/builder.js"></script>
+	<script src="./js/behaviors.js"></script>
+	<script src="./js/sounds.js"></script>
+
+	<body class="width-full height-full background flex-column justify-center">
+		<div id="screenContainer" class="flex-column justify-center">
+			
+			<div class="background blur width-100 height-100"></div>
+			<h1 id="title" class="f-doomL">Entomocen<span class="f-doomR">E</span></h1>
+
+			<!-- GAME SCREEN -->
+			<div id="screen" class="width-80 height-80 flex-column justify-center">
+				<!-- MAP DISPLAY -->
+				<div id="map" class="perspective">
+					<div id="mapOrigin" class="perspective"></div>
+				</div>
+			</div>
+			<div id="overlay" class="width-80 height-80"></div>
+
+		</div>
+
+		<h2 class="f-uLight">Déplacements [ZQSD] - Orientation [◄►] - Tir [SPACEBAR]</h2>
+		<h3 class="f-uLight">Technical demontration by François GETE</h3>
+
+		<audio id="audioShot" src="./sounds/shotgun.mp3"></audio>
+		<audio id="audioFootstep" src="./sounds/footstep.mp3"></audio>
+		<audio id="audioEnemyDeath" src="./sounds/enemyDeath.mp3"></audio>
+		<audio id="audioEnemyHit" src="./sounds/enemyHit.mp3"></audio>
+		<audio id="audioExplosion" src="./sounds/explosion.mp3"></audio>
+		<audio id="audioMusic" src="./sounds/music.mp3" loop></audio>
+	</body>
+
+	<script>
+		screen  = document.getElementById("screen");
+		overlay = document.getElementById("overlay");
+		map     = document.getElementById("mapOrigin");
+		
+		BuildMap(map, mapData);
+		BuildMap(map, objData);
+
+		objs    = document.getElementsByClassName("obj");
+		enemies = document.getElementsByClassName("enemy");
+
+		// Update character transform 100Hz
+		setInterval(Update, 10);
+	</script>
+
+</html>

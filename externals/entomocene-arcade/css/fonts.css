@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "Light";
+	src: url("../fonts/Nimbus Sans Light.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: "Ultra Light";
+	src: url("../fonts/Nimbus Sans UltraLight.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: "DOOMLEFT";
+	src: url("../fonts/AmazDooMLeft.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: "DOOMRIGHT";
+	src: url("../fonts/AmazDooMRight.ttf") format('truetype');
+}
+
+.f-light  { font-family: Light; }
+.f-uLight { font-family: Ultra Light; }
+.f-doomL  { font-family: DOOMLEFT; }
+.f-doomR  { font-family: DOOMRIGHT; }
