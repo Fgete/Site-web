@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Liminal Museum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, height=100, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors2024.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/default2024.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/project.css">
+</head>
+
+<script type="text/javascript" src="../js/project.js"></script>
+
+<body onload="EnterProject();" class="width-100 height-100">
+    <div id="decorum" class="width-full height-full">
+        <div id="bgEnvironment" class="width-100 height-100" style="background-image: url('../images/emergeance/showcase.png')"></div>
+        <div href="#body"><img src="../images/screens/screen.png" id="bgScreen" class="width-100 height-100"></div>
+        <div id="mainScreen" class="width-100 height-100" onclick="GoUp(); ExitProjectWithUrl('./projects.html', 1000);">
+            <embed class="width-100 height-100" type="text/html" src="./projects.html" style="pointer-events: none;"></embed>
+        </div>
+    </div>
+    <div id="projectContent" class="flex-column width-full">
+
+        <div class="titleStrip">
+            <div style="background-image: url('../images/emergeance/showcase.png')" class="width-full height-100"></div>
+            <h1>Emergeance</h1>
+            <h4>Expérience de développement</h4>
+        </div>
+
+        <p class="context">
+            L'expérience <span class="highLight">Emergeance</span> a été réalisé lors d'un examen. Le but était de proposer une expérience vidéo-ludique avec un vecteur de vulgarisation. Ici, nous avons un premier pas dans le domaine de la définition de la vie d'un point de vue scientifique.
+        </p>
+
+        <div class="chapter">
+            <h1>Aperçu</h1>
+            <div class="flex-row justify-center">
+                <video class="width-60" controls>
+                    <source src="../videos/emergeance/apercu.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <img id="upArrow" src="../images/logos/play.png" onclick="GoUp();">
+
+    </div>
+</body>
+</html>
